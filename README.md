@@ -7,8 +7,9 @@
 [![GitHub CI status](https://github.com/oliverklee/ext-feuserextrafields/workflows/CI/badge.svg?branch=main)](https://github.com/oliverklee/ext-feuserextrafields/actions)
 
 This TYPO3 extension adds additional common fields to FE users
-and provides Extbase models for this (like the extensions sr_feuser_register
-or sf_register do, but without the additional registering functionality).
+and provides Extbase models for this (like the *sr_feuser_register* and
+*sf_register* extensions do, but without the additional registering
+functionality).
 
 |                  | URL                                                               |
 |------------------|-------------------------------------------------------------------|
