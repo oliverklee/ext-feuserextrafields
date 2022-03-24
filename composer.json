@@ -71,7 +71,6 @@
 		],
 		"php:cbf": ".Build/vendor/bin/phpcbf Classes Configuration Tests TestExtensions",
 		"php:fixer": ".Build/vendor/bin/php-cs-fixer --config=Configuration/php-cs-fixer.php fix Classes Tests",
-		"php:rector": ".Build/vendor/bin/rector",
 		"ci:php:fixer": ".Build/vendor/bin/php-cs-fixer --config=Configuration/php-cs-fixer.php fix --dry-run -v --show-progress=dots Classes Tests",
 		"ci:php:lint": "find *.php Classes Configuration TestExtensions Tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
 		"ci:php:sniff": ".Build/vendor/bin/phpcs Classes Configuration Tests TestExtensions",
@@ -122,7 +121,6 @@
 		"php:fix": "Updates the code with PHP-CS-Fixer and PHPCBF (but not with Rector).",
 		"php:fixer": "Updates the code with PHP-CS-Fixer.",
 		"ci:php:stan": "Checks the types with PHPStan.",
-		"ci:php:rector": "Checks for code for changes by Rector.",
 		"ci:static": "Runs all static code analysis checks for the code.",
 		"phpstan:baseline": "Updates the PHPStan baseline file to match the code.",
 		"prepare-release": "Removes development-only files in preparation of a TER release."
