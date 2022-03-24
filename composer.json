@@ -28,8 +28,6 @@
 	"require-dev": {
 		"friendsofphp/php-cs-fixer": "^3.4.0",
 		"jangregor/phpstan-prophecy": "^1.0.0",
-		"oliverklee/user-oelibtest": "@dev",
-		"oliverklee/user-oelibtest2": "@dev",
 		"phpstan/extension-installer": "^1.1.0",
 		"phpstan/phpstan": "^1.4.10",
 		"phpstan/phpstan-phpunit": "^1.0.0",
@@ -96,7 +94,7 @@
 		],
 		"link-extension": [
 			"@php -r 'is_dir($extFolder=__DIR__.\"/.Build/public/typo3conf/ext/\") || mkdir($extFolder, 0777, true);'",
-			"@php -r 'file_exists($extFolder=__DIR__.\"/.Build/public/typo3conf/ext/oelib\") || symlink(__DIR__,$extFolder);'"
+			"@php -r 'file_exists($extFolder=__DIR__.\"/.Build/public/typo3conf/ext/feuserextrafields\") || symlink(__DIR__,$extFolder);'"
 		],
 		"post-autoload-dump": [
 			"@link-extension"
