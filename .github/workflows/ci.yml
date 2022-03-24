@@ -1,0 +1,77 @@
+---
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    - cron: '15 3 * * 1'
+jobs:
+  php-lint:
+    name: "PHP linter"
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+      - name: "Install PHP"
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "${{ matrix.php-version }}"
+          coverage: none
+          tools: composer:v2.2
+      - name: "Run PHP lint"
+        run: "composer ci:php:lint"
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version:
+          - 7.2
+          - 7.3
+          - 7.4
+          - 8.0
+          - 8.1
+  code-quality:
+    name: "Code quality checks"
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+      - name: "Install PHP"
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "${{ matrix.php-version }}"
+          coverage: none
+          tools: composer:v2.2
+      - name: "Show Composer version"
+        run: composer --version
+      - name: "Cache dependencies installed with composer"
+        uses: actions/cache@v1
+        with:
+          key: "php${{ matrix.php-version }}-composer-${{ hashFiles('**/composer.json') }}"
+          path: ~/.cache/composer
+          restore-keys: "php${{ matrix.php-version }}-composer-\n"
+      - name: "Install Composer dependencies"
+        run: "composer install --no-progress"
+      - name: "Run command"
+        run: "composer ci:${{ matrix.command }}"
+    strategy:
+      fail-fast: false
+      matrix:
+        command:
+          - "composer:normalize"
+          - "json:lint"
+          - "php:cs-fixer"
+          - "php:sniff"
+          - "php:stan"
+          - "yaml:lint"
+        php-version:
+          - 7.4
+  xliff-lint:
+    name: "Xliff linter"
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+      - name: "Run the xliff lint"
+        uses: TYPO3-Continuous-Integration/TYPO3-CI-Xliff-Lint@v1
