@@ -79,9 +79,6 @@
 		}
 	},
 	"scripts": {
-		"post-autoload-dump": [
-			"@link-extension"
-		],
 		"ci": [
 			"@ci:static"
 		],
@@ -138,6 +135,9 @@
 		"link-extension": [
 			"@php -r 'is_dir($extFolder=__DIR__.\"/.Build/public/typo3conf/ext/\") || mkdir($extFolder, 0777, true);'",
 			"@php -r 'file_exists($extFolder=__DIR__.\"/.Build/public/typo3conf/ext/feuserextrafields\") || symlink(__DIR__,$extFolder);'"
+		],
+		"post-autoload-dump": [
+			"@link-extension"
 		],
 		"phpstan:baseline": ".Build/vendor/bin/phpstan  --generate-baseline=phpstan-baseline.neon",
 		"prepare-release": [
