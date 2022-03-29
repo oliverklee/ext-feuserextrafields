@@ -1,0 +1,8 @@
+# This file can be removed once we drop support for TYPO3 V9.
+config.tx_extbase.persistence.classes {
+    OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser {
+        mapping {
+            tableName = fe_users
+        }
+    }
+}
