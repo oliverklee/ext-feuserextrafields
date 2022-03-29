@@ -43,8 +43,8 @@ functionality).
    :maxdepth: 2
    :titlesonly:
 
-   AddedFields
    ExtbaseModels
+   AddedFields
 
 .. Meta Menu
 

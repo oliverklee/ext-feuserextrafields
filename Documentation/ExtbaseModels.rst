@@ -6,7 +6,11 @@
 Available Extbase models
 ========================
 
-This extension provides the following Extbase models and correspoding
-repositories:
+This extension provides the following Extbase models and repositories:
 
-(TBD)
+*  :php:`\OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser`
+*  :php:`\OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepository`
+
+These models and repositories can also be used as replacements for the
+:php:`FrontEndUser` model and repository that were deprecated in TYPO3 V11 and
+removed in TYPO3 V12.
