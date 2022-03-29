@@ -2,5 +2,25 @@
 <dataset>
     <fe_users>
         <uid>1</uid>
+        <username>max</username>
+        <password>luif3ui4t12</password>
+        <!--<usergroup></usergroup>-->
+        <name>Max M. Minimau</name>
+        <first_name>Max</first_name>
+        <middle_name>Murri</middle_name>
+        <last_name>Minimau</last_name>
+        <address>Near the heating 4</address>
+        <telephone>+49 1111 1233456-78</telephone>
+        <fax>+49 1111 1233456-79</fax>
+        <email>max@example.com</email>
+        <lockToDomain>example.com</lockToDomain>
+        <title>Head of fur</title>
+        <zip>01234</zip>
+        <city>Kattingen</city>
+        <country>United States of CAT</country>
+        <www>www.example.com</www>
+        <company>Cat Scans Inc.</company>
+        <!--<image></image>-->
+        <lastlogin>1648922400</lastlogin>
     </fe_users>
 </dataset>

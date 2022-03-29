@@ -3,6 +3,9 @@ config.tx_extbase.persistence.classes {
     OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser {
         mapping {
             tableName = fe_users
+            columns {
+                lockToDomain.mapOnProperty = lockToDomain
+            }
         }
     }
 }

@@ -54,6 +54,23 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         $model = $this->subject->findByUid($uid);
 
         self::assertInstanceOf(FrontendUser::class, $model);
-        self::assertNotNull($model);
+        self::assertSame('max', $model->getUsername());
+        self::assertSame('luif3ui4t12', $model->getPassword());
+        self::assertSame('Max M. Minimau', $model->getName());
+        self::assertSame('Max', $model->getFirstName());
+        self::assertSame('Murri', $model->getMiddleName());
+        self::assertSame('Minimau', $model->getLastName());
+        self::assertSame('Near the heating 4', $model->getAddress());
+        self::assertSame('+49 1111 1233456-78', $model->getTelephone());
+        self::assertSame('+49 1111 1233456-79', $model->getFax());
+        self::assertSame('max@example.com', $model->getEmail());
+        self::assertSame('example.com', $model->getLockToDomain());
+        self::assertSame('Head of fur', $model->getTitle());
+        self::assertSame('01234', $model->getZip());
+        self::assertSame('Kattingen', $model->getCity());
+        self::assertSame('United States of CAT', $model->getCountry());
+        self::assertSame('www.example.com', $model->getWww());
+        self::assertSame('Cat Scans Inc.', $model->getCompany());
+        self::assertEquals(new \DateTime('2022-04-02T18:00'), $model->getLastlogin());
     }
 }

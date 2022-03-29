@@ -3,5 +3,10 @@
 declare(strict_types=1);
 
 return [
-    OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::class => ['tableName' => 'fe_users'],
+    OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::class => [
+        'tableName' => 'fe_users',
+        'properties' => [
+            'lockToDomain' => ['fieldName' => 'lockToDomain'],
+        ],
+    ],
 ];
