@@ -9,4 +9,7 @@ return [
             'lockToDomain' => ['fieldName' => 'lockToDomain'],
         ],
     ],
+    OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup::class => [
+        'tableName' => 'fe_groups',
+    ],
 ];

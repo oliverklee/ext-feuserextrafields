@@ -50,8 +50,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
     {
         $this->importDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.xml');
 
-        $uid = 1;
-        $model = $this->subject->findByUid($uid);
+        $model = $this->subject->findByUid(1);
 
         self::assertInstanceOf(FrontendUser::class, $model);
         self::assertSame('max', $model->getUsername());
