@@ -11,5 +11,8 @@ return [
     ],
     OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup::class => [
         'tableName' => 'fe_groups',
+        'properties' => [
+            'lockToDomain' => ['fieldName' => 'lockToDomain'],
+        ],
     ],
 ];
