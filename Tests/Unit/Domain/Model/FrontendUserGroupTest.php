@@ -34,4 +34,83 @@ final class FrontendUserGroupTest extends UnitTestCase
     {
         self::assertInstanceOf(AbstractEntity::class, $this->subject);
     }
+
+    /**
+     * @test
+     */
+    public function getTitleInitiallyReturnsEmptyString(): void
+    {
+        $result = $this->subject->getTitle();
+
+        self::assertSame('', $result);
+    }
+
+    /**
+     * @test
+     */
+    public function getTitleInitiallyReturnsGivenTitleProvidedInConstructor(): void
+    {
+        $title = 'foo bar';
+        $subject = new FrontendUserGroup($title);
+
+        $result = $subject->getTitle();
+
+        self::assertSame($title, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function setTitleSetsTitle(): void
+    {
+        $title = 'foo bar';
+
+        $this->subject->setTitle($title);
+
+        self::assertSame($title, $this->subject->getTitle());
+    }
+
+    /**
+     * @test
+     */
+    public function getLockToDomainInitiallyReturnsEmptyString(): void
+    {
+        $result = $this->subject->getLockToDomain();
+
+        self::assertSame('', $result);
+    }
+
+    /**
+     * @test
+     */
+    public function setLockToDomainSetsLockToDomain(): void
+    {
+        $lockToDomain = 'example.com';
+
+        $this->subject->setLockToDomain($lockToDomain);
+
+        self::assertSame($lockToDomain, $this->subject->getLockToDomain());
+    }
+
+    /**
+     * @test
+     */
+    public function getDescriptionInitiallyReturnsEmptyString(): void
+    {
+        $result = $this->subject->getDescription();
+
+        self::assertSame('', $result);
+    }
+
+    /**
+     * @test
+     */
+    public function setDescriptionSetsDescription(): void
+    {
+        $description = 'foo bar';
+
+        $this->subject->setDescription($description);
+
+        self::assertSame($description, $this->subject->getDescription());
+    }
 }

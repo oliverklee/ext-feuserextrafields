@@ -2,5 +2,8 @@
 <dataset>
     <fe_groups>
         <uid>1</uid>
+        <title>editors</title>
+        <lockToDomain>www.example.com</lockToDomain>
+        <description>We build websites!</description>
     </fe_groups>
 </dataset>
