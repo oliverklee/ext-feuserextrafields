@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Model;
 
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
+use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
 /**
@@ -77,6 +79,57 @@ final class FrontendUserTest extends UnitTestCase
         $this->subject->setPassword($password);
 
         self::assertSame($password, $this->subject->getPassword());
+    }
+
+    /**
+     * @test
+     */
+    public function getUsergroupInitiallyReturnsEmptyStorage(): void
+    {
+        $result = $this->subject->getUsergroup();
+
+        self::assertInstanceOf(ObjectStorage::class, $result);
+        self::assertCount(0, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function setUsergroupSetsUserGroups(): void
+    {
+        /** @var ObjectStorage<FrontendUserGroup> $userGroups */
+        $userGroups = new ObjectStorage();
+        $userGroups->attach(new FrontendUserGroup('foo'));
+
+        $this->subject->setUsergroup($userGroups);
+
+        self::assertSame($userGroups, $this->subject->getUsergroup());
+    }
+
+    /**
+     * @test
+     */
+    public function addUsergroupAddsUserGroup(): void
+    {
+        $userGroup = new FrontendUserGroup('foo');
+
+        $this->subject->addUsergroup($userGroup);
+
+        self::assertTrue($this->subject->getUsergroup()->contains($userGroup));
+    }
+
+    /**
+     * @test
+     */
+    public function removeUsergroupRemovesUserGroup(): void
+    {
+        $userGroup = new FrontendUserGroup('foo');
+        $this->subject->addUsergroup($userGroup);
+        self::assertTrue($this->subject->getUsergroup()->contains($userGroup));
+
+        $this->subject->removeUsergroup($userGroup);
+
+        self::assertFalse($this->subject->getUsergroup()->contains($userGroup));
     }
 
     /**

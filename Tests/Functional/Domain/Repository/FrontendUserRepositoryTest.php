@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace OliverKlee\FeUserExtraFields\Tests\Functional\Domain\Repository;
 
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
+use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
 use OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
@@ -71,5 +72,22 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         self::assertSame('www.example.com', $model->getWww());
         self::assertSame('Cat Scans Inc.', $model->getCompany());
         self::assertEquals(new \DateTime('2022-04-02T18:00'), $model->getLastlogin());
+    }
+
+    /**
+     * @test
+     */
+    public function mapsUserGroupsAssociation(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/UserWithTwoGroups.xml');
+
+        $model = $this->subject->findByUid(1);
+        self::assertInstanceOf(FrontendUser::class, $model);
+
+        $userGroups = $model->getUsergroup();
+        self::assertCount(2, $userGroups);
+        $userGroupsArray = $userGroups->toArray();
+        self::assertInstanceOf(FrontendUserGroup::class, $userGroupsArray[0]);
+        self::assertInstanceOf(FrontendUserGroup::class, $userGroupsArray[1]);
     }
 }
