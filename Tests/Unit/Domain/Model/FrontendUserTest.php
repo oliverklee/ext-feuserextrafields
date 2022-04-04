@@ -97,13 +97,13 @@ final class FrontendUserTest extends UnitTestCase
      */
     public function setUsergroupSetsUserGroups(): void
     {
-        /** @var ObjectStorage<FrontendUserGroup> $userGroups */
-        $userGroups = new ObjectStorage();
-        $userGroups->attach(new FrontendUserGroup('foo'));
+        /** @var ObjectStorage<FrontendUserGroup> $groups */
+        $groups = new ObjectStorage();
+        $groups->attach(new FrontendUserGroup('foo'));
 
-        $this->subject->setUsergroup($userGroups);
+        $this->subject->setUsergroup($groups);
 
-        self::assertSame($userGroups, $this->subject->getUsergroup());
+        self::assertSame($groups, $this->subject->getUsergroup());
     }
 
     /**
@@ -111,11 +111,11 @@ final class FrontendUserTest extends UnitTestCase
      */
     public function addUsergroupAddsUserGroup(): void
     {
-        $userGroup = new FrontendUserGroup('foo');
+        $group = new FrontendUserGroup('foo');
 
-        $this->subject->addUsergroup($userGroup);
+        $this->subject->addUsergroup($group);
 
-        self::assertTrue($this->subject->getUsergroup()->contains($userGroup));
+        self::assertTrue($this->subject->getUsergroup()->contains($group));
     }
 
     /**
@@ -123,13 +123,13 @@ final class FrontendUserTest extends UnitTestCase
      */
     public function removeUsergroupRemovesUserGroup(): void
     {
-        $userGroup = new FrontendUserGroup('foo');
-        $this->subject->addUsergroup($userGroup);
-        self::assertTrue($this->subject->getUsergroup()->contains($userGroup));
+        $group = new FrontendUserGroup('foo');
+        $this->subject->addUsergroup($group);
+        self::assertTrue($this->subject->getUsergroup()->contains($group));
 
-        $this->subject->removeUsergroup($userGroup);
+        $this->subject->removeUsergroup($group);
 
-        self::assertFalse($this->subject->getUsergroup()->contains($userGroup));
+        self::assertFalse($this->subject->getUsergroup()->contains($group));
     }
 
     /**
