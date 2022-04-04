@@ -84,10 +84,10 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         $model = $this->subject->findByUid(1);
         self::assertInstanceOf(FrontendUser::class, $model);
 
-        $userGroups = $model->getUsergroup();
-        self::assertCount(2, $userGroups);
-        $userGroupsArray = $userGroups->toArray();
-        self::assertInstanceOf(FrontendUserGroup::class, $userGroupsArray[0]);
-        self::assertInstanceOf(FrontendUserGroup::class, $userGroupsArray[1]);
+        $groups = $model->getUsergroup();
+        self::assertCount(2, $groups);
+        $groupsAsArray = $groups->toArray();
+        self::assertInstanceOf(FrontendUserGroup::class, $groupsAsArray[0]);
+        self::assertInstanceOf(FrontendUserGroup::class, $groupsAsArray[1]);
     }
 }
