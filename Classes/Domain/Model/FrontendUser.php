@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace OliverKlee\FeUserExtraFields\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
  * Model for a front-end user without a country association.
@@ -20,6 +21,11 @@ class FrontendUser extends AbstractEntity
      * @var string
      */
     protected $password = '';
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup>
+     */
+    protected $usergroup;
 
     /**
      * @var string
@@ -105,6 +111,7 @@ class FrontendUser extends AbstractEntity
     {
         $this->username = $username;
         $this->password = $password;
+        $this->usergroup = new ObjectStorage();
     }
 
     public function getUsername(): string
@@ -125,6 +132,38 @@ class FrontendUser extends AbstractEntity
     public function setPassword(string $password): void
     {
         $this->password = $password;
+    }
+
+    /**
+     * Returns the user groups. Keep in mind that the property is called "usergroup"
+     * although it can hold several user groups.
+     *
+     * @return ObjectStorage<FrontendUserGroup>
+     */
+    public function getUsergroup(): ObjectStorage
+    {
+        return $this->usergroup;
+    }
+
+    /**
+     * Sets the user groups. Keep in mind that the property is called "usergroup"
+     * although it can hold several user groups.
+     *
+     * @param ObjectStorage<FrontendUserGroup> $usergroup
+     */
+    public function setUsergroup(ObjectStorage $usergroup): void
+    {
+        $this->usergroup = $usergroup;
+    }
+
+    public function addUsergroup(FrontendUserGroup $usergroup): void
+    {
+        $this->usergroup->attach($usergroup);
+    }
+
+    public function removeUsergroup(FrontendUserGroup $usergroup): void
+    {
+        $this->usergroup->detach($usergroup);
     }
 
     public function getName(): string
