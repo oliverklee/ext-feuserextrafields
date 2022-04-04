@@ -6,6 +6,7 @@ namespace OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Model;
 
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -460,6 +461,30 @@ final class FrontendUserTest extends UnitTestCase
         $this->subject->setCompany($company);
 
         self::assertSame($company, $this->subject->getCompany());
+    }
+
+    /**
+     * @test
+     */
+    public function getImageInitiallyReturnsEmptyCollection(): void
+    {
+        $result = $this->subject->getImage();
+
+        self::assertInstanceOf(ObjectStorage::class, $result);
+        self::assertCount(0, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function setImageSetsImage(): void
+    {
+        /** @var ObjectStorage<FileReference> $images */
+        $images = new ObjectStorage();
+
+        $this->subject->setImage($images);
+
+        self::assertSame($images, $this->subject->getImage());
     }
 
     /**

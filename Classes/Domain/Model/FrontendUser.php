@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace OliverKlee\FeUserExtraFields\Domain\Model;
 
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
@@ -103,6 +104,11 @@ class FrontendUser extends AbstractEntity
     protected $company = '';
 
     /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     */
+    protected $image;
+
+    /**
      * @var \DateTime|null
      */
     protected $lastlogin;
@@ -112,6 +118,7 @@ class FrontendUser extends AbstractEntity
         $this->username = $username;
         $this->password = $password;
         $this->usergroup = new ObjectStorage();
+        $this->image = new ObjectStorage();
     }
 
     /**
@@ -120,6 +127,7 @@ class FrontendUser extends AbstractEntity
     public function initializeObject(): void
     {
         $this->usergroup = new ObjectStorage();
+        $this->image = new ObjectStorage();
     }
 
     public function getUsername(): string
@@ -322,6 +330,26 @@ class FrontendUser extends AbstractEntity
     public function setCompany(string $company): void
     {
         $this->company = $company;
+    }
+
+    /**
+     * Gets the image. (This is a storage with 0 or 1 elements.)
+     *
+     * @return ObjectStorage<FileReference>
+     */
+    public function getImage(): ObjectStorage
+    {
+        return $this->image;
+    }
+
+    /**
+     * Sets the image. (This is a storage with 0 or 1 elements.)
+     *
+     * @param ObjectStorage<FileReference> $images
+     */
+    public function setImage(ObjectStorage $images): void
+    {
+        $this->image = $images;
     }
 
     public function getLastlogin(): ?\DateTime
