@@ -8,6 +8,7 @@ use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
 use OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserGroupRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 /**
@@ -61,6 +62,21 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
     /**
      * @test
      */
+    public function initializesSubGroupsWithEmptyStorage(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+
+        $model = $this->subject->findByUid(1);
+        self::assertInstanceOf(FrontendUserGroup::class, $model);
+
+        $groups = $model->getSubgroup();
+        self::assertInstanceOf(ObjectStorage::class, $groups);
+        self::assertCount(0, $groups);
+    }
+
+    /**
+     * @test
+     */
     public function mapsSubgroupAssociation(): void
     {
         $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithTwoSubgroups.xml');
@@ -69,6 +85,7 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
         self::assertInstanceOf(FrontendUserGroup::class, $model);
 
         $groups = $model->getSubgroup();
+        self::assertInstanceOf(ObjectStorage::class, $groups);
         self::assertCount(2, $groups);
         $groupsAsArray = $groups->toArray();
         self::assertInstanceOf(FrontendUserGroup::class, $groupsAsArray[0]);
