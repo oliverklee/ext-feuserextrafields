@@ -38,6 +38,14 @@ class FrontendUserGroup extends AbstractEntity
         $this->subgroup = new ObjectStorage();
     }
 
+    /**
+     * Properly initializes all associations (as fetching an entity from the DB does not use the constructor).
+     */
+    public function initializeObject(): void
+    {
+        $this->subgroup = new ObjectStorage();
+    }
+
     public function getTitle(): string
     {
         return $this->title;
