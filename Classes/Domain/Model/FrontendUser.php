@@ -149,21 +149,21 @@ class FrontendUser extends AbstractEntity
      * Sets the user groups. Keep in mind that the property is called "usergroup"
      * although it can hold several user groups.
      *
-     * @param ObjectStorage<FrontendUserGroup> $usergroup
+     * @param ObjectStorage<FrontendUserGroup> $groups
      */
-    public function setUsergroup(ObjectStorage $usergroup): void
+    public function setUsergroup(ObjectStorage $groups): void
     {
-        $this->usergroup = $usergroup;
+        $this->usergroup = $groups;
     }
 
-    public function addUsergroup(FrontendUserGroup $usergroup): void
+    public function addUsergroup(FrontendUserGroup $group): void
     {
-        $this->usergroup->attach($usergroup);
+        $this->usergroup->attach($group);
     }
 
-    public function removeUsergroup(FrontendUserGroup $usergroup): void
+    public function removeUsergroup(FrontendUserGroup $group): void
     {
-        $this->usergroup->detach($usergroup);
+        $this->usergroup->detach($group);
     }
 
     public function getName(): string
