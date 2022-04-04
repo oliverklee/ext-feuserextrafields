@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+    <fe_users>
+        <uid>1</uid>
+        <image>1</image>
+    </fe_users>
+
+    <sys_file>
+        <uid>5</uid>
+        <storage>1</storage>
+        <type>0</type>
+        <!-- SHA1 hash of the path without the name, i.e., of "/" -->
+        <folder_hash>42099b4af021e53fd8fd4e056c2568d7c2e3ffa8</folder_hash>
+        <!-- path relative to fileadmin, but with leading slash -->
+        <identifier>/model.jpg</identifier>
+        <!-- SHA1 hash of the "identifier" field -->
+        <identifier_hash>7e53a1ace84baf4fb1708ba6aa29c85b2a9ec904</identifier_hash>
+        <name>model.jpg</name>
+        <extension>jpg</extension>
+        <mime_type>image/jpeg</mime_type>
+    </sys_file>
+
+    <sys_file_metadata>
+        <uid>1</uid>
+        <file>5</file>
+        <title>model image</title>
+        <l10n_diffsource/>
+    </sys_file_metadata>
+
+    <sys_file_reference>
+        <uid>1</uid>
+        <uid_local>5</uid_local>
+        <uid_foreign>1</uid_foreign>
+        <tablenames>fe_users</tablenames>
+        <fieldname>image</fieldname>
+    </sys_file_reference>
+</dataset>
