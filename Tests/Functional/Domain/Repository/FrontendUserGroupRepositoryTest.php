@@ -57,4 +57,21 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
         self::assertSame('www.example.com', $model->getLockToDomain());
         self::assertSame('We build websites!', $model->getDescription());
     }
+
+    /**
+     * @test
+     */
+    public function mapsSubgroupAssociation(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithTwoSubgroups.xml');
+
+        $model = $this->subject->findByUid(1);
+        self::assertInstanceOf(FrontendUserGroup::class, $model);
+
+        $groups = $model->getSubgroup();
+        self::assertCount(2, $groups);
+        $groupsAsArray = $groups->toArray();
+        self::assertInstanceOf(FrontendUserGroup::class, $groupsAsArray[0]);
+        self::assertInstanceOf(FrontendUserGroup::class, $groupsAsArray[1]);
+    }
 }

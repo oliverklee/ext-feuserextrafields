@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace OliverKlee\FeUserExtraFields\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
  * Model for a front-end user group.
@@ -26,9 +27,15 @@ class FrontendUserGroup extends AbstractEntity
      */
     protected $description = '';
 
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup>
+     */
+    protected $subgroup;
+
     public function __construct(string $title = '')
     {
         $this->setTitle($title);
+        $this->subgroup = new ObjectStorage();
     }
 
     public function getTitle(): string
@@ -59,5 +66,37 @@ class FrontendUserGroup extends AbstractEntity
     public function setDescription(string $description): void
     {
         $this->description = $description;
+    }
+
+    /**
+     * Returns the subgroups. Keep in mind that the property is called "subgroup"
+     * although it can hold several user groups.
+     *
+     * @return ObjectStorage<FrontendUserGroup>
+     */
+    public function getSubgroup(): ObjectStorage
+    {
+        return $this->subgroup;
+    }
+
+    /**
+     * Sets the subgroups. Keep in mind that the property is called "subgroup"
+     * although it can hold several user groups.
+     *
+     * @param ObjectStorage<FrontendUserGroup> $groups
+     */
+    public function setSubgroup(ObjectStorage $groups): void
+    {
+        $this->subgroup = $groups;
+    }
+
+    public function addSubgroup(FrontendUserGroup $group): void
+    {
+        $this->subgroup->attach($group);
+    }
+
+    public function removeSubgroup(FrontendUserGroup $group): void
+    {
+        $this->subgroup->detach($group);
     }
 }

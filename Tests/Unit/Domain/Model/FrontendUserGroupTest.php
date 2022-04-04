@@ -6,6 +6,7 @@ namespace OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Model;
 
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
 /**
@@ -95,6 +96,31 @@ final class FrontendUserGroupTest extends UnitTestCase
     /**
      * @test
      */
+    public function getSubgroupInitiallyReturnsEmptyStorage(): void
+    {
+        $result = $this->subject->getSubgroup();
+
+        self::assertInstanceOf(ObjectStorage::class, $result);
+        self::assertCount(0, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function setSubgroupSetsUserGroups(): void
+    {
+        /** @var ObjectStorage<FrontendUserGroup> $groups */
+        $groups = new ObjectStorage();
+        $groups->attach(new FrontendUserGroup('foo'));
+
+        $this->subject->setSubgroup($groups);
+
+        self::assertSame($groups, $this->subject->getSubgroup());
+    }
+
+    /**
+     * @test
+     */
     public function getDescriptionInitiallyReturnsEmptyString(): void
     {
         $result = $this->subject->getDescription();
@@ -112,5 +138,31 @@ final class FrontendUserGroupTest extends UnitTestCase
         $this->subject->setDescription($description);
 
         self::assertSame($description, $this->subject->getDescription());
+    }
+
+    /**
+     * @test
+     */
+    public function addSubgroupAddsUserGroup(): void
+    {
+        $group = new FrontendUserGroup('foo');
+
+        $this->subject->addSubgroup($group);
+
+        self::assertTrue($this->subject->getSubgroup()->contains($group));
+    }
+
+    /**
+     * @test
+     */
+    public function removeSubgroupRemovesUserGroup(): void
+    {
+        $group = new FrontendUserGroup('foo');
+        $this->subject->addSubgroup($group);
+        self::assertTrue($this->subject->getSubgroup()->contains($group));
+
+        $this->subject->removeSubgroup($group);
+
+        self::assertFalse($this->subject->getSubgroup()->contains($group));
     }
 }

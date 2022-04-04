@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+    <fe_groups>
+        <uid>1</uid>
+        <subgroup>2,3</subgroup>
+    </fe_groups>
+    <fe_groups>
+        <uid>2</uid>
+    </fe_groups>
+    <fe_groups>
+        <uid>3</uid>
+    </fe_groups>
+</dataset>
