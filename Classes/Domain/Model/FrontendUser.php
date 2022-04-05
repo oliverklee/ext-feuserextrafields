@@ -14,6 +14,68 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 class FrontendUser extends AbstractEntity
 {
     /**
+     * @var int
+     */
+    public const GENDER_MALE = 0;
+
+    /**
+     * @var int
+     */
+    public const GENDER_FEMALE = 1;
+
+    /**
+     * @var int
+     */
+    public const GENDER_NOT_PROVIDED = 99;
+
+    /**
+     * @var array<int, int<0, max>>
+     */
+    protected const VALID_GENDERS = [self::GENDER_MALE, self::GENDER_FEMALE, self::GENDER_NOT_PROVIDED];
+
+    /**
+     * @var int
+     */
+    public const STATUS_NONE = 0;
+
+    /**
+     * @var int
+     */
+    public const STATUS_STUDENT = 1;
+
+    /**
+     * @var int
+     */
+    public const STATUS_JOB_SEEKING_FULL_TIME = 2;
+
+    /**
+     * @var int
+     */
+    public const STATUS_WORKING = 3;
+
+    /**
+     * @var int
+     */
+    public const STATUS_RETIRED = 4;
+
+    /**
+     * @var int
+     */
+    public const STATUS_JOB_SEEKING_PART_TIME = 5;
+
+    /**
+     * @var array<int, int<0, max>>
+     */
+    protected const VALID_STATUSES = [
+        self::STATUS_NONE,
+        self::STATUS_STUDENT,
+        self::STATUS_JOB_SEEKING_FULL_TIME,
+        self::STATUS_WORKING,
+        self::STATUS_RETIRED,
+        self::STATUS_JOB_SEEKING_PART_TIME,
+    ];
+
+    /**
      * @var string
      */
     protected $username = '';
@@ -112,6 +174,31 @@ class FrontendUser extends AbstractEntity
      * @var \DateTime|null
      */
     protected $lastlogin;
+
+    /**
+     * @var int
+     */
+    protected $gender = self::GENDER_NOT_PROVIDED;
+
+    /**
+     * @var string
+     */
+    protected $zone = '';
+
+    /**
+     * @var \DateTime|null
+     */
+    protected $dateOfBirth;
+
+    /**
+     * @var int
+     */
+    protected $status = self::STATUS_NONE;
+
+    /**
+     * @var string
+     */
+    protected $comments = '';
 
     public function __construct(string $username = '', string $password = '')
     {
@@ -360,5 +447,65 @@ class FrontendUser extends AbstractEntity
     public function setLastlogin(\DateTime $lastlogin): void
     {
         $this->lastlogin = $lastlogin;
+    }
+
+    public function getZone(): string
+    {
+        return $this->zone;
+    }
+
+    public function setZone(string $zone): void
+    {
+        $this->zone = $zone;
+    }
+
+    public static function isValidGender(int $gender): bool
+    {
+        return \in_array($gender, self::VALID_GENDERS, true);
+    }
+
+    public function getGender(): int
+    {
+        return $this->gender;
+    }
+
+    public function setGender(int $gender): void
+    {
+        $this->gender = $gender;
+    }
+
+    public function getDateOfBirth(): ?\DateTime
+    {
+        return $this->dateOfBirth;
+    }
+
+    public function setDateOfBirth(?\DateTime $dateOfBirth): void
+    {
+        $this->dateOfBirth = $dateOfBirth;
+    }
+
+    public static function isValidStatus(int $gender): bool
+    {
+        return \in_array($gender, self::VALID_STATUSES, true);
+    }
+
+    public function getStatus(): int
+    {
+        return $this->status;
+    }
+
+    public function setStatus(int $status): void
+    {
+        $this->status = $status;
+    }
+
+    public function getComments(): string
+    {
+        return $this->comments;
+    }
+
+    public function setComments(string $comments): void
+    {
+        $this->comments = $comments;
     }
 }

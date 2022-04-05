@@ -508,4 +508,210 @@ final class FrontendUserTest extends UnitTestCase
 
         self::assertSame($date, $this->subject->getLastlogin());
     }
+
+    /**
+     * @return array<string, array<int, int<0, max>>>
+     */
+    public function validGenderDataProvider(): array
+    {
+        return [
+            'male' => [FrontendUser::GENDER_MALE],
+            'female' => [FrontendUser::GENDER_FEMALE],
+            'unknown' => [FrontendUser::GENDER_NOT_PROVIDED],
+        ];
+    }
+
+    /**
+     * @test
+     *
+     * @param int<0, max> $gender
+     *
+     * @dataProvider validGenderDataProvider
+     */
+    public function allGenderConstantsAreValid(int $gender): void
+    {
+        self::assertTrue(FrontendUser::isValidGender($gender));
+    }
+
+    /**
+     * @return array<string, array<int, int>>
+     */
+    public function invalidGenderDataProvider(): array
+    {
+        return [
+            'negative' => [-1],
+            'too large' => [100],
+            'unassigned in the middle' => [50],
+        ];
+    }
+
+    /**
+     * @test
+     *
+     * @dataProvider invalidGenderDataProvider
+     */
+    public function invalidGenderValuesAreInvalid(int $gender): void
+    {
+        self::assertFalse(FrontendUser::isValidGender($gender));
+    }
+
+    /**
+     * @test
+     */
+    public function getGenderInitiallyReturnsNotProvided(): void
+    {
+        self::assertSame(FrontendUser::GENDER_NOT_PROVIDED, $this->subject->getGender());
+    }
+
+    /**
+     * @test
+     */
+    public function setGenderSetsGender(): void
+    {
+        $value = FrontendUser::GENDER_FEMALE;
+
+        $this->subject->setGender($value);
+
+        self::assertSame($value, $this->subject->getGender());
+    }
+
+    /**
+     * @test
+     */
+    public function getZoneInitiallyReturnsEmptyString(): void
+    {
+        self::assertSame('', $this->subject->getZone());
+    }
+
+    /**
+     * @test
+     */
+    public function setZoneSetsZone(): void
+    {
+        $value = 'Club-Mate';
+
+        $this->subject->setZone($value);
+
+        self::assertSame($value, $this->subject->getZone());
+    }
+
+    /**
+     * @test
+     */
+    public function getDateOfBirthInitiallyReturnsNull(): void
+    {
+        $result = $this->subject->getDateOfBirth();
+
+        self::assertNull($result);
+    }
+
+    /**
+     * @test
+     */
+    public function setDateOfBirthSetsDateOfBirth(): void
+    {
+        $date = new \DateTime();
+
+        $this->subject->setDateOfBirth($date);
+
+        self::assertSame($date, $this->subject->getDateOfBirth());
+    }
+
+    /**
+     * @test
+     */
+    public function setDateOfBirthCanSetDateOfBirthToNull(): void
+    {
+        $this->subject->setDateOfBirth(null);
+
+        self::assertNull($this->subject->getDateOfBirth());
+    }
+
+    /**
+     * @return array<string, array<int, int<0, max>>>
+     */
+    public function validStatusDataProvider(): array
+    {
+        return [
+            'unknown' => [FrontendUser::STATUS_NONE],
+            'student' => [FrontendUser::STATUS_STUDENT],
+            'job seeking (full time)' => [FrontendUser::STATUS_JOB_SEEKING_FULL_TIME],
+            'working' => [FrontendUser::STATUS_WORKING],
+            'retired' => [FrontendUser::STATUS_RETIRED],
+            'job seeking (part time)' => [FrontendUser::STATUS_JOB_SEEKING_PART_TIME],
+        ];
+    }
+
+    /**
+     * @test
+     *
+     * @param int<0, max> $status
+     *
+     * @dataProvider validStatusDataProvider
+     */
+    public function allStatusConstantsAreValid(int $status): void
+    {
+        self::assertTrue(FrontendUser::isValidStatus($status));
+    }
+
+    /**
+     * @return array<string, array<int, int>>
+     */
+    public function invalidStatusDataProvider(): array
+    {
+        return [
+            'negative' => [-1],
+            'too large' => [6],
+        ];
+    }
+
+    /**
+     * @test
+     *
+     * @dataProvider invalidStatusDataProvider
+     */
+    public function invalidStatusValuesAreInvalid(int $gender): void
+    {
+        self::assertFalse(FrontendUser::isValidStatus($gender));
+    }
+
+    /**
+     * @test
+     */
+    public function getStatusInitiallyReturnsNone(): void
+    {
+        self::assertSame(FrontendUser::STATUS_NONE, $this->subject->getStatus());
+    }
+
+    /**
+     * @test
+     */
+    public function setStatusSetsStatus(): void
+    {
+        $value = FrontendUser::STATUS_RETIRED;
+
+        $this->subject->setStatus($value);
+
+        self::assertSame($value, $this->subject->getStatus());
+    }
+
+    /**
+     * @test
+     */
+    public function getCommentsInitiallyReturnsEmptyString(): void
+    {
+        self::assertSame('', $this->subject->getComments());
+    }
+
+    /**
+     * @test
+     */
+    public function setCommentsSetsComments(): void
+    {
+        $value = 'Club-Mate';
+
+        $this->subject->setComments($value);
+
+        self::assertSame($value, $this->subject->getComments());
+    }
 }
