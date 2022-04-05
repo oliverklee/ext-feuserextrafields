@@ -85,9 +85,9 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
-    public function getUsergroupInitiallyReturnsEmptyStorage(): void
+    public function getUserGroupInitiallyReturnsEmptyStorage(): void
     {
-        $result = $this->subject->getUsergroup();
+        $result = $this->subject->getUserGroup();
 
         self::assertInstanceOf(ObjectStorage::class, $result);
         self::assertCount(0, $result);
@@ -96,41 +96,41 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
-    public function setUsergroupSetsUserGroups(): void
+    public function setUserGroupSetsUserGroups(): void
     {
         /** @var ObjectStorage<FrontendUserGroup> $groups */
         $groups = new ObjectStorage();
         $groups->attach(new FrontendUserGroup('foo'));
 
-        $this->subject->setUsergroup($groups);
+        $this->subject->setUserGroup($groups);
 
-        self::assertSame($groups, $this->subject->getUsergroup());
+        self::assertSame($groups, $this->subject->getUserGroup());
     }
 
     /**
      * @test
      */
-    public function addUsergroupAddsUserGroup(): void
+    public function addUserGroupAddsUserGroup(): void
     {
         $group = new FrontendUserGroup('foo');
 
-        $this->subject->addUsergroup($group);
+        $this->subject->addUserGroup($group);
 
-        self::assertTrue($this->subject->getUsergroup()->contains($group));
+        self::assertTrue($this->subject->getUserGroup()->contains($group));
     }
 
     /**
      * @test
      */
-    public function removeUsergroupRemovesUserGroup(): void
+    public function removeUserGroupRemovesUserGroup(): void
     {
         $group = new FrontendUserGroup('foo');
-        $this->subject->addUsergroup($group);
-        self::assertTrue($this->subject->getUsergroup()->contains($group));
+        $this->subject->addUserGroup($group);
+        self::assertTrue($this->subject->getUserGroup()->contains($group));
 
-        $this->subject->removeUsergroup($group);
+        $this->subject->removeUserGroup($group);
 
-        self::assertFalse($this->subject->getUsergroup()->contains($group));
+        self::assertFalse($this->subject->getUserGroup()->contains($group));
     }
 
     /**
@@ -490,9 +490,9 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
-    public function getLastloginInitiallyReturnsNull(): void
+    public function getLastLoginInitiallyReturnsNull(): void
     {
-        $result = $this->subject->getLastlogin();
+        $result = $this->subject->getLastLogin();
 
         self::assertNull($result);
     }
@@ -500,13 +500,13 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
-    public function setLastloginSetsLastlogin(): void
+    public function setLastLoginSetsLastLogin(): void
     {
         $date = new \DateTime();
 
-        $this->subject->setLastlogin($date);
+        $this->subject->setLastLogin($date);
 
-        self::assertSame($date, $this->subject->getLastlogin());
+        self::assertSame($date, $this->subject->getLastLogin());
     }
 
     /**

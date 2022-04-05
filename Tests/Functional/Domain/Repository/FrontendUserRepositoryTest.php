@@ -73,7 +73,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         self::assertSame('United States of CAT', $model->getCountry());
         self::assertSame('www.example.com', $model->getWww());
         self::assertSame('Cat Scans Inc.', $model->getCompany());
-        self::assertEquals(new \DateTime('2022-04-02T18:00'), $model->getLastlogin());
+        self::assertEquals(new \DateTime('2022-04-02T18:00'), $model->getLastLogin());
         self::assertSame('NRW', $model->getZone());
         self::assertSame(FrontendUser::GENDER_FEMALE, $model->getGender());
         self::assertEquals(new \DateTime('2022-04-02T00:00'), $model->getDateOfBirth());
@@ -91,7 +91,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         $model = $this->subject->findByUid(1);
         self::assertInstanceOf(FrontendUser::class, $model);
 
-        $groups = $model->getUsergroup();
+        $groups = $model->getUserGroup();
         self::assertInstanceOf(ObjectStorage::class, $groups);
         self::assertCount(0, $groups);
     }
@@ -106,7 +106,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         $model = $this->subject->findByUid(1);
         self::assertInstanceOf(FrontendUser::class, $model);
 
-        $groups = $model->getUsergroup();
+        $groups = $model->getUserGroup();
         self::assertInstanceOf(ObjectStorage::class, $groups);
         self::assertCount(2, $groups);
         $groupsAsArray = $groups->toArray();

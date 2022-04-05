@@ -88,7 +88,7 @@ class FrontendUser extends AbstractEntity
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup>
      */
-    protected $usergroup;
+    protected $userGroup;
 
     /**
      * @var string
@@ -173,7 +173,7 @@ class FrontendUser extends AbstractEntity
     /**
      * @var \DateTime|null
      */
-    protected $lastlogin;
+    protected $lastLogin;
 
     /**
      * @var int
@@ -204,7 +204,7 @@ class FrontendUser extends AbstractEntity
     {
         $this->username = $username;
         $this->password = $password;
-        $this->usergroup = new ObjectStorage();
+        $this->userGroup = new ObjectStorage();
         $this->image = new ObjectStorage();
     }
 
@@ -213,7 +213,7 @@ class FrontendUser extends AbstractEntity
      */
     public function initializeObject(): void
     {
-        $this->usergroup = new ObjectStorage();
+        $this->userGroup = new ObjectStorage();
         $this->image = new ObjectStorage();
     }
 
@@ -243,9 +243,9 @@ class FrontendUser extends AbstractEntity
      *
      * @return ObjectStorage<FrontendUserGroup>
      */
-    public function getUsergroup(): ObjectStorage
+    public function getUserGroup(): ObjectStorage
     {
-        return $this->usergroup;
+        return $this->userGroup;
     }
 
     /**
@@ -254,19 +254,19 @@ class FrontendUser extends AbstractEntity
      *
      * @param ObjectStorage<FrontendUserGroup> $groups
      */
-    public function setUsergroup(ObjectStorage $groups): void
+    public function setUserGroup(ObjectStorage $groups): void
     {
-        $this->usergroup = $groups;
+        $this->userGroup = $groups;
     }
 
-    public function addUsergroup(FrontendUserGroup $group): void
+    public function addUserGroup(FrontendUserGroup $group): void
     {
-        $this->usergroup->attach($group);
+        $this->userGroup->attach($group);
     }
 
-    public function removeUsergroup(FrontendUserGroup $group): void
+    public function removeUserGroup(FrontendUserGroup $group): void
     {
-        $this->usergroup->detach($group);
+        $this->userGroup->detach($group);
     }
 
     public function getName(): string
@@ -439,14 +439,14 @@ class FrontendUser extends AbstractEntity
         $this->image = $images;
     }
 
-    public function getLastlogin(): ?\DateTime
+    public function getLastLogin(): ?\DateTime
     {
-        return $this->lastlogin;
+        return $this->lastLogin;
     }
 
-    public function setLastlogin(\DateTime $lastlogin): void
+    public function setLastLogin(\DateTime $lastLogin): void
     {
-        $this->lastlogin = $lastlogin;
+        $this->lastLogin = $lastLogin;
     }
 
     public function getZone(): string
