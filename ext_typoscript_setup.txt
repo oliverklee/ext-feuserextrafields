@@ -4,7 +4,9 @@ config.tx_extbase.persistence.classes {
         mapping {
             tableName = fe_users
             columns {
+                usergroup.mapOnProperty = userGroup
                 lockToDomain.mapOnProperty = lockToDomain
+                lastlogin.mapOnProperty = lastLogin
             }
         }
     }
