@@ -9,4 +9,8 @@ Fields added to the FE users table
 In addition to the existing FE user fields, this extension adds the following
 fields to the FE users table:
 
-(TBD)
+*  :php:`gender` (with the mappings from `sr_feuser_register`)
+*  :php:`date_of_birth`
+*  :php:`zone` (state/province)
+*  :php:`status` (job status)
+*  :php:`comments`
