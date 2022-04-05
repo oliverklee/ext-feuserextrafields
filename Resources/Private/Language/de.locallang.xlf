@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages">
+		<header/>
+		<body>
+			<trans-unit id="gender">
+				<source>Gender</source>
+				<target>Geschlecht</target>
+			</trans-unit>
+			<trans-unit id="gender.99">
+				<source>(none provided)</source>
+				<target>(nicht angegeben)</target>
+			</trans-unit>
+			<trans-unit id="gender.0">
+				<source>Mr.</source>
+				<target>Herr</target>
+			</trans-unit>
+			<trans-unit id="gender.1">
+				<source>Mrs.</source>
+				<target>Frau</target>
+			</trans-unit>
+			<trans-unit id="dateOfBirth">
+				<source>Birth date</source>
+				<target>Geburtsdatum</target>
+			</trans-unit>
+			<trans-unit id="zone">
+				<source>State/province</source>
+				<target>Bundesland</target>
+			</trans-unit>
+			<trans-unit id="status">
+				<source>Job status</source>
+				<target>Beschäftigungsstatus</target>
+			</trans-unit>
+			<trans-unit id="status.1">
+				<source>Student</source>
+				<target>in Ausbildung</target>
+			</trans-unit>
+			<trans-unit id="status.2">
+				<source>Job seeking (full time)</source>
+				<target>auf Arbeitssuche (Vollzeit)</target>
+			</trans-unit>
+			<trans-unit id="status.3">
+				<source>Working</source>
+				<target>arbeitend</target>
+			</trans-unit>
+			<trans-unit id="status.4">
+				<source>Retired</source>
+				<target>in Rente</target>
+			</trans-unit>
+			<trans-unit id="status.5">
+				<source>Job seeking (part time)</source>
+				<target>auf Arbeitssuche (Teilzeit)</target>
+			</trans-unit>
+			<trans-unit id="comments">
+				<source>Comments</source>
+				<target>Anmerkungen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
