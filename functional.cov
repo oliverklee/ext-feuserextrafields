@@ -1,1 +1,399 @@
 <?php
+$coverage = new SebastianBergmann\CodeCoverage\CodeCoverage;
+$coverage->setData(array (
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUserGroup.php' => 
+  array (
+    37 => 
+    array (
+    ),
+    38 => 
+    array (
+    ),
+    39 => 
+    array (
+    ),
+    46 => 
+    array (
+    ),
+    47 => 
+    array (
+    ),
+    51 => 
+    array (
+    ),
+    52 => NULL,
+    56 => 
+    array (
+    ),
+    57 => 
+    array (
+    ),
+    61 => 
+    array (
+    ),
+    62 => NULL,
+    66 => 
+    array (
+    ),
+    67 => 
+    array (
+    ),
+    71 => 
+    array (
+    ),
+    72 => NULL,
+    76 => 
+    array (
+    ),
+    77 => 
+    array (
+    ),
+    87 => 
+    array (
+    ),
+    88 => NULL,
+    98 => 
+    array (
+    ),
+    99 => 
+    array (
+    ),
+    103 => 
+    array (
+    ),
+    104 => 
+    array (
+    ),
+    108 => 
+    array (
+    ),
+    109 => 
+    array (
+    ),
+  ),
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserGroupRepository.php' => 
+  array (
+  ),
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUser.php' => 
+  array (
+    205 => 
+    array (
+    ),
+    206 => 
+    array (
+    ),
+    207 => 
+    array (
+    ),
+    208 => 
+    array (
+    ),
+    209 => 
+    array (
+    ),
+    216 => 
+    array (
+    ),
+    217 => 
+    array (
+    ),
+    218 => 
+    array (
+    ),
+    222 => 
+    array (
+    ),
+    223 => NULL,
+    227 => 
+    array (
+    ),
+    228 => 
+    array (
+    ),
+    232 => 
+    array (
+    ),
+    233 => NULL,
+    237 => 
+    array (
+    ),
+    238 => 
+    array (
+    ),
+    248 => 
+    array (
+    ),
+    249 => NULL,
+    259 => 
+    array (
+    ),
+    260 => 
+    array (
+    ),
+    264 => 
+    array (
+    ),
+    265 => 
+    array (
+    ),
+    269 => 
+    array (
+    ),
+    270 => 
+    array (
+    ),
+    274 => 
+    array (
+    ),
+    275 => NULL,
+    279 => 
+    array (
+    ),
+    280 => 
+    array (
+    ),
+    284 => 
+    array (
+    ),
+    285 => NULL,
+    289 => 
+    array (
+    ),
+    290 => 
+    array (
+    ),
+    294 => 
+    array (
+    ),
+    295 => NULL,
+    299 => 
+    array (
+    ),
+    300 => 
+    array (
+    ),
+    304 => 
+    array (
+    ),
+    305 => NULL,
+    309 => 
+    array (
+    ),
+    310 => 
+    array (
+    ),
+    314 => 
+    array (
+    ),
+    315 => NULL,
+    319 => 
+    array (
+    ),
+    320 => 
+    array (
+    ),
+    324 => 
+    array (
+    ),
+    325 => NULL,
+    329 => 
+    array (
+    ),
+    330 => 
+    array (
+    ),
+    334 => 
+    array (
+    ),
+    335 => NULL,
+    339 => 
+    array (
+    ),
+    340 => 
+    array (
+    ),
+    344 => 
+    array (
+    ),
+    345 => NULL,
+    349 => 
+    array (
+    ),
+    350 => 
+    array (
+    ),
+    354 => 
+    array (
+    ),
+    355 => NULL,
+    359 => 
+    array (
+    ),
+    360 => 
+    array (
+    ),
+    364 => 
+    array (
+    ),
+    365 => NULL,
+    369 => 
+    array (
+    ),
+    370 => 
+    array (
+    ),
+    374 => 
+    array (
+    ),
+    375 => NULL,
+    379 => 
+    array (
+    ),
+    380 => 
+    array (
+    ),
+    384 => 
+    array (
+    ),
+    385 => NULL,
+    389 => 
+    array (
+    ),
+    390 => 
+    array (
+    ),
+    394 => 
+    array (
+    ),
+    395 => NULL,
+    399 => 
+    array (
+    ),
+    400 => 
+    array (
+    ),
+    404 => 
+    array (
+    ),
+    405 => NULL,
+    409 => 
+    array (
+    ),
+    410 => 
+    array (
+    ),
+    414 => 
+    array (
+    ),
+    415 => NULL,
+    419 => 
+    array (
+    ),
+    420 => 
+    array (
+    ),
+    429 => 
+    array (
+    ),
+    430 => NULL,
+    439 => 
+    array (
+    ),
+    440 => 
+    array (
+    ),
+    444 => 
+    array (
+    ),
+    445 => NULL,
+    449 => 
+    array (
+    ),
+    450 => 
+    array (
+    ),
+    454 => 
+    array (
+    ),
+    455 => NULL,
+    459 => 
+    array (
+    ),
+    460 => 
+    array (
+    ),
+    464 => 
+    array (
+    ),
+    465 => NULL,
+    469 => 
+    array (
+    ),
+    470 => NULL,
+    474 => 
+    array (
+    ),
+    475 => 
+    array (
+    ),
+    479 => 
+    array (
+    ),
+    480 => NULL,
+    484 => 
+    array (
+    ),
+    485 => 
+    array (
+    ),
+    489 => 
+    array (
+    ),
+    490 => NULL,
+    494 => 
+    array (
+    ),
+    495 => NULL,
+    499 => 
+    array (
+    ),
+    500 => 
+    array (
+    ),
+    504 => 
+    array (
+    ),
+    505 => NULL,
+    509 => 
+    array (
+    ),
+    510 => 
+    array (
+    ),
+  ),
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserRepository.php' => 
+  array (
+  ),
+));
+$coverage->setTests(array (
+  'OliverKlee\\FeUserExtraFields\\Tests\\Functional\\Domain\\Repository\\FrontendUserGroupRepositoryTest::findAllForNoRecordsReturnsEmptyContainer' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'OliverKlee\\FeUserExtraFields\\Tests\\Functional\\Domain\\Repository\\FrontendUserRepositoryTest::findAllForNoRecordsReturnsEmptyContainer' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+));
+
+$filter = $coverage->filter();
+$filter->setWhitelistedFiles(array (
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUser.php' => true,
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUserGroup.php' => true,
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserGroupRepository.php' => true,
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserRepository.php' => true,
+));
+
+return $coverage;
