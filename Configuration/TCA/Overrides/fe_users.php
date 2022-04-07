@@ -11,7 +11,7 @@ call_user_func(static function (): void {
             'label' => $languageFile . 'full_salutation',
             'config' => [
                 'type' => 'input',
-                'size' => '15',
+                'size' => '20',
                 'max' => '255',
                 'eval' => '',
                 'default' => '',
