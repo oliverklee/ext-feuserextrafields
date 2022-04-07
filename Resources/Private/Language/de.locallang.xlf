@@ -27,6 +27,10 @@
 				<source>State/province</source>
 				<target>Bundesland</target>
 			</trans-unit>
+			<trans-unit id="privacy">
+				<source>Privacy agreement</source>
+				<target>Datenschutzerklärung</target>
+			</trans-unit>
 			<trans-unit id="status">
 				<source>Job status</source>
 				<target>Beschäftigungsstatus</target>

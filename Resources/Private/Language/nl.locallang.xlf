@@ -23,6 +23,10 @@
 				<source>State/province</source>
 				<target>Provincie</target>
 			</trans-unit>
+			<trans-unit id="privacy">
+				<source>Privacy agreement</source>
+				<target>Privacy overeenkomst</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

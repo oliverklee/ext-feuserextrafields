@@ -48,6 +48,13 @@ call_user_func(static function (): void {
                 'default' => '',
             ],
         ],
+        'privacy' => [
+            'exclude' => true,
+            'label' => $languageFile . 'privacy',
+            'config' => [
+                'type' => 'check',
+            ],
+        ],
         'status' => [
             'label' => $languageFile . 'status',
             'config' => [
@@ -110,6 +117,6 @@ call_user_func(static function (): void {
     );
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
-        'comments'
+        'privacy, comments'
     );
 });
