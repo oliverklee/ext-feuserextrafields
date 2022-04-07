@@ -11,7 +11,7 @@ use TYPO3\CMS\Extbase\Persistence\RepositoryInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
 /**
- * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepositoryWithCountry
+ * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserWithCountryRepository
  */
 final class FrontendUserWithCountryRepositoryTest extends UnitTestCase
 {
