@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 ### Changed
+- Switch the code coverage collection to Coveralls (#53)
 
 ### Deprecated
 
