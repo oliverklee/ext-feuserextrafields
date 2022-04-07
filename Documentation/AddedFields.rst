@@ -9,6 +9,8 @@ Fields added to the FE users table
 In addition to the existing FE user fields, this extension adds the following
 fields to the FE users table:
 
+*  :php:`full salutation`, e.g., "Hello Mr. Klee" (to work around the futile
+   problem of trying to automatically generate gender-specific salutations)
 *  :php:`gender` (with the mappings from `sr_feuser_register`)
 *  :php:`date_of_birth`
 *  :php:`zone` (state/province)

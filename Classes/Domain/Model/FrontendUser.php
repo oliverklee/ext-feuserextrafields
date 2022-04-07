@@ -176,6 +176,13 @@ class FrontendUser extends AbstractEntity
     protected $lastLogin;
 
     /**
+     * salutation (possibly including a name), e.g., "Hello" or "Good day, Mr. Smith"
+     *
+     * @var string
+     */
+    protected $fullSalutation = '';
+
+    /**
      * @var int
      */
     protected $gender = self::GENDER_NOT_PROVIDED;
@@ -474,6 +481,16 @@ class FrontendUser extends AbstractEntity
     public function setPrivacy(bool $privacy): void
     {
         $this->privacy = $privacy;
+    }
+
+    public function getFullSalutation(): string
+    {
+        return $this->fullSalutation;
+    }
+
+    public function setFullSalutation(string $fullSalutation): void
+    {
+        $this->fullSalutation = $fullSalutation;
     }
 
     public static function isValidGender(int $gender): bool

@@ -6,6 +6,17 @@ call_user_func(static function (): void {
     $languageFile = 'LLL:EXT:feuserextrafields/Resources/Private/Language/locallang.xlf:';
 
     $temporaryColumns = [
+        'full_salutation' => [
+            'exclude' => 0,
+            'label' => $languageFile . 'full_salutation',
+            'config' => [
+                'type' => 'input',
+                'size' => '15',
+                'max' => '255',
+                'eval' => '',
+                'default' => '',
+            ],
+        ],
         'gender' => [
             'label' => $languageFile . 'gender',
             'config' => [
@@ -102,7 +113,12 @@ call_user_func(static function (): void {
     ];
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('fe_users', $temporaryColumns);
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'gender', '', 'before:name');
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+        'fe_users',
+        'full_salutation, gender',
+        '',
+        'before:name'
+    );
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
         'date_of_birth, status',

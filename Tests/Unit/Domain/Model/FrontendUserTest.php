@@ -558,6 +558,26 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
+    public function getFullSalutationInitiallyReturnsEmptyString(): void
+    {
+        self::assertSame('', $this->subject->getFullSalutation());
+    }
+
+    /**
+     * @test
+     */
+    public function setFullSalutationSetsFullSalutation(): void
+    {
+        $value = 'Bonjour, my friend!';
+
+        $this->subject->setFullSalutation($value);
+
+        self::assertSame($value, $this->subject->getFullSalutation());
+    }
+
+    /**
+     * @test
+     */
     public function getGenderInitiallyReturnsNotProvided(): void
     {
         self::assertSame(FrontendUser::GENDER_NOT_PROVIDED, $this->subject->getGender());

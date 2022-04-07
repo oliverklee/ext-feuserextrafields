@@ -3,6 +3,10 @@
 	<file source-language="en" target-language="de" datatype="plaintext" original="messages">
 		<header/>
 		<body>
+			<trans-unit id="full_salutation">
+				<source>Full salutation (possibly with name)</source>
+				<target>Vollständige Anrede (evtl. mit Name)</target>
+			</trans-unit>
 			<trans-unit id="gender">
 				<source>Gender</source>
 				<target>Geschlecht</target>
