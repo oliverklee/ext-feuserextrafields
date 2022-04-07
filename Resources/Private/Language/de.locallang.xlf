@@ -27,6 +27,9 @@
 				<source>State/province</source>
 				<target>Bundesland</target>
 			</trans-unit>
+			<trans-unit id="static_info_country">
+				<source>Ländercode nach ISO 3166-1 A3</source>
+			</trans-unit>
 			<trans-unit id="privacy">
 				<source>Privacy agreement</source>
 				<target>Datenschutzerklärung</target>
