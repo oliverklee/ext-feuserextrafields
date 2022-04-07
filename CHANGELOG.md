@@ -17,6 +17,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Drop support for TYPO3 V9 (#49)
 
 ### Fixed
+- Make sure the necessary directories get created when running the tests (#56)
 
 ## 3.0.0
 
