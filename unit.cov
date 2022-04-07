@@ -156,7 +156,7 @@ $coverage->setData(array (
   ),
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUser.php' => 
   array (
-    205 => 
+    212 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isAbstractEntity',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getUsernameInitiallyReturnsEmptyString',
@@ -211,23 +211,25 @@ $coverage->setData(array (
       50 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setGenderSetsGender',
       51 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getZoneInitiallyReturnsEmptyString',
       52 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZoneSetsZone',
-      53 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getDateOfBirthInitiallyReturnsNull',
-      54 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
-      55 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
-      56 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "unknown"',
-      57 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "student"',
-      58 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (full time)"',
-      59 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "working"',
-      60 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "retired"',
-      61 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (part time)"',
-      62 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "negative"',
-      63 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "too large"',
-      64 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getStatusInitiallyReturnsNone',
-      65 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
-      66 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCommentsInitiallyReturnsEmptyString',
-      67 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
+      53 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isPrivacyInitiallyReturnsFalse',
+      54 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPrivacySetsPrivacy',
+      55 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getDateOfBirthInitiallyReturnsNull',
+      56 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
+      57 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
+      58 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "unknown"',
+      59 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "student"',
+      60 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (full time)"',
+      61 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "working"',
+      62 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "retired"',
+      63 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (part time)"',
+      64 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "negative"',
+      65 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "too large"',
+      66 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getStatusInitiallyReturnsNone',
+      67 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
+      68 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCommentsInitiallyReturnsEmptyString',
+      69 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
     ),
-    206 => 
+    213 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isAbstractEntity',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getUsernameInitiallyReturnsEmptyString',
@@ -282,23 +284,25 @@ $coverage->setData(array (
       50 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setGenderSetsGender',
       51 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getZoneInitiallyReturnsEmptyString',
       52 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZoneSetsZone',
-      53 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getDateOfBirthInitiallyReturnsNull',
-      54 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
-      55 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
-      56 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "unknown"',
-      57 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "student"',
-      58 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (full time)"',
-      59 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "working"',
-      60 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "retired"',
-      61 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (part time)"',
-      62 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "negative"',
-      63 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "too large"',
-      64 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getStatusInitiallyReturnsNone',
-      65 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
-      66 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCommentsInitiallyReturnsEmptyString',
-      67 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
+      53 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isPrivacyInitiallyReturnsFalse',
+      54 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPrivacySetsPrivacy',
+      55 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getDateOfBirthInitiallyReturnsNull',
+      56 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
+      57 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
+      58 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "unknown"',
+      59 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "student"',
+      60 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (full time)"',
+      61 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "working"',
+      62 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "retired"',
+      63 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (part time)"',
+      64 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "negative"',
+      65 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "too large"',
+      66 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getStatusInitiallyReturnsNone',
+      67 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
+      68 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCommentsInitiallyReturnsEmptyString',
+      69 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
     ),
-    207 => 
+    214 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isAbstractEntity',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getUsernameInitiallyReturnsEmptyString',
@@ -353,23 +357,25 @@ $coverage->setData(array (
       50 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setGenderSetsGender',
       51 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getZoneInitiallyReturnsEmptyString',
       52 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZoneSetsZone',
-      53 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getDateOfBirthInitiallyReturnsNull',
-      54 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
-      55 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
-      56 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "unknown"',
-      57 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "student"',
-      58 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (full time)"',
-      59 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "working"',
-      60 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "retired"',
-      61 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (part time)"',
-      62 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "negative"',
-      63 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "too large"',
-      64 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getStatusInitiallyReturnsNone',
-      65 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
-      66 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCommentsInitiallyReturnsEmptyString',
-      67 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
+      53 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isPrivacyInitiallyReturnsFalse',
+      54 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPrivacySetsPrivacy',
+      55 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getDateOfBirthInitiallyReturnsNull',
+      56 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
+      57 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
+      58 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "unknown"',
+      59 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "student"',
+      60 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (full time)"',
+      61 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "working"',
+      62 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "retired"',
+      63 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (part time)"',
+      64 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "negative"',
+      65 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "too large"',
+      66 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getStatusInitiallyReturnsNone',
+      67 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
+      68 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCommentsInitiallyReturnsEmptyString',
+      69 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
     ),
-    208 => 
+    215 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isAbstractEntity',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getUsernameInitiallyReturnsEmptyString',
@@ -424,417 +430,435 @@ $coverage->setData(array (
       50 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setGenderSetsGender',
       51 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getZoneInitiallyReturnsEmptyString',
       52 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZoneSetsZone',
-      53 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getDateOfBirthInitiallyReturnsNull',
-      54 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
-      55 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
-      56 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "unknown"',
-      57 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "student"',
-      58 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (full time)"',
-      59 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "working"',
-      60 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "retired"',
-      61 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (part time)"',
-      62 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "negative"',
-      63 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "too large"',
-      64 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getStatusInitiallyReturnsNone',
-      65 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
-      66 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCommentsInitiallyReturnsEmptyString',
-      67 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
-    ),
-    209 => 
-    array (
-      0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isAbstractEntity',
-      1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getUsernameInitiallyReturnsEmptyString',
-      2 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setUsernameSetsUsername',
-      3 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getPasswordInitiallyReturnsEmptyString',
-      4 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPasswordSetsPassword',
-      5 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getUserGroupInitiallyReturnsEmptyStorage',
-      6 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setUserGroupSetsUserGroups',
-      7 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::addUserGroupAddsUserGroup',
-      8 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::removeUserGroupRemovesUserGroup',
-      9 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getNameInitiallyReturnsEmptyString',
-      10 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setNameSetsName',
-      11 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getFirstNameInitiallyReturnsEmptyString',
-      12 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setFirstNameSetsFirstName',
-      13 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getMiddleNameInitiallyReturnsEmptyString',
-      14 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setMiddleNameSetsMiddleName',
-      15 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getLastNameInitiallyReturnsEmptyString',
-      16 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLastNameSetsLastName',
-      17 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getAddressInitiallyReturnsEmptyString',
-      18 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setAddressSetsAddress',
-      19 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getTelephoneInitiallyReturnsEmptyString',
-      20 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setTelephoneSetsTelephone',
-      21 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getFaxInitiallyReturnsEmptyString',
-      22 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setFaxSetsFax',
-      23 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getEmailInitiallyReturnsEmptyString',
-      24 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setEmailSetsEmail',
-      25 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getLockToDomainInitiallyReturnsEmptyString',
-      26 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLockToDomainSetsLockToDomain',
-      27 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getTitleInitiallyReturnsEmptyString',
-      28 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setTitleSetsTitle',
-      29 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getZipInitiallyReturnsEmptyString',
-      30 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZipSetsZip',
-      31 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCityInitiallyReturnsEmptyString',
-      32 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCitySetsCity',
-      33 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCountryInitiallyReturnsEmptyString',
-      34 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCountrySetsCountry',
-      35 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getWwwInitiallyReturnsEmptyString',
-      36 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setWwwSetsWww',
-      37 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCompanyInitiallyReturnsEmptyString',
-      38 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCompanySetsCompany',
-      39 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getImageInitiallyReturnsEmptyCollection',
-      40 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setImageSetsImage',
-      41 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getLastLoginInitiallyReturnsNull',
-      42 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLastLoginSetsLastLogin',
-      43 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allGenderConstantsAreValid with data set "male"',
-      44 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allGenderConstantsAreValid with data set "female"',
-      45 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allGenderConstantsAreValid with data set "unknown"',
-      46 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidGenderValuesAreInvalid with data set "negative"',
-      47 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidGenderValuesAreInvalid with data set "too large"',
-      48 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidGenderValuesAreInvalid with data set "unassigned in the middle"',
-      49 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getGenderInitiallyReturnsNotProvided',
-      50 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setGenderSetsGender',
-      51 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getZoneInitiallyReturnsEmptyString',
-      52 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZoneSetsZone',
-      53 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getDateOfBirthInitiallyReturnsNull',
-      54 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
-      55 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
-      56 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "unknown"',
-      57 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "student"',
-      58 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (full time)"',
-      59 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "working"',
-      60 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "retired"',
-      61 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (part time)"',
-      62 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "negative"',
-      63 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "too large"',
-      64 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getStatusInitiallyReturnsNone',
-      65 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
-      66 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCommentsInitiallyReturnsEmptyString',
-      67 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
+      53 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isPrivacyInitiallyReturnsFalse',
+      54 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPrivacySetsPrivacy',
+      55 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getDateOfBirthInitiallyReturnsNull',
+      56 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
+      57 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
+      58 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "unknown"',
+      59 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "student"',
+      60 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (full time)"',
+      61 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "working"',
+      62 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "retired"',
+      63 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (part time)"',
+      64 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "negative"',
+      65 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "too large"',
+      66 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getStatusInitiallyReturnsNone',
+      67 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
+      68 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCommentsInitiallyReturnsEmptyString',
+      69 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
     ),
     216 => 
     array (
+      0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isAbstractEntity',
+      1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getUsernameInitiallyReturnsEmptyString',
+      2 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setUsernameSetsUsername',
+      3 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getPasswordInitiallyReturnsEmptyString',
+      4 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPasswordSetsPassword',
+      5 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getUserGroupInitiallyReturnsEmptyStorage',
+      6 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setUserGroupSetsUserGroups',
+      7 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::addUserGroupAddsUserGroup',
+      8 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::removeUserGroupRemovesUserGroup',
+      9 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getNameInitiallyReturnsEmptyString',
+      10 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setNameSetsName',
+      11 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getFirstNameInitiallyReturnsEmptyString',
+      12 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setFirstNameSetsFirstName',
+      13 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getMiddleNameInitiallyReturnsEmptyString',
+      14 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setMiddleNameSetsMiddleName',
+      15 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getLastNameInitiallyReturnsEmptyString',
+      16 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLastNameSetsLastName',
+      17 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getAddressInitiallyReturnsEmptyString',
+      18 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setAddressSetsAddress',
+      19 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getTelephoneInitiallyReturnsEmptyString',
+      20 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setTelephoneSetsTelephone',
+      21 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getFaxInitiallyReturnsEmptyString',
+      22 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setFaxSetsFax',
+      23 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getEmailInitiallyReturnsEmptyString',
+      24 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setEmailSetsEmail',
+      25 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getLockToDomainInitiallyReturnsEmptyString',
+      26 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLockToDomainSetsLockToDomain',
+      27 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getTitleInitiallyReturnsEmptyString',
+      28 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setTitleSetsTitle',
+      29 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getZipInitiallyReturnsEmptyString',
+      30 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZipSetsZip',
+      31 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCityInitiallyReturnsEmptyString',
+      32 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCitySetsCity',
+      33 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCountryInitiallyReturnsEmptyString',
+      34 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCountrySetsCountry',
+      35 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getWwwInitiallyReturnsEmptyString',
+      36 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setWwwSetsWww',
+      37 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCompanyInitiallyReturnsEmptyString',
+      38 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCompanySetsCompany',
+      39 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getImageInitiallyReturnsEmptyCollection',
+      40 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setImageSetsImage',
+      41 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getLastLoginInitiallyReturnsNull',
+      42 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLastLoginSetsLastLogin',
+      43 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allGenderConstantsAreValid with data set "male"',
+      44 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allGenderConstantsAreValid with data set "female"',
+      45 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allGenderConstantsAreValid with data set "unknown"',
+      46 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidGenderValuesAreInvalid with data set "negative"',
+      47 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidGenderValuesAreInvalid with data set "too large"',
+      48 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidGenderValuesAreInvalid with data set "unassigned in the middle"',
+      49 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getGenderInitiallyReturnsNotProvided',
+      50 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setGenderSetsGender',
+      51 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getZoneInitiallyReturnsEmptyString',
+      52 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZoneSetsZone',
+      53 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isPrivacyInitiallyReturnsFalse',
+      54 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPrivacySetsPrivacy',
+      55 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getDateOfBirthInitiallyReturnsNull',
+      56 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
+      57 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
+      58 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "unknown"',
+      59 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "student"',
+      60 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (full time)"',
+      61 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "working"',
+      62 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "retired"',
+      63 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "job seeking (part time)"',
+      64 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "negative"',
+      65 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "too large"',
+      66 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getStatusInitiallyReturnsNone',
+      67 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
+      68 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCommentsInitiallyReturnsEmptyString',
+      69 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
     ),
-    217 => 
+    223 => 
     array (
     ),
-    218 => 
+    224 => 
     array (
     ),
-    222 => 
+    225 => 
+    array (
+    ),
+    229 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getUsernameInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setUsernameSetsUsername',
     ),
-    223 => NULL,
-    227 => 
+    230 => NULL,
+    234 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setUsernameSetsUsername',
     ),
-    228 => 
+    235 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setUsernameSetsUsername',
     ),
-    232 => 
+    239 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getPasswordInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPasswordSetsPassword',
     ),
-    233 => NULL,
-    237 => 
+    240 => NULL,
+    244 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPasswordSetsPassword',
     ),
-    238 => 
+    245 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPasswordSetsPassword',
     ),
-    248 => 
+    255 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getUserGroupInitiallyReturnsEmptyStorage',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setUserGroupSetsUserGroups',
       2 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::addUserGroupAddsUserGroup',
       3 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::removeUserGroupRemovesUserGroup',
     ),
-    249 => NULL,
-    259 => 
+    256 => NULL,
+    266 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setUserGroupSetsUserGroups',
     ),
-    260 => 
+    267 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setUserGroupSetsUserGroups',
     ),
-    264 => 
+    271 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::addUserGroupAddsUserGroup',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::removeUserGroupRemovesUserGroup',
     ),
-    265 => 
+    272 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::addUserGroupAddsUserGroup',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::removeUserGroupRemovesUserGroup',
     ),
-    269 => 
+    276 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::removeUserGroupRemovesUserGroup',
     ),
-    270 => 
+    277 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::removeUserGroupRemovesUserGroup',
     ),
-    274 => 
+    281 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getNameInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setNameSetsName',
     ),
-    275 => NULL,
-    279 => 
+    282 => NULL,
+    286 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setNameSetsName',
     ),
-    280 => 
+    287 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setNameSetsName',
     ),
-    284 => 
+    291 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getFirstNameInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setFirstNameSetsFirstName',
     ),
-    285 => NULL,
-    289 => 
+    292 => NULL,
+    296 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setFirstNameSetsFirstName',
     ),
-    290 => 
+    297 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setFirstNameSetsFirstName',
     ),
-    294 => 
+    301 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getMiddleNameInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setMiddleNameSetsMiddleName',
     ),
-    295 => NULL,
-    299 => 
+    302 => NULL,
+    306 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setMiddleNameSetsMiddleName',
     ),
-    300 => 
+    307 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setMiddleNameSetsMiddleName',
     ),
-    304 => 
+    311 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getLastNameInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLastNameSetsLastName',
     ),
-    305 => NULL,
-    309 => 
+    312 => NULL,
+    316 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLastNameSetsLastName',
     ),
-    310 => 
+    317 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLastNameSetsLastName',
     ),
-    314 => 
+    321 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getAddressInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setAddressSetsAddress',
     ),
-    315 => NULL,
-    319 => 
+    322 => NULL,
+    326 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setAddressSetsAddress',
     ),
-    320 => 
+    327 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setAddressSetsAddress',
     ),
-    324 => 
+    331 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getTelephoneInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setTelephoneSetsTelephone',
     ),
-    325 => NULL,
-    329 => 
+    332 => NULL,
+    336 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setTelephoneSetsTelephone',
     ),
-    330 => 
+    337 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setTelephoneSetsTelephone',
     ),
-    334 => 
+    341 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getFaxInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setFaxSetsFax',
     ),
-    335 => NULL,
-    339 => 
+    342 => NULL,
+    346 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setFaxSetsFax',
     ),
-    340 => 
+    347 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setFaxSetsFax',
     ),
-    344 => 
+    351 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getEmailInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setEmailSetsEmail',
     ),
-    345 => NULL,
-    349 => 
+    352 => NULL,
+    356 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setEmailSetsEmail',
     ),
-    350 => 
+    357 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setEmailSetsEmail',
     ),
-    354 => 
+    361 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getLockToDomainInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLockToDomainSetsLockToDomain',
     ),
-    355 => NULL,
-    359 => 
+    362 => NULL,
+    366 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLockToDomainSetsLockToDomain',
     ),
-    360 => 
+    367 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLockToDomainSetsLockToDomain',
     ),
-    364 => 
+    371 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getTitleInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setTitleSetsTitle',
     ),
-    365 => NULL,
-    369 => 
+    372 => NULL,
+    376 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setTitleSetsTitle',
     ),
-    370 => 
+    377 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setTitleSetsTitle',
     ),
-    374 => 
+    381 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getZipInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZipSetsZip',
     ),
-    375 => NULL,
-    379 => 
+    382 => NULL,
+    386 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZipSetsZip',
     ),
-    380 => 
+    387 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZipSetsZip',
     ),
-    384 => 
+    391 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCityInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCitySetsCity',
     ),
-    385 => NULL,
-    389 => 
+    392 => NULL,
+    396 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCitySetsCity',
     ),
-    390 => 
+    397 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCitySetsCity',
     ),
-    394 => 
+    401 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCountryInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCountrySetsCountry',
     ),
-    395 => NULL,
-    399 => 
+    402 => NULL,
+    406 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCountrySetsCountry',
     ),
-    400 => 
+    407 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCountrySetsCountry',
     ),
-    404 => 
+    411 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getWwwInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setWwwSetsWww',
     ),
-    405 => NULL,
-    409 => 
+    412 => NULL,
+    416 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setWwwSetsWww',
     ),
-    410 => 
+    417 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setWwwSetsWww',
     ),
-    414 => 
+    421 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCompanyInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCompanySetsCompany',
     ),
-    415 => NULL,
-    419 => 
+    422 => NULL,
+    426 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCompanySetsCompany',
     ),
-    420 => 
+    427 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCompanySetsCompany',
     ),
-    429 => 
+    436 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getImageInitiallyReturnsEmptyCollection',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setImageSetsImage',
     ),
-    430 => NULL,
-    439 => 
+    437 => NULL,
+    446 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setImageSetsImage',
     ),
-    440 => 
+    447 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setImageSetsImage',
     ),
-    444 => 
+    451 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getLastLoginInitiallyReturnsNull',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLastLoginSetsLastLogin',
     ),
-    445 => NULL,
-    449 => 
+    452 => NULL,
+    456 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLastLoginSetsLastLogin',
     ),
-    450 => 
+    457 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setLastLoginSetsLastLogin',
     ),
-    454 => 
+    461 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getZoneInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZoneSetsZone',
     ),
-    455 => NULL,
-    459 => 
+    462 => NULL,
+    466 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZoneSetsZone',
     ),
-    460 => 
+    467 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZoneSetsZone',
     ),
-    464 => 
+    471 => 
+    array (
+      0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isPrivacyInitiallyReturnsFalse',
+      1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPrivacySetsPrivacy',
+    ),
+    472 => NULL,
+    476 => 
+    array (
+      0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPrivacySetsPrivacy',
+    ),
+    477 => 
+    array (
+      0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPrivacySetsPrivacy',
+    ),
+    481 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allGenderConstantsAreValid with data set "male"',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allGenderConstantsAreValid with data set "female"',
@@ -843,39 +867,39 @@ $coverage->setData(array (
       4 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidGenderValuesAreInvalid with data set "too large"',
       5 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidGenderValuesAreInvalid with data set "unassigned in the middle"',
     ),
-    465 => NULL,
-    469 => 
+    482 => NULL,
+    486 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getGenderInitiallyReturnsNotProvided',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setGenderSetsGender',
     ),
-    470 => NULL,
-    474 => 
+    487 => NULL,
+    491 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setGenderSetsGender',
     ),
-    475 => 
+    492 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setGenderSetsGender',
     ),
-    479 => 
+    496 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getDateOfBirthInitiallyReturnsNull',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
       2 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
     ),
-    480 => NULL,
-    484 => 
+    497 => NULL,
+    501 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
     ),
-    485 => 
+    502 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthSetsDateOfBirth',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setDateOfBirthCanSetDateOfBirthToNull',
     ),
-    489 => 
+    506 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "unknown"',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::allStatusConstantsAreValid with data set "student"',
@@ -886,32 +910,32 @@ $coverage->setData(array (
       6 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "negative"',
       7 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::invalidStatusValuesAreInvalid with data set "too large"',
     ),
-    490 => NULL,
-    494 => 
+    507 => NULL,
+    511 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getStatusInitiallyReturnsNone',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
     ),
-    495 => NULL,
-    499 => 
+    512 => NULL,
+    516 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
     ),
-    500 => 
+    517 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setStatusSetsStatus',
     ),
-    504 => 
+    521 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::getCommentsInitiallyReturnsEmptyString',
       1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
     ),
-    505 => NULL,
-    509 => 
+    522 => NULL,
+    526 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
     ),
-    510 => 
+    527 => 
     array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
     ),
@@ -1245,6 +1269,16 @@ $coverage->setTests(array (
     'status' => 0,
   ),
   'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setZoneSetsZone' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::isPrivacyInitiallyReturnsFalse' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setPrivacySetsPrivacy' => 
   array (
     'size' => 'unknown',
     'status' => 0,

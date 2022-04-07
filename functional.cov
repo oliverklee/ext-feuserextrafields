@@ -76,298 +76,308 @@ $coverage->setData(array (
   ),
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUser.php' => 
   array (
-    205 => 
+    212 => 
     array (
     ),
-    206 => 
+    213 => 
     array (
     ),
-    207 => 
+    214 => 
     array (
     ),
-    208 => 
-    array (
-    ),
-    209 => 
+    215 => 
     array (
     ),
     216 => 
     array (
     ),
-    217 => 
+    223 => 
     array (
     ),
-    218 => 
+    224 => 
     array (
     ),
-    222 => 
+    225 => 
     array (
     ),
-    223 => NULL,
-    227 => 
+    229 => 
     array (
     ),
-    228 => 
+    230 => NULL,
+    234 => 
     array (
     ),
-    232 => 
+    235 => 
     array (
     ),
-    233 => NULL,
-    237 => 
+    239 => 
     array (
     ),
-    238 => 
+    240 => NULL,
+    244 => 
     array (
     ),
-    248 => 
+    245 => 
     array (
     ),
-    249 => NULL,
-    259 => 
+    255 => 
     array (
     ),
-    260 => 
+    256 => NULL,
+    266 => 
     array (
     ),
-    264 => 
+    267 => 
     array (
     ),
-    265 => 
+    271 => 
     array (
     ),
-    269 => 
+    272 => 
     array (
     ),
-    270 => 
+    276 => 
     array (
     ),
-    274 => 
+    277 => 
     array (
     ),
-    275 => NULL,
-    279 => 
+    281 => 
     array (
     ),
-    280 => 
+    282 => NULL,
+    286 => 
     array (
     ),
-    284 => 
+    287 => 
     array (
     ),
-    285 => NULL,
-    289 => 
+    291 => 
     array (
     ),
-    290 => 
+    292 => NULL,
+    296 => 
     array (
     ),
-    294 => 
+    297 => 
     array (
     ),
-    295 => NULL,
-    299 => 
+    301 => 
     array (
     ),
-    300 => 
+    302 => NULL,
+    306 => 
     array (
     ),
-    304 => 
+    307 => 
     array (
     ),
-    305 => NULL,
-    309 => 
+    311 => 
     array (
     ),
-    310 => 
+    312 => NULL,
+    316 => 
     array (
     ),
-    314 => 
+    317 => 
     array (
     ),
-    315 => NULL,
-    319 => 
+    321 => 
     array (
     ),
-    320 => 
+    322 => NULL,
+    326 => 
     array (
     ),
-    324 => 
+    327 => 
     array (
     ),
-    325 => NULL,
-    329 => 
+    331 => 
     array (
     ),
-    330 => 
+    332 => NULL,
+    336 => 
     array (
     ),
-    334 => 
+    337 => 
     array (
     ),
-    335 => NULL,
-    339 => 
+    341 => 
     array (
     ),
-    340 => 
+    342 => NULL,
+    346 => 
     array (
     ),
-    344 => 
+    347 => 
     array (
     ),
-    345 => NULL,
-    349 => 
+    351 => 
     array (
     ),
-    350 => 
+    352 => NULL,
+    356 => 
     array (
     ),
-    354 => 
+    357 => 
     array (
     ),
-    355 => NULL,
-    359 => 
+    361 => 
     array (
     ),
-    360 => 
+    362 => NULL,
+    366 => 
     array (
     ),
-    364 => 
+    367 => 
     array (
     ),
-    365 => NULL,
-    369 => 
+    371 => 
     array (
     ),
-    370 => 
+    372 => NULL,
+    376 => 
     array (
     ),
-    374 => 
+    377 => 
     array (
     ),
-    375 => NULL,
-    379 => 
+    381 => 
     array (
     ),
-    380 => 
+    382 => NULL,
+    386 => 
     array (
     ),
-    384 => 
+    387 => 
     array (
     ),
-    385 => NULL,
-    389 => 
+    391 => 
     array (
     ),
-    390 => 
+    392 => NULL,
+    396 => 
     array (
     ),
-    394 => 
+    397 => 
     array (
     ),
-    395 => NULL,
-    399 => 
+    401 => 
     array (
     ),
-    400 => 
+    402 => NULL,
+    406 => 
     array (
     ),
-    404 => 
+    407 => 
     array (
     ),
-    405 => NULL,
-    409 => 
+    411 => 
     array (
     ),
-    410 => 
+    412 => NULL,
+    416 => 
     array (
     ),
-    414 => 
+    417 => 
     array (
     ),
-    415 => NULL,
-    419 => 
+    421 => 
     array (
     ),
-    420 => 
+    422 => NULL,
+    426 => 
     array (
     ),
-    429 => 
+    427 => 
     array (
     ),
-    430 => NULL,
-    439 => 
+    436 => 
     array (
     ),
-    440 => 
+    437 => NULL,
+    446 => 
     array (
     ),
-    444 => 
+    447 => 
     array (
     ),
-    445 => NULL,
-    449 => 
+    451 => 
     array (
     ),
-    450 => 
+    452 => NULL,
+    456 => 
     array (
     ),
-    454 => 
+    457 => 
     array (
     ),
-    455 => NULL,
-    459 => 
+    461 => 
     array (
     ),
-    460 => 
+    462 => NULL,
+    466 => 
     array (
     ),
-    464 => 
+    467 => 
     array (
     ),
-    465 => NULL,
-    469 => 
+    471 => 
     array (
     ),
-    470 => NULL,
-    474 => 
+    472 => NULL,
+    476 => 
     array (
     ),
-    475 => 
+    477 => 
     array (
     ),
-    479 => 
+    481 => 
     array (
     ),
-    480 => NULL,
-    484 => 
+    482 => NULL,
+    486 => 
     array (
     ),
-    485 => 
+    487 => NULL,
+    491 => 
     array (
     ),
-    489 => 
+    492 => 
     array (
     ),
-    490 => NULL,
-    494 => 
+    496 => 
     array (
     ),
-    495 => NULL,
-    499 => 
+    497 => NULL,
+    501 => 
     array (
     ),
-    500 => 
+    502 => 
     array (
     ),
-    504 => 
+    506 => 
     array (
     ),
-    505 => NULL,
-    509 => 
+    507 => NULL,
+    511 => 
     array (
     ),
-    510 => 
+    512 => NULL,
+    516 => 
+    array (
+    ),
+    517 => 
+    array (
+    ),
+    521 => 
+    array (
+    ),
+    522 => NULL,
+    526 => 
+    array (
+    ),
+    527 => 
     array (
     ),
   ),
