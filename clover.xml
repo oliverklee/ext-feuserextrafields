@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1649247685">
-  <project timestamp="1649247685">
+<coverage generated="1649327269">
+  <project timestamp="1649327269">
     <package name="OliverKlee\FeUserExtraFields\Domain\Model">
       <file name="/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUser.php">
         <class name="OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser" namespace="OliverKlee\FeUserExtraFields\Domain\Model">
