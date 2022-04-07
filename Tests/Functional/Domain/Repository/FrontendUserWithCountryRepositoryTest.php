@@ -83,6 +83,7 @@ final class FrontendUserWithCountryRepositoryTest extends FunctionalTestCase
         self::assertTrue($model->getPrivacy());
         self::assertSame('NRW', $model->getZone());
         self::assertSame('NLD', $model->getStaticInfoCountry());
+        self::assertSame('Welcome, Max MM!', $model->getFullSalutation());
         self::assertSame(FrontendUser::GENDER_FEMALE, $model->getGender());
         self::assertEquals(new \DateTime('2022-04-02T00:00'), $model->getDateOfBirth());
         self::assertSame(FrontendUser::STATUS_JOB_SEEKING_FULL_TIME, $model->getStatus());
