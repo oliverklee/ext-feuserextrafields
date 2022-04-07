@@ -17,4 +17,4 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## 3.0.0
 
-Completely rewritten.
+Completely rewritten for TYPO3 V9/V10.
