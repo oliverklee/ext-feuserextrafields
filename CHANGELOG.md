@@ -14,3 +14,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+
+## 3.0.0
+
+Completely rewritten.
