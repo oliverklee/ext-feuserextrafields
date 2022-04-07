@@ -186,6 +186,13 @@ class FrontendUser extends AbstractEntity
     protected $zone = '';
 
     /**
+     * "privacy agreement accepted" flag
+     *
+     * @var bool
+     */
+    protected $privacy = false;
+
+    /**
      * @var \DateTime|null
      */
     protected $dateOfBirth;
@@ -457,6 +464,16 @@ class FrontendUser extends AbstractEntity
     public function setZone(string $zone): void
     {
         $this->zone = $zone;
+    }
+
+    public function getPrivacy(): bool
+    {
+        return $this->privacy;
+    }
+
+    public function setPrivacy(bool $privacy): void
+    {
+        $this->privacy = $privacy;
     }
 
     public static function isValidGender(int $gender): bool

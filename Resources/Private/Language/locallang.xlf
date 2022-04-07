@@ -21,6 +21,9 @@
 			<trans-unit id="zone">
 				<source>State/province</source>
 			</trans-unit>
+			<trans-unit id="privacy">
+				<source>Privacy agreement</source>
+			</trans-unit>
 			<trans-unit id="status">
 				<source>Job status</source>
 			</trans-unit>

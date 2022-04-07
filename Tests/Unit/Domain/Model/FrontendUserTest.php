@@ -598,6 +598,24 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
+    public function isPrivacyInitiallyReturnsFalse(): void
+    {
+        self::assertFalse($this->subject->getPrivacy());
+    }
+
+    /**
+     * @test
+     */
+    public function setPrivacySetsPrivacy(): void
+    {
+        $this->subject->setPrivacy(true);
+
+        self::assertTrue($this->subject->getPrivacy());
+    }
+
+    /**
+     * @test
+     */
     public function getDateOfBirthInitiallyReturnsNull(): void
     {
         $result = $this->subject->getDateOfBirth();
