@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
 jobs:
-  code-coverage:
+  tests:
     name: "Calculate code coverage"
     runs-on: ubuntu-18.04
     steps:
@@ -57,3 +57,12 @@ jobs:
           - 7.4
         typo3-version:
           - ^10.4
+  finish:
+    needs: tests
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.github_token }}
+          parallel-finished: true

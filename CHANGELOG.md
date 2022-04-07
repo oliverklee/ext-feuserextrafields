@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Changed
 - Reuse `initializeObject` from the constructor (#54)
-- Switch the code coverage collection to Coveralls (#53)
+- Switch the code coverage collection to Coveralls (#53, #55)
 
 ### Deprecated
 
