@@ -940,10 +940,30 @@ $coverage->setData(array (
       0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserTest::setCommentsSetsComments',
     ),
   ),
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUserWithCountry.php' => 
+  array (
+    21 => 
+    array (
+      0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserWithCountryTest::getStaticInfoCountryInitiallyReturnsEmptyString',
+      1 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserWithCountryTest::setStaticInfoCountrySetsStaticInfoCountry',
+    ),
+    22 => NULL,
+    26 => 
+    array (
+      0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserWithCountryTest::setStaticInfoCountrySetsStaticInfoCountry',
+    ),
+    27 => 
+    array (
+      0 => 'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserWithCountryTest::setStaticInfoCountrySetsStaticInfoCountry',
+    ),
+  ),
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserGroupRepository.php' => 
   array (
   ),
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserRepository.php' => 
+  array (
+  ),
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserWithCountryRepository.php' => 
   array (
   ),
 ));
@@ -1358,6 +1378,21 @@ $coverage->setTests(array (
     'size' => 'unknown',
     'status' => 0,
   ),
+  'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserWithCountryTest::isAbstractEntity' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserWithCountryTest::getStaticInfoCountryInitiallyReturnsEmptyString' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
+  'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Model\\FrontendUserWithCountryTest::setStaticInfoCountrySetsStaticInfoCountry' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
   'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Repository\\FrontendUserGroupRepositoryTest::implementsRepositoryInterface' => 
   array (
     'size' => 'unknown',
@@ -1368,14 +1403,21 @@ $coverage->setTests(array (
     'size' => 'unknown',
     'status' => 0,
   ),
+  'OliverKlee\\FeUserExtraFields\\Tests\\Unit\\Domain\\Repository\\FrontendUserWithCountryRepositoryTest::implementsRepositoryInterface' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
 ));
 
 $filter = $coverage->filter();
 $filter->setWhitelistedFiles(array (
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUser.php' => true,
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUserGroup.php' => true,
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUserWithCountry.php' => true,
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserGroupRepository.php' => true,
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserRepository.php' => true,
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserWithCountryRepository.php' => true,
 ));
 
 return $coverage;

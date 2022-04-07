@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1649328677">
-  <project timestamp="1649328677">
+<coverage generated="1649340773">
+  <project timestamp="1649340773">
     <package name="OliverKlee\FeUserExtraFields\Domain\Model">
       <file name="/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUser.php">
         <class name="OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser" namespace="OliverKlee\FeUserExtraFields\Domain\Model">
@@ -197,6 +197,17 @@
         <line num="109" type="stmt" count="1"/>
         <metrics loc="110" ncloc="88" classes="1" methods="12" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="19" elements="33" coveredelements="30"/>
       </file>
+      <file name="/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUserWithCountry.php">
+        <class name="OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserWithCountry" namespace="OliverKlee\FeUserExtraFields\Domain\Model">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+        </class>
+        <line num="19" type="method" name="getStaticInfoCountry" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="24" type="method" name="setStaticInfoCountry" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <metrics loc="28" ncloc="22" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+      </file>
     </package>
     <package name="OliverKlee\FeUserExtraFields\Domain\Repository">
       <file name="/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserGroupRepository.php">
@@ -211,7 +222,13 @@
         </class>
         <metrics loc="15" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
+      <file name="/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserWithCountryRepository.php">
+        <class name="OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserWithCountryRepository" namespace="OliverKlee\FeUserExtraFields\Domain\Repository">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="15" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
     </package>
-    <metrics files="4" loc="668" ncloc="544" classes="2" methods="70" coveredmethods="68" conditionals="0" coveredconditionals="0" statements="113" coveredstatements="108" elements="183" coveredelements="176"/>
+    <metrics files="6" loc="711" ncloc="579" classes="3" methods="72" coveredmethods="70" conditionals="0" coveredconditionals="0" statements="116" coveredstatements="111" elements="188" coveredelements="181"/>
   </project>
 </coverage>

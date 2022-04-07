@@ -74,6 +74,19 @@ $coverage->setData(array (
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserGroupRepository.php' => 
   array (
   ),
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUserWithCountry.php' => 
+  array (
+    21 => 
+    array (
+    ),
+    22 => NULL,
+    26 => 
+    array (
+    ),
+    27 => 
+    array (
+    ),
+  ),
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUser.php' => 
   array (
     212 => 
@@ -384,6 +397,9 @@ $coverage->setData(array (
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserRepository.php' => 
   array (
   ),
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserWithCountryRepository.php' => 
+  array (
+  ),
 ));
 $coverage->setTests(array (
   'OliverKlee\\FeUserExtraFields\\Tests\\Functional\\Domain\\Repository\\FrontendUserGroupRepositoryTest::findAllForNoRecordsReturnsEmptyContainer' => 
@@ -396,14 +412,21 @@ $coverage->setTests(array (
     'size' => 'unknown',
     'status' => 0,
   ),
+  'OliverKlee\\FeUserExtraFields\\Tests\\Functional\\Domain\\Repository\\FrontendUserWithCountryRepositoryTest::findAllForNoRecordsReturnsEmptyContainer' => 
+  array (
+    'size' => 'unknown',
+    'status' => 0,
+  ),
 ));
 
 $filter = $coverage->filter();
 $filter->setWhitelistedFiles(array (
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUser.php' => true,
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUserGroup.php' => true,
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Model/FrontendUserWithCountry.php' => true,
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserGroupRepository.php' => true,
   '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserRepository.php' => true,
+  '/home/runner/work/ext-feuserextrafields/ext-feuserextrafields/Classes/Domain/Repository/FrontendUserWithCountryRepository.php' => true,
 ));
 
 return $coverage;
