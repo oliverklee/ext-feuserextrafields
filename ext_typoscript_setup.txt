@@ -10,6 +10,16 @@ config.tx_extbase.persistence.classes {
             }
         }
     }
+    OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserWithCountry {
+        mapping {
+            tableName = fe_users
+            columns {
+                usergroup.mapOnProperty = userGroup
+                lockToDomain.mapOnProperty = lockToDomain
+                lastlogin.mapOnProperty = lastLogin
+            }
+        }
+    }
     OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup {
         mapping {
             tableName = fe_groups

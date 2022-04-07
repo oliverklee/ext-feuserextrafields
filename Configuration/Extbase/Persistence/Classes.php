@@ -11,6 +11,14 @@ return [
             'lastLogin' => ['fieldName' => 'lastlogin'],
         ],
     ],
+    OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserWithCountry::class => [
+        'tableName' => 'fe_users',
+        'properties' => [
+            'userGroup' => ['fieldName' => 'usergroup'],
+            'lockToDomain' => ['fieldName' => 'lockToDomain'],
+            'lastLogin' => ['fieldName' => 'lastlogin'],
+        ],
+    ],
     OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup::class => [
         'tableName' => 'fe_groups',
         'properties' => [
