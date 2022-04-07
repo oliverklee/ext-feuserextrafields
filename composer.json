@@ -29,6 +29,7 @@
 		"ergebnis/composer-normalize": "^2.19.0",
 		"friendsofphp/php-cs-fixer": "^3.4.0",
 		"jangregor/phpstan-prophecy": "^1.0.0",
+		"php-coveralls/php-coveralls": "^2.5.2",
 		"phpstan/extension-installer": "^1.1.0",
 		"phpstan/phpstan": "^1.5.4",
 		"phpstan/phpstan-phpunit": "^1.1.0",
@@ -94,9 +95,19 @@
 			"@ci:coverage:unit",
 			"@ci:coverage:functional"
 		],
-		"ci:coverage:functional": ".Build/vendor/bin/phpunit -c .Build/vendor/typo3/testing-framework/Resources/Core/Build/FunctionalTests.xml --whitelist Classes --coverage-php=coverage/functional.cov Tests/Functional",
-		"ci:coverage:merge": ".Build/vendor/bin/phpcov merge --clover=./coverage/clover.xml coverage/",
-		"ci:coverage:unit": ".Build/vendor/bin/phpunit -c .Build/vendor/typo3/testing-framework/Resources/Core/Build/UnitTests.xml --whitelist Classes --coverage-php=coverage/unit.cov Tests/Unit",
+		"ci:coverage:create-directories": "mkdir -p build/logs .Build/coverage",
+		"ci:coverage:functional": [
+			"@ci:coverage:create-directories",
+			".Build/vendor/bin/phpunit -c .Build/vendor/typo3/testing-framework/Resources/Core/Build/FunctionalTests.xml --whitelist Classes --coverage-php=.Build/coverage/functional.cov Tests/Functional"
+		],
+		"ci:coverage:merge": [
+			"@ci:coverage:create-directories",
+			".Build/vendor/bin/phpcov merge --clover=./build/logs/clover.xml ./.Build/coverage/"
+		],
+		"ci:coverage:unit": [
+			"@ci:coverage:create-directories",
+			".Build/vendor/bin/phpunit -c .Build/vendor/typo3/testing-framework/Resources/Core/Build/UnitTests.xml --whitelist Classes --coverage-php=.Build/coverage/unit.cov Tests/Unit"
+		],
 		"ci:dynamic": [
 			"@ci:tests"
 		],
