@@ -1,10 +1,10 @@
 ---
-# This GitHub Actions workflow is calculating code coverage of extension and creates a badge for it.
 name: Code coverage
 on:
   push:
     branches:
       - main
+  pull_request:
 jobs:
   code-coverage:
     name: "Calculate code coverage"
@@ -27,9 +27,9 @@ jobs:
           key: "php${{ matrix.php-version }}-typo3${{ matrix.typo3-version }}-composer-${{ hashFiles('**/composer.json') }}"
           path: ~/.cache/composer
           restore-keys: "php${{ matrix.php-version }}-typo3${{ matrix.typo3-version }}-composer-\n"
-      - env:
+      - name: "Install TYPO3 Core"
+        env:
           TYPO3: "${{ matrix.typo3-version }}"
-        name: "Install TYPO3 Core"
         run: |
           composer require --no-progress typo3/minimal:"$TYPO3"
           composer show
@@ -46,18 +46,10 @@ jobs:
         run: composer ci:coverage:unit
       - name: "Merge coverage results"
         run: composer ci:coverage:merge
-      - name: "Generate coverage badge"
-        uses: timkrase/phpunit-coverage-badge@v1.2.0
-        with:
-          report: './coverage/clover.xml'
-          coverage_badge_path: './coverage/badge.svg'
-      - name: "Commit PHPUnit coverage results"
-        uses: s0/git-publish-subdir-action@develop
+      - name: "Upload coverage results to Coveralls"
         env:
-          REPO: self
-          BRANCH: code-coverage-badge
-          FOLDER: coverage
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./.Build/vendor/bin/php-coveralls --coverage_clover=build/logs/clover.xml -v
     strategy:
       fail-fast: false
       matrix:
