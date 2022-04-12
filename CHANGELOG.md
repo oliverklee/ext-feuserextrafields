@@ -8,10 +8,18 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 ### Changed
-- Reuse `initializeObject` from the constructor (#54)
-- Switch the code coverage collection to Coveralls (#53)
 
 ### Deprecated
+
+### Removed
+
+### Fixed
+
+## 4.0.0
+
+### Changed
+- Reuse `initializeObject` from the constructor (#54)
+- Switch the code coverage collection to Coveralls (#53)
 
 ### Removed
 - Drop support for TYPO3 V9 (#49)
