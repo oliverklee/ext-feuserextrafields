@@ -95,17 +95,16 @@
 			"@ci:coverage:unit",
 			"@ci:coverage:functional"
 		],
-		"ci:coverage:create-directories": "mkdir -p build/logs .Build/coverage",
 		"ci:coverage:functional": [
-			"@ci:coverage:create-directories",
+			"@coverage:create-directories",
 			".Build/vendor/bin/phpunit -c .Build/vendor/typo3/testing-framework/Resources/Core/Build/FunctionalTests.xml --whitelist Classes --coverage-php=.Build/coverage/functional.cov Tests/Functional"
 		],
 		"ci:coverage:merge": [
-			"@ci:coverage:create-directories",
+			"@coverage:create-directories",
 			".Build/vendor/bin/phpcov merge --clover=./build/logs/clover.xml ./.Build/coverage/"
 		],
 		"ci:coverage:unit": [
-			"@ci:coverage:create-directories",
+			"@coverage:create-directories",
 			".Build/vendor/bin/phpunit -c .Build/vendor/typo3/testing-framework/Resources/Core/Build/UnitTests.xml --whitelist Classes --coverage-php=.Build/coverage/unit.cov Tests/Unit"
 		],
 		"ci:dynamic": [
@@ -148,6 +147,7 @@
 			".Build/vendor/bin/phpunit -c .Build/vendor/typo3/testing-framework/Resources/Core/Build/UnitTests.xml Tests/Unit"
 		],
 		"ci:yaml:lint": "find . ! -path '*.Build/*' -name '*.yml' | xargs -r php ./.Build/vendor/bin/yaml-lint",
+		"coverage:create-directories": "mkdir -p build/logs .Build/coverage",
 		"docs:generate": [
 			"docker run --rm t3docs/render-documentation show-shell-commands > tempfile.sh; echo 'dockrun_t3rd makehtml' >> tempfile.sh; bash tempfile.sh; rm tempfile.sh"
 		],
@@ -179,7 +179,6 @@
 	"scripts-descriptions": {
 		"ci": "Runs all dynamic and static code checks.",
 		"ci:composer:normalize": "Checks the composer.json.",
-		"ci:coverage:create-directories": "Creates the directories needed for recording and merging the code coverage reports.",
 		"ci:coverage:functional": "Generates the code coverage report for functional tests.",
 		"ci:coverage:merge": "Merges the code coverage reports for unit and functional tests.",
 		"ci:coverage:unit": "Generates the code coverage report for unit tests.",
@@ -196,6 +195,7 @@
 		"ci:tests:functional": "Runs the functional tests.",
 		"ci:tests:unit": "Runs the unit tests.",
 		"ci:yaml:lint": "Lints the YAML files.",
+		"coverage:create-directories": "Creates the directories needed for recording and merging the code coverage reports.",
 		"docs:generate": "Renders the extension ReST documentation.",
 		"fix:php": "Runs all fixers for the PHP code.",
 		"fix:php:cs": "Fixes the code style with PHP-CS-Fixer.",
