@@ -32,7 +32,8 @@
 				<target>Bundesland</target>
 			</trans-unit>
 			<trans-unit id="static_info_country">
-				<source>Ländercode nach ISO 3166-1 A3</source>
+				<source>ISO 3166-1 A3 country code</source>
+				<target>Ländercode nach ISO 3166-1 A3</target>
 			</trans-unit>
 			<trans-unit id="privacy">
 				<source>Privacy agreement</source>

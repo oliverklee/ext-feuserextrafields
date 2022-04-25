@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+- Fix the German label for `static_info_country` (#68)
 
 ## 4.0.0
 
