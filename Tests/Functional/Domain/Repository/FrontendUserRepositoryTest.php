@@ -149,4 +149,40 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         self::assertInstanceOf(FileReference::class, $firstImage);
         self::assertSame(1, $firstImage->getUid());
     }
+
+    /**
+     * @test
+     */
+    public function findOneByUsernameWithoutMatchReturnsNull(): void
+    {
+        $result = $this->subject->findOneByUsername('not-existing-username');
+
+        self::assertNull($result);
+    }
+
+    /**
+     * @test
+     */
+    public function findOneByUsernameWithMatchReturnsUserWithTheProvidedUsername(): void
+    {
+        $username = 'max';
+        $this->importDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.xml');
+
+        $result = $this->subject->findOneByUsername($username);
+
+        self::assertInstanceOf(FrontendUser::class, $result);
+        self::assertSame($username, $result->getUsername());
+    }
+
+    /**
+     * @test
+     */
+    public function findOneByUsernameWithEmptyUsernameReturnsNullEvenForUserWithEmptyUsername(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/UserWithEmptyUsername.xml');
+
+        $result = $this->subject->findOneByUsername('');
+
+        self::assertNull($result);
+    }
 }

@@ -12,4 +12,16 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
  */
 class FrontendUserRepository extends Repository
 {
+    public function findOneByUsername(string $username): ?FrontendUser
+    {
+        if ($username === '') {
+            return null;
+        }
+
+        $query = $this->createQuery();
+        $query->getQuerySettings()->setRespectStoragePage(false);
+        $query->matching($query->equals('username', $username));
+
+        return $query->execute()->getFirst();
+    }
 }
