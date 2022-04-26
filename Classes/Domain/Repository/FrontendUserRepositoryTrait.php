@@ -4,26 +4,23 @@ declare(strict_types=1);
 
 namespace OliverKlee\FeUserExtraFields\Domain\Repository;
 
-use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserWithCountry;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
- * @extends Repository<FrontendUserWithCountry>
+ * @mixin Repository
  */
-class FrontendUserWithCountryRepository extends Repository
+trait FrontendUserRepositoryTrait
 {
-    use FrontendUserRepositoryTrait;
-
-    public function findOneByUsername(string $username): ?FrontendUserWithCountry
+    public function existsWithUsername(string $username): bool
     {
         if ($username === '') {
-            return null;
+            return false;
         }
 
         $query = $this->createQuery();
         $query->getQuerySettings()->setRespectStoragePage(false);
         $query->matching($query->equals('username', $username));
 
-        return $query->execute()->getFirst();
+        return $query->execute()->count() > 0;
     }
 }
