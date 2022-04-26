@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
+- Add `FrontendUser(WithCountry)Repository::findOneByUsername` (#68)
 
 ### Changed
 
