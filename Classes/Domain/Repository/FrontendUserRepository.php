@@ -12,6 +12,8 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
  */
 class FrontendUserRepository extends Repository
 {
+    use FrontendUserRepositoryTrait;
+
     public function findOneByUsername(string $username): ?FrontendUser
     {
         if ($username === '') {

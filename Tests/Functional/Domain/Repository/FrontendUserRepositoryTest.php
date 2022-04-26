@@ -15,6 +15,7 @@ use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 /**
  * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepository
+ * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepositoryTrait
  */
 final class FrontendUserRepositoryTest extends FunctionalTestCase
 {
@@ -184,5 +185,39 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         $result = $this->subject->findOneByUsername('');
 
         self::assertNull($result);
+    }
+
+    /**
+     * @test
+     */
+    public function existsWithUsernameWithoutMatchReturnsFalse(): void
+    {
+        $result = $this->subject->existsWithUsername('not-existing-username');
+
+        self::assertFalse($result);
+    }
+
+    /**
+     * @test
+     */
+    public function existsWithUsernameWithMatchReturnsTrue(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.xml');
+
+        $result = $this->subject->existsWithUsername('max');
+
+        self::assertTrue($result);
+    }
+
+    /**
+     * @test
+     */
+    public function existsWithUsernameWithEmptyUsernameReturnsFalseEvenForUserWithEmptyUsername(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/UserWithEmptyUsername.xml');
+
+        $result = $this->subject->existsWithUsername('');
+
+        self::assertFalse($result);
     }
 }
