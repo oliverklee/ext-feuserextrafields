@@ -6,15 +6,23 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+## 3.1.0
+
+### Added
 - Add `FrontendUser(WithCountry)Repository::existsWithUsername` (#69)
 - Add `FrontendUser(WithCountry)Repository::findOneByUsername` (#68)
 
 ### Changed
 - Reuse `initializeObject` from the constructor (#54)
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 - Fix the German label for `static_info_country` (#68)
