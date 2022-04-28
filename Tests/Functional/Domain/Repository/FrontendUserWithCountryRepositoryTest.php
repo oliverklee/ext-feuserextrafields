@@ -11,6 +11,7 @@ use OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserWithCountryReposi
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
+use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
@@ -31,6 +32,11 @@ final class FrontendUserWithCountryRepositoryTest extends FunctionalTestCase
     protected $testExtensionsToLoad = ['typo3conf/ext/feuserextrafields', 'typo3conf/ext/static_info_tables'];
 
     /**
+     * @var PersistenceManager
+     */
+    private $persistenceManager;
+
+    /**
      * @var FrontendUserWithCountryRepository
      */
     private $subject;
@@ -40,6 +46,7 @@ final class FrontendUserWithCountryRepositoryTest extends FunctionalTestCase
         parent::setUp();
 
         $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
+        $this->persistenceManager = GeneralUtility::makeInstance(PersistenceManager::class);
         $this->subject = $objectManager->get(FrontendUserWithCountryRepository::class);
     }
 
@@ -226,5 +233,28 @@ final class FrontendUserWithCountryRepositoryTest extends FunctionalTestCase
         $result = $this->subject->existsWithUsername('');
 
         self::assertFalse($result);
+    }
+
+    /**
+     * @test
+     */
+    public function willSaveNewUserWithExplicitPidOnTheGivenPage(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/Pages.xml');
+        $pageUid = 1;
+
+        $user = new FrontendUserWithCountry();
+        $user->setPid($pageUid);
+
+        $this->subject->add($user);
+        $this->persistenceManager->persistAll();
+
+        $connection = $this->getConnectionPool()->getConnectionForTable('fe_users');
+        $databaseRow = $connection
+            ->executeQuery('SELECT * FROM fe_users WHERE uid = :uid', ['uid' => $user->getUid()])
+            ->fetchAssociative();
+
+        self::assertIsArray($databaseRow);
+        self::assertSame($pageUid, $databaseRow['pid']);
     }
 }

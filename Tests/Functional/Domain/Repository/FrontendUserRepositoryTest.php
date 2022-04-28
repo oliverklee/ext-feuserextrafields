@@ -10,6 +10,7 @@ use OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
+use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
@@ -25,6 +26,11 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
     protected $testExtensionsToLoad = ['typo3conf/ext/feuserextrafields'];
 
     /**
+     * @var PersistenceManager
+     */
+    private $persistenceManager;
+
+    /**
      * @var FrontendUserRepository
      */
     private $subject;
@@ -34,6 +40,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         parent::setUp();
 
         $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
+        $this->persistenceManager = GeneralUtility::makeInstance(PersistenceManager::class);
         $this->subject = $objectManager->get(FrontendUserRepository::class);
     }
 
@@ -219,5 +226,28 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         $result = $this->subject->existsWithUsername('');
 
         self::assertFalse($result);
+    }
+
+    /**
+     * @test
+     */
+    public function willSaveNewUserWithExplicitPidOnTheGivenPage(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/Pages.xml');
+        $pageUid = 1;
+
+        $user = new FrontendUser();
+        $user->setPid($pageUid);
+
+        $this->subject->add($user);
+        $this->persistenceManager->persistAll();
+
+        $connection = $this->getConnectionPool()->getConnectionForTable('fe_users');
+        $databaseRow = $connection
+            ->executeQuery('SELECT * FROM fe_users WHERE uid = :uid', ['uid' => $user->getUid()])
+            ->fetchAssociative();
+
+        self::assertIsArray($databaseRow);
+        self::assertSame($pageUid, $databaseRow['pid']);
     }
 }
