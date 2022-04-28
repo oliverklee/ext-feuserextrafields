@@ -39,6 +39,25 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
+    public function getPidInitiallyReturnsNull(): void
+    {
+        self::assertNull($this->subject->getPid());
+    }
+
+    /**
+     * @test
+     */
+    public function setPidSetsPid(): void
+    {
+        $value = 123456;
+        $this->subject->setPid($value);
+
+        self::assertSame($value, $this->subject->getPid());
+    }
+
+    /**
+     * @test
+     */
     public function getUsernameInitiallyReturnsEmptyString(): void
     {
         $result = $this->subject->getUsername();
