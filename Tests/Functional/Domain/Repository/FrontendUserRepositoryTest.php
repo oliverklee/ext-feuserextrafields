@@ -21,7 +21,7 @@ use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 final class FrontendUserRepositoryTest extends FunctionalTestCase
 {
     /**
-     * @var array<int, non-empty-string>
+     * @var array<string>
      */
     protected $testExtensionsToLoad = ['typo3conf/ext/feuserextrafields'];
 

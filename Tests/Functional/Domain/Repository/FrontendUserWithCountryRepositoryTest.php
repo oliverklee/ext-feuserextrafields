@@ -27,7 +27,7 @@ final class FrontendUserWithCountryRepositoryTest extends FunctionalTestCase
     protected $coreExtensionsToLoad = ['extensionmanager'];
 
     /**
-     * @var array<int, non-empty-string>
+     * @var array<string>
      */
     protected $testExtensionsToLoad = ['typo3conf/ext/feuserextrafields', 'typo3conf/ext/static_info_tables'];
 
