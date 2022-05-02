@@ -34,6 +34,7 @@
 		"phpstan/extension-installer": "^1.1.0",
 		"phpstan/phpstan": "^1.5.4",
 		"phpstan/phpstan-phpunit": "^1.1.0",
+		"phpstan/phpstan-strict-rules": "^1.2.2",
 		"phpunit/phpcov": "^6.0.1",
 		"phpunit/phpunit": "^8.5.26",
 		"saschaegerer/phpstan-typo3": "^1.1.2",
