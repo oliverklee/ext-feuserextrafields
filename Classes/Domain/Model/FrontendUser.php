@@ -81,6 +81,8 @@ class FrontendUser extends AbstractEntity
     protected $username = '';
 
     /**
+     * the password hash
+     *
      * @var string
      */
     protected $password = '';
@@ -240,11 +242,17 @@ class FrontendUser extends AbstractEntity
         $this->username = $username;
     }
 
+    /**
+     * Returns the password hash (or an empty string).
+     */
     public function getPassword(): string
     {
         return $this->password;
     }
 
+    /**
+     * Sets the password hash.
+     */
     public function setPassword(string $password): void
     {
         $this->password = $password;
