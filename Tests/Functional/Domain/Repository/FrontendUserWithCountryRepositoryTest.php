@@ -21,14 +21,8 @@ use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
  */
 final class FrontendUserWithCountryRepositoryTest extends FunctionalTestCase
 {
-    /**
-     * @var array<int, string>
-     */
     protected $coreExtensionsToLoad = ['extensionmanager'];
 
-    /**
-     * @var array<string>
-     */
     protected $testExtensionsToLoad = ['typo3conf/ext/feuserextrafields', 'typo3conf/ext/static_info_tables'];
 
     /**
