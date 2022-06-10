@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace OliverKlee\FeUserExtraFields\Domain\Model;
 
+use TYPO3\CMS\Extbase\Annotation as Extbase;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
@@ -14,16 +15,19 @@ class FrontendUserGroup extends AbstractEntity
 {
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
     protected $title = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
     protected $lockToDomain = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 65535})
      */
     protected $description = '';
 
