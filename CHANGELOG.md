@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
+- Add `Repository.persistAll` (#90)
 - Add tests concerning handling a user's PID (#75)
 
 ### Changed
