@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Repository;
 
+use OliverKlee\FeUserExtraFields\Domain\Repository\DirectPersistInterface;
 use OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepository;
 use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
@@ -44,5 +45,13 @@ final class FrontendUserRepositoryTest extends UnitTestCase
     public function isRepository(): void
     {
         self::assertInstanceOf(Repository::class, $this->subject);
+    }
+
+    /**
+     * @test
+     */
+    public function implementsDirectPersistInterface(): void
+    {
+        self::assertInstanceOf(DirectPersistInterface::class, $this->subject);
     }
 }

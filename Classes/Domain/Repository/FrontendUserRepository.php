@@ -10,9 +10,10 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
 /**
  * @extends Repository<FrontendUser>
  */
-class FrontendUserRepository extends Repository
+class FrontendUserRepository extends Repository implements DirectPersistInterface
 {
     use FrontendUserRepositoryTrait;
+    use DirectPersistTrait;
 
     public function findOneByUsername(string $username): ?FrontendUser
     {

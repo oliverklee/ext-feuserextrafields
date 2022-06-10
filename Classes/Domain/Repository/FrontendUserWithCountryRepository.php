@@ -10,9 +10,10 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
 /**
  * @extends Repository<FrontendUserWithCountry>
  */
-class FrontendUserWithCountryRepository extends Repository
+class FrontendUserWithCountryRepository extends Repository implements DirectPersistInterface
 {
     use FrontendUserRepositoryTrait;
+    use DirectPersistTrait;
 
     public function findOneByUsername(string $username): ?FrontendUserWithCountry
     {

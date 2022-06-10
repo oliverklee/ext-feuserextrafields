@@ -17,6 +17,7 @@ use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 /**
  * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepository
  * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepositoryTrait
+ * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\DirectPersistTrait
  */
 final class FrontendUserRepositoryTest extends FunctionalTestCase
 {
@@ -153,6 +154,24 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         $firstImage = $imagesAsArray[0];
         self::assertInstanceOf(FileReference::class, $firstImage);
         self::assertSame(1, $firstImage->getUid());
+    }
+
+    /**
+     * @test
+     */
+    public function persistAllPersistsAddedModels(): void
+    {
+        $user = new FrontendUser();
+
+        $this->subject->add($user);
+        $this->subject->persistAll();
+
+        $connection = $this->getConnectionPool()->getConnectionForTable('fe_users');
+        $databaseRow = $connection
+            ->executeQuery('SELECT * FROM fe_users WHERE uid = :uid', ['uid' => $user->getUid()])
+            ->fetchAssociative();
+
+        self::assertIsArray($databaseRow);
     }
 
     /**
