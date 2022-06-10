@@ -13,6 +13,7 @@ use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 /**
  * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserGroupRepository
+ * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\DirectPersistTrait
  */
 final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
 {
@@ -87,5 +88,23 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
         $groupsAsArray = $groups->toArray();
         self::assertInstanceOf(FrontendUserGroup::class, $groupsAsArray[0]);
         self::assertInstanceOf(FrontendUserGroup::class, $groupsAsArray[1]);
+    }
+
+    /**
+     * @test
+     */
+    public function persistAllPersistsAddedModels(): void
+    {
+        $group = new FrontendUserGroup();
+
+        $this->subject->add($group);
+        $this->subject->persistAll();
+
+        $connection = $this->getConnectionPool()->getConnectionForTable('fe_users');
+        $databaseRow = $connection
+            ->executeQuery('SELECT * FROM fe_groups WHERE uid = :uid', ['uid' => $group->getUid()])
+            ->fetchAssociative();
+
+        self::assertIsArray($databaseRow);
     }
 }
