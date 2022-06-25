@@ -6,15 +6,21 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
-- Add length validation to the model properties (#109)
-- Add `Repository.persistAll` (#90)
-- Add tests concerning handling a user's PID (#75)
 
 ### Changed
 
 ### Deprecated
 
 ### Removed
+
+### Fixed
+
+## 3.2.0
+
+### Added
+- Add length validation to the model properties (#109)
+- Add `Repository.persistAll` (#90)
+- Add tests concerning handling a user's PID (#75)
 
 ### Fixed
 - Improve the type annotations (#107)
