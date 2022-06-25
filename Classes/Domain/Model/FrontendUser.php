@@ -29,9 +29,9 @@ class FrontendUser extends AbstractEntity
     public const GENDER_NOT_PROVIDED = 99;
 
     /**
-     * @var array<int, int<0, max>>
+     * @var array<int, self::GENDER_*>
      */
-    protected const VALID_GENDERS = [self::GENDER_MALE, self::GENDER_FEMALE, self::GENDER_NOT_PROVIDED];
+    public const VALID_GENDERS = [self::GENDER_MALE, self::GENDER_FEMALE, self::GENDER_NOT_PROVIDED];
 
     /**
      * @var int
@@ -64,9 +64,9 @@ class FrontendUser extends AbstractEntity
     public const STATUS_JOB_SEEKING_PART_TIME = 5;
 
     /**
-     * @var array<int, int<0, max>>
+     * @var array<int, self::STATUS_*>
      */
-    protected const VALID_STATUSES = [
+    public const VALID_STATUSES = [
         self::STATUS_NONE,
         self::STATUS_STUDENT,
         self::STATUS_JOB_SEEKING_FULL_TIME,
@@ -186,6 +186,7 @@ class FrontendUser extends AbstractEntity
 
     /**
      * @var int
+     * @phpstan-var self::GENDER_*
      */
     protected $gender = self::GENDER_NOT_PROVIDED;
 
@@ -208,6 +209,7 @@ class FrontendUser extends AbstractEntity
 
     /**
      * @var int
+     * @phpstan-var self::STATUS_*
      */
     protected $status = self::STATUS_NONE;
 
@@ -505,11 +507,20 @@ class FrontendUser extends AbstractEntity
         return \in_array($gender, self::VALID_GENDERS, true);
     }
 
+    /**
+     * @return self::GENDER_*
+     */
     public function getGender(): int
     {
-        return $this->gender;
+        $gender = $this->gender;
+        \assert(\in_array($gender, self::VALID_GENDERS, true));
+
+        return $gender;
     }
 
+    /**
+     * @param self::GENDER_* $gender
+     */
     public function setGender(int $gender): void
     {
         $this->gender = $gender;
@@ -530,11 +541,20 @@ class FrontendUser extends AbstractEntity
         return \in_array($gender, self::VALID_STATUSES, true);
     }
 
+    /**
+     * @return self::STATUS_*
+     */
     public function getStatus(): int
     {
-        return $this->status;
+        $status = $this->status;
+        \assert(\in_array($status, self::VALID_STATUSES, true));
+
+        return $status;
     }
 
+    /**
+     * @param self::STATUS_* $status
+     */
     public function setStatus(int $status): void
     {
         $this->status = $status;
