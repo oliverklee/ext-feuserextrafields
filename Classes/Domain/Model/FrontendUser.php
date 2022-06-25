@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace OliverKlee\FeUserExtraFields\Domain\Model;
 
+use TYPO3\CMS\Extbase\Annotation as Extbase;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
@@ -77,6 +78,7 @@ class FrontendUser extends AbstractEntity
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 255})
      */
     protected $username = '';
 
@@ -84,6 +86,7 @@ class FrontendUser extends AbstractEntity
      * the password hash
      *
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 100})
      */
     protected $password = '';
 
@@ -94,76 +97,91 @@ class FrontendUser extends AbstractEntity
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 160})
      */
     protected $name = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
     protected $firstName = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
     protected $middleName = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
     protected $lastName = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 255})
      */
     protected $address = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 30})
      */
     protected $telephone = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 30})
      */
     protected $fax = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 255})
      */
     protected $email = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
     protected $lockToDomain = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 40})
      */
     protected $title = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 10})
      */
     protected $zip = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
     protected $city = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 40})
      */
     protected $country = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 80})
      */
     protected $www = '';
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 80})
      */
     protected $company = '';
 
@@ -181,6 +199,7 @@ class FrontendUser extends AbstractEntity
      * salutation (possibly including a name), e.g., "Hello" or "Good day, Mr. Smith"
      *
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 255})
      */
     protected $fullSalutation = '';
 
@@ -192,6 +211,7 @@ class FrontendUser extends AbstractEntity
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 45})
      */
     protected $zone = '';
 
@@ -215,6 +235,7 @@ class FrontendUser extends AbstractEntity
 
     /**
      * @var string
+     * @Extbase\Validate("StringLength", options={"maximum": 65535})
      */
     protected $comments = '';
 
