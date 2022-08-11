@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
-- Add support for TYPO3 11LTS (#154)
+- Add support for TYPO3 11LTS (#154, #155)
 
 ### Changed
 
