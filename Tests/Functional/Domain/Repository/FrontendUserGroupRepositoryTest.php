@@ -53,7 +53,6 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
 
         self::assertInstanceOf(FrontendUserGroup::class, $model);
         self::assertSame('editors', $model->getTitle());
-        self::assertSame('www.example.com', $model->getLockToDomain());
         self::assertSame('We build websites!', $model->getDescription());
     }
 

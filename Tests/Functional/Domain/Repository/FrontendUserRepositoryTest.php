@@ -72,7 +72,6 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         self::assertSame('+49 1111 1233456-78', $model->getTelephone());
         self::assertSame('+49 1111 1233456-79', $model->getFax());
         self::assertSame('max@example.com', $model->getEmail());
-        self::assertSame('example.com', $model->getLockToDomain());
         self::assertSame('Head of fur', $model->getTitle());
         self::assertSame('01234', $model->getZip());
         self::assertSame('Kattingen', $model->getCity());

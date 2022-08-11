@@ -145,12 +145,6 @@ class FrontendUser extends AbstractEntity
 
     /**
      * @var string
-     * @Extbase\Validate("StringLength", options={"maximum": 50})
-     */
-    protected $lockToDomain = '';
-
-    /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 40})
      */
     protected $title = '';
@@ -391,16 +385,6 @@ class FrontendUser extends AbstractEntity
     public function setEmail(string $email): void
     {
         $this->email = $email;
-    }
-
-    public function getLockToDomain(): string
-    {
-        return $this->lockToDomain;
-    }
-
-    public function setLockToDomain(string $lockToDomain): void
-    {
-        $this->lockToDomain = $lockToDomain;
     }
 
     public function getTitle(): string

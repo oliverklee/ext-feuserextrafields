@@ -72,28 +72,6 @@ final class FrontendUserGroupTest extends UnitTestCase
     /**
      * @test
      */
-    public function getLockToDomainInitiallyReturnsEmptyString(): void
-    {
-        $result = $this->subject->getLockToDomain();
-
-        self::assertSame('', $result);
-    }
-
-    /**
-     * @test
-     */
-    public function setLockToDomainSetsLockToDomain(): void
-    {
-        $lockToDomain = 'example.com';
-
-        $this->subject->setLockToDomain($lockToDomain);
-
-        self::assertSame($lockToDomain, $this->subject->getLockToDomain());
-    }
-
-    /**
-     * @test
-     */
     public function getSubgroupInitiallyReturnsEmptyStorage(): void
     {
         $result = $this->subject->getSubgroup();
