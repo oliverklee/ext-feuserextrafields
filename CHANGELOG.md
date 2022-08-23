@@ -6,13 +6,19 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
-- Add tests that the models can be XCLASSed (#143)
 
 ### Changed
 
 ### Deprecated
 
 ### Removed
+
+### Fixed
+
+## 4.2.1
+
+### Added
+- Add tests that the models can be XCLASSed (#143)
 
 ### Fixed
 - Reduce code duplication in the repositories (#144)
