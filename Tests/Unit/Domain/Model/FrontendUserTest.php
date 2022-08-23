@@ -329,28 +329,6 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
-    public function getLockToDomainInitiallyReturnsEmptyString(): void
-    {
-        $result = $this->subject->getLockToDomain();
-
-        self::assertSame('', $result);
-    }
-
-    /**
-     * @test
-     */
-    public function setLockToDomainSetsLockToDomain(): void
-    {
-        $lockToDomain = 'foo.bar';
-
-        $this->subject->setLockToDomain($lockToDomain);
-
-        self::assertSame($lockToDomain, $this->subject->getLockToDomain());
-    }
-
-    /**
-     * @test
-     */
     public function getTitleInitiallyReturnsEmptyString(): void
     {
         $result = $this->subject->getTitle();

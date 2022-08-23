@@ -21,12 +21,6 @@ class FrontendUserGroup extends AbstractEntity
 
     /**
      * @var string
-     * @Extbase\Validate("StringLength", options={"maximum": 50})
-     */
-    protected $lockToDomain = '';
-
-    /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 65535})
      */
     protected $description = '';
@@ -58,16 +52,6 @@ class FrontendUserGroup extends AbstractEntity
     public function setTitle(string $title): void
     {
         $this->title = $title;
-    }
-
-    public function getLockToDomain(): string
-    {
-        return $this->lockToDomain;
-    }
-
-    public function setLockToDomain(string $lockToDomain): void
-    {
-        $this->lockToDomain = $lockToDomain;
     }
 
     public function getDescription(): string
