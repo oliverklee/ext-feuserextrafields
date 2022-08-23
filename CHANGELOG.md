@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
+- Add tests that the models can be XCLASSed (#143)
 
 ### Changed
 
