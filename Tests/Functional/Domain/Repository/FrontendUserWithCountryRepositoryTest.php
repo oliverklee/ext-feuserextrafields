@@ -16,8 +16,8 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 /**
+ * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\AbstractFrontendUserRepository
  * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserWithCountryRepository
- * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepositoryTrait
  * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\DirectPersistTrait
  */
 final class FrontendUserWithCountryRepositoryTest extends FunctionalTestCase

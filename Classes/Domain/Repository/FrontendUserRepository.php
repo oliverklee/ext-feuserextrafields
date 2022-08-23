@@ -5,26 +5,10 @@ declare(strict_types=1);
 namespace OliverKlee\FeUserExtraFields\Domain\Repository;
 
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
-use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
- * @extends Repository<FrontendUser>
+ * @extends AbstractFrontendUserRepository<FrontendUser>
  */
-class FrontendUserRepository extends Repository implements DirectPersistInterface
+class FrontendUserRepository extends AbstractFrontendUserRepository
 {
-    use FrontendUserRepositoryTrait;
-    use DirectPersistTrait;
-
-    public function findOneByUsername(string $username): ?FrontendUser
-    {
-        if ($username === '') {
-            return null;
-        }
-
-        $query = $this->createQuery();
-        $query->getQuerySettings()->setRespectStoragePage(false);
-        $query->matching($query->equals('username', $username));
-
-        return $query->execute()->getFirst();
-    }
 }
