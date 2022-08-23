@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+- Bump the minimal 10.4 Extbase requirement (#136)
 
 ## 4.2.0
 
