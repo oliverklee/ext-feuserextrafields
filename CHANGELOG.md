@@ -12,9 +12,13 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Deprecated
 
 ### Removed
-- Drop the `locktodomain` property (#146)
 
 ### Fixed
+
+# 5.0.0
+
+### Removed
+- Drop the `locktodomain` property (#146)
 
 ## 4.2.1
 
