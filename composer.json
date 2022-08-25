@@ -26,6 +26,7 @@
 		"typo3/cms-extbase": "^10.4.6"
 	},
 	"require-dev": {
+		"bnf/phpstan-psr-container": "^1.0.1",
 		"doctrine/dbal": "^2.13.9",
 		"ergebnis/composer-normalize": "^2.19.0",
 		"friendsofphp/php-cs-fixer": "^3.4.0",
