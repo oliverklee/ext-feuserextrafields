@@ -21,7 +21,7 @@
 		"source": "https://github.com/oliverklee/ext-feuserextrafields"
 	},
 	"require": {
-		"php": "^7.2.0 || ~8.0.0 || ~8.1.0",
+		"php": "^7.2.0 || ~8.0.0 || ~8.1.0 || ~8.2.0",
 		"typo3/cms-core": "^10.4.1 || ^11.5",
 		"typo3/cms-extbase": "^10.4.6 || ^11.5"
 	},
