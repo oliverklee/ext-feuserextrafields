@@ -70,7 +70,7 @@ jobs:
           - "php:stan"
           - "yaml:lint"
         php-version:
-          - "7.4"
+          - "8.1"
   xliff-lint:
     name: "Xliff linter"
     runs-on: ubuntu-22.04
