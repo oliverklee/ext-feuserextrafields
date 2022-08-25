@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+- Configure DI for the repositories (#240)
 - Bump the minimal 10.4 Extbase requirement (#138)
 
 ## 3.2.0
