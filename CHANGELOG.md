@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+- Stop using the deprecated `TYPO3_MODE` constant (#175)
 
 ## 5.1.0
 
