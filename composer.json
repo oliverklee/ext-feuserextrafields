@@ -31,7 +31,7 @@
 		"ergebnis/composer-normalize": "^2.19.0",
 		"friendsofphp/php-cs-fixer": "^3.4.0",
 		"jangregor/phpstan-prophecy": "^1.0.0",
-		"php-coveralls/php-coveralls": "^2.5.2",
+		"php-coveralls/php-coveralls": "^2.5.3",
 		"phpstan/extension-installer": "^1.1.0",
 		"phpstan/phpstan": "^1.8.5",
 		"phpstan/phpstan-phpunit": "^1.1.1",
