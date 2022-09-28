@@ -6,6 +6,9 @@ namespace OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Model;
 
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserWithCountry;
+use OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Model\Fixtures\XclassFrontendUserWithCountry;
+use OliverKlee\FeUserExtraFields\Tests\Unit\Support\MakeInstanceCacheFlusher;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
@@ -22,8 +25,17 @@ final class FrontendUserWithCountryTest extends UnitTestCase
     protected function setUp(): void
     {
         parent::setUp();
+        MakeInstanceCacheFlusher::flushMakeInstanceCache();
 
         $this->subject = new FrontendUserWithCountry();
+    }
+
+    protected function tearDown(): void
+    {
+        // @phpstan-ignore-next-line We know that the necessary array keys exist.
+        unset($GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][FrontendUserWithCountry::class]);
+        MakeInstanceCacheFlusher::flushMakeInstanceCache();
+        parent::tearDown();
     }
 
     /**
@@ -40,6 +52,20 @@ final class FrontendUserWithCountryTest extends UnitTestCase
     public function extendsUserWithoutCountry(): void
     {
         self::assertInstanceOf(FrontendUser::class, $this->subject);
+    }
+
+    /**
+     * @test
+     */
+    public function canBeSubclassed(): void
+    {
+        // @phpstan-ignore-next-line We know that the necessary array keys exist.
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][FrontendUserWithCountry::class]
+            = ['className' => XclassFrontendUserWithCountry::class];
+
+        $instance = GeneralUtility::makeInstance(FrontendUserWithCountry::class);
+
+        self::assertInstanceOf(XclassFrontendUserWithCountry::class, $instance);
     }
 
     /**
