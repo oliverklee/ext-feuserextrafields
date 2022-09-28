@@ -8,11 +8,17 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 ### Changed
-- Require TYPO3 >= 10.4.11 (#173)
 
 ### Deprecated
 
 ### Removed
+
+### Fixed
+
+## 5.1.1
+
+### Changed
+- Require TYPO3 >= 10.4.11 (#173)
 
 ### Fixed
 - Stop using the deprecated `TYPO3_MODE` constant (#175)
