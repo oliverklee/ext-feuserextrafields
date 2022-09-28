@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Model;
 
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
+use OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Model\Fixtures\XclassFrontendUserGroup;
+use OliverKlee\FeUserExtraFields\Tests\Unit\Support\MakeInstanceCacheFlusher;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -22,8 +25,17 @@ final class FrontendUserGroupTest extends UnitTestCase
     protected function setUp(): void
     {
         parent::setUp();
+        MakeInstanceCacheFlusher::flushMakeInstanceCache();
 
         $this->subject = new FrontendUserGroup();
+    }
+
+    protected function tearDown(): void
+    {
+        // @phpstan-ignore-next-line We know that the necessary array keys exist.
+        unset($GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][FrontendUserGroup::class]);
+        MakeInstanceCacheFlusher::flushMakeInstanceCache();
+        parent::tearDown();
     }
 
     /**
@@ -32,6 +44,20 @@ final class FrontendUserGroupTest extends UnitTestCase
     public function isAbstractEntity(): void
     {
         self::assertInstanceOf(AbstractEntity::class, $this->subject);
+    }
+
+    /**
+     * @test
+     */
+    public function canBeSubclassed(): void
+    {
+        // @phpstan-ignore-next-line We know that the necessary array keys exist.
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][FrontendUserGroup::class]
+            = ['className' => XclassFrontendUserGroup::class];
+
+        $instance = GeneralUtility::makeInstance(FrontendUserGroup::class);
+
+        self::assertInstanceOf(XclassFrontendUserGroup::class, $instance);
     }
 
     /**

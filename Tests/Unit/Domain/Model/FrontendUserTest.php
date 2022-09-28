@@ -6,6 +6,9 @@ namespace OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Model;
 
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
+use OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Model\Fixtures\XclassFrontendUser;
+use OliverKlee\FeUserExtraFields\Tests\Unit\Support\MakeInstanceCacheFlusher;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
@@ -24,8 +27,17 @@ final class FrontendUserTest extends UnitTestCase
     protected function setUp(): void
     {
         parent::setUp();
+        MakeInstanceCacheFlusher::flushMakeInstanceCache();
 
         $this->subject = new FrontendUser();
+    }
+
+    protected function tearDown(): void
+    {
+        // @phpstan-ignore-next-line We know that the necessary array keys exist.
+        unset($GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][FrontendUser::class]);
+        MakeInstanceCacheFlusher::flushMakeInstanceCache();
+        parent::tearDown();
     }
 
     /**
@@ -34,6 +46,19 @@ final class FrontendUserTest extends UnitTestCase
     public function isAbstractEntity(): void
     {
         self::assertInstanceOf(AbstractEntity::class, $this->subject);
+    }
+
+    /**
+     * @test
+     */
+    public function canBeSubclassed(): void
+    {
+        // @phpstan-ignore-next-line We know that the necessary array keys exist.
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][FrontendUser::class] = ['className' => XclassFrontendUser::class];
+
+        $instance = GeneralUtility::makeInstance(FrontendUser::class);
+
+        self::assertInstanceOf(XclassFrontendUser::class, $instance);
     }
 
     /**
