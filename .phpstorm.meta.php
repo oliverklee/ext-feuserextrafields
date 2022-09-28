@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * @see https://www.jetbrains.com/help/phpstorm/ide-advanced-metadata.html
  */
+
 namespace PHPSTORM_META {
 
     override(\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(0), type(0));
@@ -157,12 +158,12 @@ namespace PHPSTORM_META {
 
     override(\TYPO3\CMS\Core\Routing\SiteMatcher::matchRequest(), type(
             \TYPO3\CMS\Core\Routing\SiteRouteResult::class,
-            \TYPO3\CMS\Core\Routing\RouteResultInterface::class,
+            \TYPO3\CMS\Core\Routing\RouteResultInterface::class
         )
     );
 
     override(\TYPO3\CMS\Core\Routing\PageRouter::matchRequest(), type(
         \TYPO3\CMS\Core\Routing\PageArguments::class,
-        \TYPO3\CMS\Core\Routing\RouteResultInterface::class,
+        \TYPO3\CMS\Core\Routing\RouteResultInterface::class
     ));
 }
