@@ -6,7 +6,6 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
-- Add `FrontendUserGroupRepository::findByUids` (#207)
 
 ### Changed
 
@@ -15,6 +14,11 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+
+## 5.2.0
+
+### Added
+- Add `FrontendUserGroupRepository::findByUids` (#207)
 
 ## 5.1.1
 
