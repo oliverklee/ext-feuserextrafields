@@ -64,6 +64,64 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
     /**
      * @test
      */
+    public function findByUidsWithoutMatchesReturnsEmptyArray(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+
+        $models = $this->subject->findByUids([2]);
+
+        self::assertCount(0, $models);
+    }
+
+    /**
+     * @test
+     */
+    public function findByUidsForExistingRecordMatchingModel(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+
+        $models = $this->subject->findByUids([1]);
+
+        self::assertCount(1, $models);
+        $firstModel = $models->current();
+        self::assertInstanceOf(FrontendUserGroup::class, $firstModel);
+        self::assertSame(1, $firstModel->getUid());
+    }
+
+    /**
+     * @test
+     */
+    public function findByUidsSilentlyIgnoresNonStringUids(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+
+        // @phpstan-ignore-next-line We are explicitly testing with a contract-violating value.
+        $models = $this->subject->findByUids([1, '\'"--ab']);
+
+        self::assertCount(1, $models);
+        $firstModel = $models->current();
+        self::assertInstanceOf(FrontendUserGroup::class, $firstModel);
+        self::assertSame(1, $firstModel->getUid());
+    }
+
+    /**
+     * @test
+     */
+    public function findByUidsForForPartialMatchesReturnsOnlyTheMatches(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+
+        $models = $this->subject->findByUids([1, 2]);
+
+        self::assertCount(1, $models);
+        $firstModel = $models->current();
+        self::assertInstanceOf(FrontendUserGroup::class, $firstModel);
+        self::assertSame(1, $firstModel->getUid());
+    }
+
+    /**
+     * @test
+     */
     public function initializesSubGroupsWithEmptyStorage(): void
     {
         $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
