@@ -23,6 +23,7 @@ class FrontendUserGroupRepository extends Repository implements DirectPersistInt
     public function findByUids(array $uids): QueryResultInterface
     {
         $query = $this->createQuery();
+        $query->getQuerySettings()->setRespectStoragePage(false);
 
         return $query->matching($query->in('uid', $uids))->execute();
     }
