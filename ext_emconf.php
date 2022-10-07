@@ -3,7 +3,7 @@
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Extra fields for TYPO3 frontend users',
     'description' => 'This TYPO3 extension adds additional common fields to FE users and provides Extbase models for this.',
-    'version' => '5.2.0',
+    'version' => '5.2.1',
     'category' => 'misc',
     'constraints' => [
         'depends' => [

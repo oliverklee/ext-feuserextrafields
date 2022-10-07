@@ -14,6 +14,10 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+
+## 5.2.1
+
+### Fixed
 - Ignore the storage PID in `FrontendUserGroupRepository::findByUids` (#208)
 
 ## 5.2.0
