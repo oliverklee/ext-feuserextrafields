@@ -76,9 +76,24 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
     /**
      * @test
      */
-    public function findByUidsForExistingRecordMatchingModel(): void
+    public function findByUidsForExistingRecordReturnsMatchingModel(): void
     {
         $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+
+        $models = $this->subject->findByUids([1]);
+
+        self::assertCount(1, $models);
+        $firstModel = $models->current();
+        self::assertInstanceOf(FrontendUserGroup::class, $firstModel);
+        self::assertSame(1, $firstModel->getUid());
+    }
+
+    /**
+     * @test
+     */
+    public function findByUidsFindsRecordsOnAnyPage(): void
+    {
+        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupOnPage.xml');
 
         $models = $this->subject->findByUids([1]);
 
