@@ -20,6 +20,7 @@ updates:
         versions: [ ">= 3.4.0" ]
       - dependency-name: "phpunit/phpunit"
         versions: [ ">= 9" ]
+      - dependency-name: "sjbr/static-info-tables"
       - dependency-name: "symfony/routing"
       - dependency-name: "symfony/yaml"
       - dependency-name: "typo3/cms-*"
