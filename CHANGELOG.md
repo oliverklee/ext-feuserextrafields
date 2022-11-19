@@ -14,6 +14,10 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+
+## 3.2.1
+
+### Fixed
 - Make the required system extension versions consistent (#241)
 - Configure DI for the repositories (#240)
 - Bump the minimal 10.4 Extbase requirement (#138)
