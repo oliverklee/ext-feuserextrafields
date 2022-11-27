@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+- Enable caching for PHP-CS-Fixer (#248)
 
 ## 5.2.1
 
