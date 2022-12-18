@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 ### Changed
+- Require TYPO3 ^11.5.4 for TYPO3 11LTS (#259)
 - Switch the coverage on CI from Xdebug to PCOV (#223)
 
 ### Deprecated
