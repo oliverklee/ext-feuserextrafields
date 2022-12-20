@@ -7,7 +7,9 @@ namespace OliverKlee\FeUserExtraFields\Domain\Model;
 use TYPO3\CMS\Extbase\Annotation as Extbase;
 
 /**
- * Model for a front-end user with a country field (to be used witho the `static_info_tables` extension).
+ * Model for a front-end user with a country field (to be used with the `static_info_tables` extension).
+ *
+ * @deprecated will be removed in feuserextrafields 6.0
  */
 class FrontendUserWithCountry extends FrontendUser
 {

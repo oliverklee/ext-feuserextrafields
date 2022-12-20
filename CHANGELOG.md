@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Changed
 
 ### Deprecated
+- Deprecate `FrontendUserWithCountry` and its repository (#265)
 
 ### Removed
 

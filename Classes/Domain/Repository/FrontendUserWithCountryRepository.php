@@ -8,6 +8,8 @@ use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserWithCountry;
 
 /**
  * @extends AbstractFrontendUserRepository<FrontendUserWithCountry>
+ *
+ * @deprecated will be removed in feuserextrafields 6.0
  */
 class FrontendUserWithCountryRepository extends AbstractFrontendUserRepository
 {
