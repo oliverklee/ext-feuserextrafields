@@ -27,12 +27,22 @@ class FrontendUser extends AbstractEntity
     /**
      * @var int
      */
+    public const GENDER_DIVERSE = 2;
+
+    /**
+     * @var int
+     */
     public const GENDER_NOT_PROVIDED = 99;
 
     /**
      * @var array<int, self::GENDER_*>
      */
-    public const VALID_GENDERS = [self::GENDER_MALE, self::GENDER_FEMALE, self::GENDER_NOT_PROVIDED];
+    public const VALID_GENDERS = [
+        self::GENDER_MALE,
+        self::GENDER_FEMALE,
+        self::GENDER_DIVERSE,
+        self::GENDER_NOT_PROVIDED,
+    ];
 
     /**
      * @var int

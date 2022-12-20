@@ -23,6 +23,10 @@
 				<source>Mrs.</source>
 				<target>Frau</target>
 			</trans-unit>
+			<trans-unit id="gender.2">
+				<source>diverse</source>
+				<target>divers</target>
+			</trans-unit>
 			<trans-unit id="dateOfBirth">
 				<source>Birth date</source>
 				<target>Geburtsdatum</target>

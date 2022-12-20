@@ -35,6 +35,10 @@ call_user_func(static function (): void {
                         $languageFile . 'gender.1',
                         \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_FEMALE,
                     ],
+                    [
+                        $languageFile . 'gender.2',
+                        \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_DIVERSE,
+                    ],
                 ],
                 'default' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_NOT_PROVIDED,
             ],
