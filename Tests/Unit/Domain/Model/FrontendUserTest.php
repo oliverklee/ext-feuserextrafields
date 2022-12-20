@@ -537,6 +537,7 @@ final class FrontendUserTest extends UnitTestCase
         return [
             'male' => [FrontendUser::GENDER_MALE],
             'female' => [FrontendUser::GENDER_FEMALE],
+            'diverse' => [FrontendUser::GENDER_DIVERSE],
             'unknown' => [FrontendUser::GENDER_NOT_PROVIDED],
         ];
     }
@@ -608,7 +609,7 @@ final class FrontendUserTest extends UnitTestCase
      */
     public function setGenderSetsGender(): void
     {
-        $value = FrontendUser::GENDER_FEMALE;
+        $value = FrontendUser::GENDER_DIVERSE;
 
         $this->subject->setGender($value);
 
