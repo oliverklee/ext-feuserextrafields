@@ -6,18 +6,24 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
-- Add a gender value "diverse" (#264)
 
 ### Changed
 
 ### Deprecated
-- Deprecate `FrontendUserWithCountry` and its repository (#265)
 
 ### Removed
 
 ### Fixed
 
-# 5.2.2
+## 5.3.0
+
+### Added
+- Add a gender value "diverse" (#264)
+
+### Deprecated
+- Deprecate `FrontendUserWithCountry` and its repository (#265)
+
+## 5.2.2
 
 ### Changed
 - Require TYPO3 ^11.5.4 for TYPO3 11LTS (#259)
