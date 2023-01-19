@@ -2,7 +2,7 @@
 
 [![TYPO3 V11](https://img.shields.io/badge/TYPO3-11-orange.svg)](https://get.typo3.org/version/11)
 [![TYPO3 V10](https://img.shields.io/badge/TYPO3-10-orange.svg)](https://get.typo3.org/version/10)
-[![License](https://poser.pugx.org/oliverklee/feuserextrafields/license.svg)](https://packagist.org/packages/oliverklee/feuserextrafields)
+[![License](https://img.shields.io/github/license/oliverklee/ext-feuserextrafields/)](https://packagist.org/packages/oliverklee/feuserextrafields)
 [![Total downloads](https://poser.pugx.org/oliverklee/feuserextrafields/downloads.svg)](https://packagist.org/packages/oliverklee/feuserextrafields)
 [![GitHub CI status](https://github.com/oliverklee/ext-feuserextrafields/workflows/CI/badge.svg?branch=main)](https://github.com/oliverklee/ext-feuserextrafields/actions)
 [![Coverage Status](https://coveralls.io/repos/github/oliverklee/ext-feuserextrafields/badge.svg?branch=main)](https://coveralls.io/github/oliverklee/ext-feuserextrafields?branch=main)
