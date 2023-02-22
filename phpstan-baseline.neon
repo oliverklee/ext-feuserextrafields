@@ -1,6 +1,11 @@
 parameters:
 	ignoreErrors:
 		-
+			message: "#^PHPDoc tag @var with type \\(TEntityClass of TYPO3\\\\CMS\\\\Extbase\\\\DomainObject\\\\DomainObjectInterface\\)\\|null is not subtype of type OliverKlee\\\\FeUserExtraFields\\\\Domain\\\\Model\\\\AbstractFrontendUser\\|null\\.$#"
+			count: 1
+			path: Classes/Domain/Repository/AbstractFrontendUserRepository.php
+
+		-
 			message: "#^Method OliverKlee\\\\FeUserExtraFields\\\\Tests\\\\Unit\\\\Fixtures\\\\StubObjectManager\\:\\:get\\(\\) has parameter \\$constructorArguments with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: Tests/Unit/Fixtures/StubObjectManager.php
