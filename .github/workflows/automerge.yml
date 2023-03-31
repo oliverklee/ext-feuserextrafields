@@ -10,6 +10,8 @@ jobs:
 
     if: ${{ github.actor == 'dependabot[bot]' }}
 
+    timeout-minutes: 1
+
     steps:
       - uses: peter-evans/enable-pull-request-automerge@v3
         with:

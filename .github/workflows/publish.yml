@@ -8,6 +8,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-22.04
+
+    timeout-minutes: 3
+
     steps:
       - name: "Checkout"
         uses: actions/checkout@v3
