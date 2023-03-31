@@ -10,10 +10,11 @@ jobs:
 
     if: ${{ github.actor == 'dependabot[bot]' }}
 
-    timeout-minutes: 2
+    timeout-minutes: 1
 
     steps:
-      - uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          pull-request-number: ${{ github.event.pull_request.number }}
-          merge-method: squash
+      - name: Enable automerge
+        shell: bash
+        run: gh pr merge -R "${{ github.repository }}" --squash --auto "${{ github.event.pull_request.number }}"
+        env:
+          GH_TOKEN: ${{ github.token }}
