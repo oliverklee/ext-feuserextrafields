@@ -1,7 +1,8 @@
 name: automerge
 
 on:
-  pull_request:
+  # We're using pull_request_target instead of pull_request due to permissions.
+  pull_request_target:
 
 jobs:
   automerge:
@@ -9,13 +10,13 @@ jobs:
 
     runs-on: ubuntu-22.04
 
-    if: ${{ github.actor == 'dependabot[bot]' }}
-
     timeout-minutes: 1
+
+    if: ${{ github.actor == 'dependabot[bot]' }}
 
     steps:
       - name: Enable automerge
         shell: bash
         run: gh pr merge -R "${{ github.repository }}" --squash --auto "${{ github.event.pull_request.number }}"
         env:
-          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
