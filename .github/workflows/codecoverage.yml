@@ -9,6 +9,7 @@ jobs:
   code-coverage:
     name: "Calculate code coverage"
     runs-on: ubuntu-22.04
+    timeout-minutes: 3
     env:
       DB_DATABASE: typo3
       DB_USER: root
