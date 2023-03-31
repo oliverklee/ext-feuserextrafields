@@ -9,7 +9,7 @@ jobs:
   publish:
     runs-on: ubuntu-22.04
 
-    timeout-minutes: 3
+    timeout-minutes: 5
 
     steps:
       - name: "Checkout"
