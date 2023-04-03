@@ -11,7 +11,6 @@ jobs:
   php-lint:
     name: "PHP linter"
     runs-on: ubuntu-22.04
-    timeout-minutes: 3
     steps:
       - name: "Checkout"
         uses: actions/checkout@v3
@@ -40,7 +39,6 @@ jobs:
   code-quality:
     name: "Code quality checks"
     runs-on: ubuntu-22.04
-    timeout-minutes: 3
     steps:
       - name: "Checkout"
         uses: actions/checkout@v3
@@ -82,7 +80,6 @@ jobs:
   xliff-lint:
     name: "Xliff linter"
     runs-on: ubuntu-22.04
-    timeout-minutes: 2
     steps:
       - name: "Checkout"
         uses: actions/checkout@v3
@@ -92,7 +89,6 @@ jobs:
     name: "Unit tests"
     runs-on: ubuntu-22.04
     needs: php-lint
-    timeout-minutes: 3
     steps:
       - name: "Checkout"
         uses: actions/checkout@v3
@@ -178,7 +174,6 @@ jobs:
     name: "Functional tests"
     runs-on: ubuntu-22.04
     needs: php-lint
-    timeout-minutes: 3
     env:
       DB_DATABASE: typo3
       DB_USER: root
