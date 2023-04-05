@@ -7,7 +7,6 @@ return [
         'tableName' => 'fe_users',
         'properties' => [
             'userGroup' => ['fieldName' => 'usergroup'],
-            'lockToDomain' => ['fieldName' => 'lockToDomain'],
             'lastLogin' => ['fieldName' => 'lastlogin'],
         ],
     ],
@@ -15,14 +14,10 @@ return [
         'tableName' => 'fe_users',
         'properties' => [
             'userGroup' => ['fieldName' => 'usergroup'],
-            'lockToDomain' => ['fieldName' => 'lockToDomain'],
             'lastLogin' => ['fieldName' => 'lastlogin'],
         ],
     ],
     OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup::class => [
         'tableName' => 'fe_groups',
-        'properties' => [
-            'lockToDomain' => ['fieldName' => 'lockToDomain'],
-        ],
     ],
 ];
