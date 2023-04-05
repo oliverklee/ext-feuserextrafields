@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Deprecated
 
 ### Removed
+- Drop the property mapping for the removed `lockToDomain` property (#325)
 
 ### Fixed
 
