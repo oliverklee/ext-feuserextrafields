@@ -29,5 +29,7 @@
         <date_of_birth>1648857600</date_of_birth>
         <status>2</status>
         <comments>Here we go!</comments>
+        <lockToDomain>www.example.com</lockToDomain>
+        <lastlogin>1680697964</lastlogin>
     </fe_users>
 </dataset>
