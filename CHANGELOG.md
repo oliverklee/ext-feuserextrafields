@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 ### Changed
+- Mention the 12LTS crowdfunding campaign (#333)
 
 ### Deprecated
 
