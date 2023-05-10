@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 ### Changed
+- Use short class names in the PHPDoc annotations (#336)
 - Mention the 12LTS crowdfunding campaign (#333)
 
 ### Deprecated
