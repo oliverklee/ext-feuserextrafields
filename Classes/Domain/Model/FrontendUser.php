@@ -101,7 +101,7 @@ class FrontendUser extends AbstractEntity
     protected $password = '';
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup>
+     * @var ObjectStorage<FrontendUserGroup>
      */
     protected $userGroup;
 
@@ -190,7 +190,7 @@ class FrontendUser extends AbstractEntity
     protected $company = '';
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+     * @var ObjectStorage<FileReference>
      */
     protected $image;
 
