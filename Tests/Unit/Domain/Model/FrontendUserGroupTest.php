@@ -63,6 +63,46 @@ final class FrontendUserGroupTest extends UnitTestCase
     /**
      * @test
      */
+    public function getCreationDateInitiallyReturnsNull(): void
+    {
+        self::assertNull($this->subject->getCreationDate());
+    }
+
+    /**
+     * @test
+     */
+    public function setCreationDateSetsCreationDate(): void
+    {
+        $date = new \DateTime();
+
+        $this->subject->setCreationDate($date);
+
+        self::assertSame($date, $this->subject->getCreationDate());
+    }
+
+    /**
+     * @test
+     */
+    public function getModificationDateInitiallyReturnsNull(): void
+    {
+        self::assertNull($this->subject->getModificationDate());
+    }
+
+    /**
+     * @test
+     */
+    public function setModificationDateSetsModificationDate(): void
+    {
+        $date = new \DateTime();
+
+        $this->subject->setModificationDate($date);
+
+        self::assertSame($date, $this->subject->getModificationDate());
+    }
+
+    /**
+     * @test
+     */
     public function getTitleInitiallyReturnsEmptyString(): void
     {
         $result = $this->subject->getTitle();

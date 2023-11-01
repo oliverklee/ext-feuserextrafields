@@ -14,6 +14,9 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  */
 class FrontendUser extends AbstractEntity
 {
+    use CreationDateTrait;
+    use ModificationDateTrait;
+
     /**
      * @var int
      */

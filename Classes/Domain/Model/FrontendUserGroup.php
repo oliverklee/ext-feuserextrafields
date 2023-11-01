@@ -13,6 +13,9 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  */
 class FrontendUserGroup extends AbstractEntity
 {
+    use CreationDateTrait;
+    use ModificationDateTrait;
+
     /**
      * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 50})

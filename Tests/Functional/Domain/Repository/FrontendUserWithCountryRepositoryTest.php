@@ -71,6 +71,8 @@ final class FrontendUserWithCountryRepositoryTest extends FunctionalTestCase
         $model = $this->subject->findByUid(1);
 
         self::assertInstanceOf(FrontendUserWithCountry::class, $model);
+        self::assertEquals(new \DateTime('2019-01-01 00:00:00'), $model->getCreationDate());
+        self::assertEquals(new \DateTime('2023-01-01 00:00:00'), $model->getModificationDate());
         self::assertSame('max', $model->getUsername());
         self::assertSame('luif3ui4t12', $model->getPassword());
         self::assertSame('Max M. Minimau', $model->getName());
