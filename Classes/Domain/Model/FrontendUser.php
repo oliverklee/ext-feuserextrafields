@@ -146,12 +146,6 @@ class FrontendUser extends AbstractEntity
 
     /**
      * @var string
-     * @Extbase\Validate("StringLength", options={"maximum": 30})
-     */
-    protected $fax = '';
-
-    /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 255})
      */
     protected $email = '';
@@ -378,16 +372,6 @@ class FrontendUser extends AbstractEntity
     public function setTelephone(string $telephone): void
     {
         $this->telephone = $telephone;
-    }
-
-    public function getFax(): string
-    {
-        return $this->fax;
-    }
-
-    public function setFax(string $fax): void
-    {
-        $this->fax = $fax;
     }
 
     public function getEmail(): string
