@@ -8,10 +8,8 @@ use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserWithCountry;
 use OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserWithCountryRepository;
-use TYPO3\CMS\Core\Information\Typo3Version;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
-use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
@@ -43,12 +41,7 @@ final class FrontendUserWithCountryRepositoryTest extends FunctionalTestCase
 
         $this->persistenceManager = GeneralUtility::makeInstance(PersistenceManager::class);
 
-        if (GeneralUtility::makeInstance(Typo3Version::class)->getMajorVersion() >= 11) {
-            $this->subject = $this->get(FrontendUserWithCountryRepository::class);
-        } else {
-            $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
-            $this->subject = $objectManager->get(FrontendUserWithCountryRepository::class);
-        }
+        $this->subject = $this->get(FrontendUserWithCountryRepository::class);
     }
 
     /**
