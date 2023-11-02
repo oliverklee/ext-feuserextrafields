@@ -6,6 +6,18 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+## 5.4.0
+
+### Added
 - Add `.creationDate` and `.modificationDate` properties (#383)
 - Add support for PHP 8.3 (#382)
 
@@ -13,12 +25,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Use short class names in the PHPDoc annotations (#336)
 - Mention the 12LTS crowdfunding campaign (#333)
 
-### Deprecated
-
 ### Removed
 - Drop the property mapping for the removed `lockToDomain` property (#325)
-
-### Fixed
 
 ## 5.3.0
 
