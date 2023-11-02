@@ -2,6 +2,8 @@
 <dataset>
     <fe_users>
         <uid>1</uid>
+        <crdate>1546300800</crdate>
+        <tstamp>1672531200</tstamp>
         <username>max</username>
         <password>luif3ui4t12</password>
         <usergroup></usergroup>

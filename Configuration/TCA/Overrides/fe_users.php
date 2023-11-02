@@ -6,6 +6,22 @@ call_user_func(static function (): void {
     $languageFile = 'LLL:EXT:feuserextrafields/Resources/Private/Language/locallang.xlf:';
 
     $temporaryColumns = [
+        'crdate' => [
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'eval' => 'datetime,int',
+                'readOnly' => true,
+            ],
+        ],
+        'tstamp' => [
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'eval' => 'datetime,int',
+                'readOnly' => true,
+            ],
+        ],
         'full_salutation' => [
             'exclude' => 0,
             'label' => $languageFile . 'full_salutation',

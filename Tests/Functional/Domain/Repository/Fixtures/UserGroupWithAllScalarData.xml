@@ -2,6 +2,8 @@
 <dataset>
     <fe_groups>
         <uid>1</uid>
+        <crdate>1546300800</crdate>
+        <tstamp>1672531200</tstamp>
         <title>editors</title>
         <description>We build websites!</description>
     </fe_groups>
