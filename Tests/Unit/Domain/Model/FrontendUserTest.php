@@ -350,28 +350,6 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
-    public function getFaxInitiallyReturnsEmptyString(): void
-    {
-        $result = $this->subject->getFax();
-
-        self::assertSame('', $result);
-    }
-
-    /**
-     * @test
-     */
-    public function setFaxSetsFax(): void
-    {
-        $fax = '42';
-
-        $this->subject->setFax($fax);
-
-        self::assertSame($fax, $this->subject->getFax());
-    }
-
-    /**
-     * @test
-     */
     public function getEmailInitiallyReturnsEmptyString(): void
     {
         $result = $this->subject->getEmail();
