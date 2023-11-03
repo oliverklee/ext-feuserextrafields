@@ -17,8 +17,6 @@ updates:
     ignore:
       - dependency-name: "ergebnis/composer-normalize"
         versions: [ ">= 2.29.0" ]
-      - dependency-name: "friendsofphp/php-cs-fixer"
-        versions: [ ">= 3.9.6" ]
       - dependency-name: "phpunit/phpunit"
         versions: [ ">= 10" ]
       - dependency-name: "symfony/routing"
