@@ -7,10 +7,9 @@ namespace OliverKlee\FeUserExtraFields\Tests\Functional\Domain\Repository;
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
 use OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepository;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
-use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use TYPO3\CMS\Extbase\Persistence\PersistenceManagerInterface;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 /**
@@ -22,7 +21,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
     protected array $testExtensionsToLoad = ['typo3conf/ext/feuserextrafields'];
 
     /**
-     * @var PersistenceManager
+     * @var PersistenceManagerInterface
      */
     private $persistenceManager;
 
@@ -35,7 +34,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
     {
         parent::setUp();
 
-        $this->persistenceManager = GeneralUtility::makeInstance(PersistenceManager::class);
+        $this->persistenceManager = $this->get(PersistenceManagerInterface::class);
 
         $this->subject = $this->get(FrontendUserRepository::class);
     }
