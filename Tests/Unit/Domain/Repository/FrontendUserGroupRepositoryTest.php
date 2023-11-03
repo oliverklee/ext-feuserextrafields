@@ -6,7 +6,7 @@ namespace OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Repository;
 
 use OliverKlee\FeUserExtraFields\Domain\Repository\DirectPersistInterface;
 use OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserGroupRepository;
-use OliverKlee\FeUserExtraFields\Tests\Unit\Fixtures\StubObjectManager;
+use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 use TYPO3\CMS\Extbase\Persistence\RepositoryInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -25,7 +25,8 @@ final class FrontendUserGroupRepositoryTest extends UnitTestCase
     {
         parent::setUp();
 
-        $this->subject = new FrontendUserGroupRepository(new StubObjectManager());
+        $objectManagerStub = $this->createStub(ObjectManagerInterface::class);
+        $this->subject = new FrontendUserGroupRepository($objectManagerStub);
     }
 
     /**

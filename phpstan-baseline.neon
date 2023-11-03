@@ -1,6 +1,2 @@
 parameters:
-	ignoreErrors:
-		-
-			message: "#^Method OliverKlee\\\\FeUserExtraFields\\\\Tests\\\\Unit\\\\Fixtures\\\\StubObjectManager\\:\\:get\\(\\) has parameter \\$constructorArguments with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: Tests/Unit/Fixtures/StubObjectManager.php
+	ignoreErrors: []
