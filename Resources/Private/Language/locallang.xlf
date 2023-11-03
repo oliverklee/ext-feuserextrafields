@@ -27,9 +27,6 @@
 			<trans-unit id="zone">
 				<source>State/province</source>
 			</trans-unit>
-			<trans-unit id="static_info_country">
-				<source>ISO 3166-1 A3 country code</source>
-			</trans-unit>
 			<trans-unit id="privacy">
 				<source>Privacy agreement</source>
 			</trans-unit>

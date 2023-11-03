@@ -10,7 +10,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
- * Model for a front-end user without a country field (to be used without the `static_info_tables` extension).
+ * Model for a front-end user.
  */
 class FrontendUser extends AbstractEntity
 {
