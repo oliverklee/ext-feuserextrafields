@@ -210,8 +210,5 @@
 		"fix:php:sniff": "Fixes the code style with PHP_CodeSniffer.",
 		"phpstan:baseline": "Updates the PHPStan baseline file to match the code.",
 		"prepare-release": "Removes development-only files in preparation of a TER release."
-	},
-	"suggests": {
-		"sjbr/static-info-tables ": "for the FE user model with a country field"
 	}
 }
