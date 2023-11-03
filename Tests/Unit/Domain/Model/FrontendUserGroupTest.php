@@ -17,9 +17,6 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
  */
 final class FrontendUserGroupTest extends UnitTestCase
 {
-    /**
-     * @var FrontendUserGroup
-     */
     private FrontendUserGroup $subject;
 
     protected function setUp(): void

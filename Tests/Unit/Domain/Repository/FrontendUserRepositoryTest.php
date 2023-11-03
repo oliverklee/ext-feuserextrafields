@@ -16,9 +16,6 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
  */
 final class FrontendUserRepositoryTest extends UnitTestCase
 {
-    /**
-     * @var FrontendUserRepository
-     */
     private FrontendUserRepository $subject;
 
     protected function setUp(): void

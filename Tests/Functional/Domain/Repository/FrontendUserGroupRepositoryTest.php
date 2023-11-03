@@ -17,9 +17,6 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
 {
     protected array $testExtensionsToLoad = ['typo3conf/ext/feuserextrafields'];
 
-    /**
-     * @var FrontendUserGroupRepository
-     */
     private FrontendUserGroupRepository $subject;
 
     protected function setUp(): void

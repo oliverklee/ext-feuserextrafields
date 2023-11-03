@@ -15,10 +15,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
  */
 trait CreationDateTrait
 {
-    /**
-     * @var \DateTime|null
-     */
-    protected $creationDate;
+    protected ?\DateTime $creationDate = null;
 
     public function getCreationDate(): ?\DateTime
     {
