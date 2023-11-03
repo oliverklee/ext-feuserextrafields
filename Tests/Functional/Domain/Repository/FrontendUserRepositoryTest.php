@@ -23,12 +23,12 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
     /**
      * @var PersistenceManagerInterface
      */
-    private $persistenceManager;
+    private PersistenceManagerInterface $persistenceManager;
 
     /**
      * @var FrontendUserRepository
      */
-    private $subject;
+    private FrontendUserRepository $subject;
 
     protected function setUp(): void
     {

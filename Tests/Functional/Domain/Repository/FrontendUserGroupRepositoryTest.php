@@ -20,7 +20,7 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
     /**
      * @var FrontendUserGroupRepository
      */
-    private $subject;
+    private FrontendUserGroupRepository $subject;
 
     protected function setUp(): void
     {

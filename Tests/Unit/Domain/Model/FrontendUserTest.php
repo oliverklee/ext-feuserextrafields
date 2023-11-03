@@ -22,7 +22,7 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @var FrontendUser
      */
-    private $subject;
+    private FrontendUser $subject;
 
     protected function setUp(): void
     {
