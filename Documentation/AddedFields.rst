@@ -17,8 +17,3 @@ fields to the FE users table:
 *  :php:`privacy` (privacy agreement accepted)
 *  :php:`status` (job status)
 *  :php:`comments`
-
-The :php:`FrontendUserWithCountryRepository` model additionally provides this
-field:
-
-*  :php:`static_info_country` (the ISO 3166-1 A3 country code)

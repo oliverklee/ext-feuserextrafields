@@ -155,27 +155,4 @@ call_user_func(static function (): void {
         'fe_users',
         'privacy, comments'
     );
-
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('static_info_tables')) {
-        $countryColumn = [
-            'static_info_country' => [
-                'exclude' => 0,
-                'label' => $languageFile . 'static_info_country',
-                'config' => [
-                    'type' => 'input',
-                    'size' => '5',
-                    'max' => '3',
-                    'eval' => '',
-                    'default' => '',
-                ],
-            ],
-        ];
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('fe_users', $countryColumn);
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-            'fe_users',
-            'static_info_country',
-            '',
-            'after:zone'
-        );
-    }
 });

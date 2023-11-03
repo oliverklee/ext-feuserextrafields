@@ -14,7 +14,6 @@ $EM_CONF[$_EXTKEY] = [
         'conflicts' => [
         ],
         'suggests' => [
-            'static_info_tables' => '6.9.0-11.5.99',
         ],
     ],
     'state' => 'stable',
