@@ -20,14 +20,8 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
 {
     protected array $testExtensionsToLoad = ['typo3conf/ext/feuserextrafields'];
 
-    /**
-     * @var PersistenceManagerInterface
-     */
     private PersistenceManagerInterface $persistenceManager;
 
-    /**
-     * @var FrontendUserRepository
-     */
     private FrontendUserRepository $subject;
 
     protected function setUp(): void

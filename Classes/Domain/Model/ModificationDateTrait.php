@@ -15,10 +15,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
  */
 trait ModificationDateTrait
 {
-    /**
-     * @var \DateTime|null
-     */
-    protected $modificationDate;
+    protected ?\DateTime $modificationDate = null;
 
     public function getModificationDate(): ?\DateTime
     {

@@ -186,10 +186,9 @@ class FrontendUser extends AbstractEntity
     protected string $fullSalutation = '';
 
     /**
-     * @var int
-     * @phpstan-var self::GENDER_*
+     * @var self::GENDER_*
      */
-    protected $gender = self::GENDER_NOT_PROVIDED;
+    protected int $gender = self::GENDER_NOT_PROVIDED;
 
     /**
      * @Extbase\Validate("StringLength", options={"maximum": 45})
@@ -198,18 +197,15 @@ class FrontendUser extends AbstractEntity
 
     /**
      * "privacy agreement accepted" flag
-     *
-     * @var bool
      */
-    protected $privacy = false;
+    protected bool $privacy = false;
 
     protected ?\DateTime $dateOfBirth = null;
 
     /**
-     * @var int
-     * @phpstan-var self::STATUS_*
+     * @var self::STATUS_*
      */
-    protected $status = self::STATUS_NONE;
+    protected int $status = self::STATUS_NONE;
 
     /**
      * @Extbase\Validate("StringLength", options={"maximum": 65535})
