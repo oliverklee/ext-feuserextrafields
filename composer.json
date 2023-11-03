@@ -42,7 +42,7 @@
 		"symfony/routing": "^5.4.26 || ^6.3.5",
 		"symfony/yaml": "^5.4.30 || ^6.3.7",
 		"typo3/coding-standards": "~0.6.1",
-		"typo3/testing-framework": "^6.16.9"
+		"typo3/testing-framework": "^7.0.4"
 	},
 	"replace": {
 		"typo3-ter/feuserextrafields": "self.version"
