@@ -17,21 +17,19 @@ class FrontendUserGroup extends AbstractEntity
     use ModificationDateTrait;
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
-    protected $title = '';
+    protected string $title = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 65535})
      */
-    protected $description = '';
+    protected string $description = '';
 
     /**
      * @var ObjectStorage<FrontendUserGroup>
      */
-    protected $subgroup;
+    protected ObjectStorage $subgroup;
 
     public function __construct(string $title = '')
     {

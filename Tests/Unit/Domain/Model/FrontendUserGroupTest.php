@@ -20,7 +20,7 @@ final class FrontendUserGroupTest extends UnitTestCase
     /**
      * @var FrontendUserGroup
      */
-    private $subject;
+    private FrontendUserGroup $subject;
 
     protected function setUp(): void
     {

@@ -90,119 +90,100 @@ class FrontendUser extends AbstractEntity
     ];
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 255})
      */
-    protected $username = '';
+    protected string $username = '';
 
     /**
      * the password hash
      *
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 100})
      */
-    protected $password = '';
+    protected string $password = '';
 
     /**
      * @var ObjectStorage<FrontendUserGroup>
      */
-    protected $userGroup;
+    protected ObjectStorage $userGroup;
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 160})
      */
-    protected $name = '';
+    protected string $name = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
-    protected $firstName = '';
+    protected string $firstName = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
-    protected $middleName = '';
+    protected string $middleName = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
-    protected $lastName = '';
+    protected string $lastName = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 255})
      */
-    protected $address = '';
+    protected string $address = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 30})
      */
-    protected $telephone = '';
+    protected string $telephone = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 255})
      */
-    protected $email = '';
+    protected string $email = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 40})
      */
-    protected $title = '';
+    protected string $title = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 10})
      */
-    protected $zip = '';
+    protected string $zip = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 50})
      */
-    protected $city = '';
+    protected string $city = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 40})
      */
-    protected $country = '';
+    protected string $country = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 80})
      */
-    protected $www = '';
+    protected string $www = '';
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 80})
      */
-    protected $company = '';
+    protected string $company = '';
 
     /**
      * @var ObjectStorage<FileReference>
      */
-    protected $image;
+    protected ObjectStorage $image;
 
-    /**
-     * @var \DateTime|null
-     */
-    protected $lastLogin;
+    protected ?\DateTime $lastLogin = null;
 
     /**
      * salutation (possibly including a name), e.g., "Hello" or "Good day, Mr. Smith"
      *
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 255})
      */
-    protected $fullSalutation = '';
+    protected string $fullSalutation = '';
 
     /**
      * @var int
@@ -211,10 +192,9 @@ class FrontendUser extends AbstractEntity
     protected $gender = self::GENDER_NOT_PROVIDED;
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 45})
      */
-    protected $zone = '';
+    protected string $zone = '';
 
     /**
      * "privacy agreement accepted" flag
@@ -223,10 +203,7 @@ class FrontendUser extends AbstractEntity
      */
     protected $privacy = false;
 
-    /**
-     * @var \DateTime|null
-     */
-    protected $dateOfBirth;
+    protected ?\DateTime $dateOfBirth = null;
 
     /**
      * @var int
@@ -235,10 +212,9 @@ class FrontendUser extends AbstractEntity
     protected $status = self::STATUS_NONE;
 
     /**
-     * @var string
      * @Extbase\Validate("StringLength", options={"maximum": 65535})
      */
-    protected $comments = '';
+    protected string $comments = '';
 
     public function __construct(string $username = '', string $password = '')
     {

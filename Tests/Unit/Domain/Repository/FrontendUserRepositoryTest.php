@@ -19,7 +19,7 @@ final class FrontendUserRepositoryTest extends UnitTestCase
     /**
      * @var FrontendUserRepository
      */
-    private $subject;
+    private FrontendUserRepository $subject;
 
     protected function setUp(): void
     {
