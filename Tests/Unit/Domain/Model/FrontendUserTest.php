@@ -550,7 +550,7 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @return array<string, array<int, int<0, max>>>
      */
-    public function validGenderDataProvider(): array
+    public static function validGenderDataProvider(): array
     {
         return [
             'male' => [FrontendUser::GENDER_MALE],
@@ -575,7 +575,7 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @return array<string, array<int, int>>
      */
-    public function invalidGenderDataProvider(): array
+    public static function invalidGenderDataProvider(): array
     {
         return [
             'negative' => [-1],
