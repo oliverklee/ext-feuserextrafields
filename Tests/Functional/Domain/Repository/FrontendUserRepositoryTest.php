@@ -14,7 +14,6 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 /**
- * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\AbstractFrontendUserRepository
  * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepository
  * @covers \OliverKlee\FeUserExtraFields\Domain\Repository\DirectPersistTrait
  */
