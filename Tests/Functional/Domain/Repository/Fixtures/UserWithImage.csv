@@ -1,0 +1,15 @@
+"fe_users"
+,"uid","image"
+,1,1
+
+"sys_file"
+,"uid","storage","type","folder_hash","identifier","identifier_hash","name","extension","mime_type"
+,5,1,0,"42099b4af021e53fd8fd4e056c2568d7c2e3ffa8","/model.jpg","7e53a1ace84baf4fb1708ba6aa29c85b2a9ec904","model.jpg","jpg","image/jpeg"
+
+"sys_file_metadata"
+,"uid","file","title","l10n_diffsource"
+,1,5,"model image",""
+
+"sys_file_reference"
+,"uid","uid_local","uid_foreign","tablenames","fieldname"
+,1,5,1,"fe_users","image"

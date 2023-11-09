@@ -48,7 +48,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
      */
     public function findByUidForExistingRecordReturnsModelWithAllScalarData(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.csv');
 
         $model = $this->subject->findByUid(1);
 
@@ -85,7 +85,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
      */
     public function initializesUserGroupsWithEmptyStorage(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.csv');
 
         $model = $this->subject->findByUid(1);
         self::assertInstanceOf(FrontendUser::class, $model);
@@ -100,7 +100,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
      */
     public function mapsUserGroupsAssociation(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserWithTwoGroups.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserWithTwoGroups.csv');
 
         $model = $this->subject->findByUid(1);
         self::assertInstanceOf(FrontendUser::class, $model);
@@ -118,7 +118,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
      */
     public function initializesImageWithEmptyStorage(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.csv');
 
         $model = $this->subject->findByUid(1);
         self::assertInstanceOf(FrontendUser::class, $model);
@@ -133,7 +133,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
      */
     public function mapsImageAssociation(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserWithImage.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserWithImage.csv');
 
         $model = $this->subject->findByUid(1);
         self::assertInstanceOf(FrontendUser::class, $model);
@@ -181,7 +181,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
     public function findOneByUsernameWithMatchReturnsUserWithTheProvidedUsername(): void
     {
         $username = 'max';
-        $this->importDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.csv');
 
         $result = $this->subject->findOneByUsername($username);
 
@@ -194,7 +194,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
      */
     public function findOneByUsernameWithEmptyUsernameReturnsNullEvenForUserWithEmptyUsername(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserWithEmptyUsername.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserWithEmptyUsername.csv');
 
         $result = $this->subject->findOneByUsername('');
 
@@ -216,7 +216,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
      */
     public function existsWithUsernameWithMatchReturnsTrue(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserWithAllScalarData.csv');
 
         $result = $this->subject->existsWithUsername('max');
 
@@ -228,7 +228,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
      */
     public function existsWithUsernameWithEmptyUsernameReturnsFalseEvenForUserWithEmptyUsername(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserWithEmptyUsername.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserWithEmptyUsername.csv');
 
         $result = $this->subject->existsWithUsername('');
 
@@ -240,7 +240,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
      */
     public function willSaveNewUserWithExplicitPidOnTheGivenPage(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/Pages.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/Pages.csv');
         $pageUid = 1;
 
         $user = new FrontendUser();

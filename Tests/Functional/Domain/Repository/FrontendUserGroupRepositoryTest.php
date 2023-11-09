@@ -41,7 +41,7 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
      */
     public function findByUidForExistingRecordReturnsModelWithAllScalarData(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.csv');
 
         $model = $this->subject->findByUid(1);
 
@@ -57,7 +57,7 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
      */
     public function findByUidsWithoutMatchesReturnsEmptyArray(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.csv');
 
         $models = $this->subject->findByUids([2]);
 
@@ -69,7 +69,7 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
      */
     public function findByUidsForExistingRecordReturnsMatchingModel(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.csv');
 
         $models = $this->subject->findByUids([1]);
 
@@ -84,7 +84,7 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
      */
     public function findByUidsFindsRecordsOnAnyPage(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupOnPage.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserGroupOnPage.csv');
 
         $models = $this->subject->findByUids([1]);
 
@@ -99,7 +99,7 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
      */
     public function findByUidsSilentlyIgnoresNonStringUids(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.csv');
 
         // @phpstan-ignore-next-line We are explicitly testing with a contract-violating value.
         $models = $this->subject->findByUids([1, '\'"--ab']);
@@ -115,7 +115,7 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
      */
     public function findByUidsForForPartialMatchesReturnsOnlyTheMatches(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.csv');
 
         $models = $this->subject->findByUids([1, 2]);
 
@@ -130,7 +130,7 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
      */
     public function initializesSubGroupsWithEmptyStorage(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.csv');
 
         $model = $this->subject->findByUid(1);
         self::assertInstanceOf(FrontendUserGroup::class, $model);
@@ -145,7 +145,7 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
      */
     public function mapsSubgroupAssociation(): void
     {
-        $this->importDataSet(__DIR__ . '/Fixtures/UserGroupWithTwoSubgroups.xml');
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/UserGroupWithTwoSubgroups.csv');
 
         $model = $this->subject->findByUid(1);
         self::assertInstanceOf(FrontendUserGroup::class, $model);
