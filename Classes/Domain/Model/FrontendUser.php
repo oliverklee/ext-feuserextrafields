@@ -38,7 +38,7 @@ class FrontendUser extends AbstractEntity
     public const GENDER_NOT_PROVIDED = 99;
 
     /**
-     * @var array<int, self::GENDER_*>
+     * @var list<self::GENDER_*>
      */
     public const VALID_GENDERS = [
         self::GENDER_MALE,
@@ -78,7 +78,7 @@ class FrontendUser extends AbstractEntity
     public const STATUS_JOB_SEEKING_PART_TIME = 5;
 
     /**
-     * @var array<int, self::STATUS_*>
+     * @var list<self::STATUS_*>
      */
     public const VALID_STATUSES = [
         self::STATUS_NONE,

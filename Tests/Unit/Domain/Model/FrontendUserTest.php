@@ -545,7 +545,7 @@ final class FrontendUserTest extends UnitTestCase
     }
 
     /**
-     * @return array<string, array<int, int<0, max>>>
+     * @return array<non-empty-string, array{0: FrontendUser::GENDER_*}>
      */
     public static function validGenderDataProvider(): array
     {
@@ -560,7 +560,7 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      *
-     * @param int<0, max> $gender
+     * @param FrontendUser::GENDER_* $gender
      *
      * @dataProvider validGenderDataProvider
      */
@@ -570,7 +570,7 @@ final class FrontendUserTest extends UnitTestCase
     }
 
     /**
-     * @return array<string, array<int, int>>
+     * @return array<non-empty-string, array{0: int}>
      */
     public static function invalidGenderDataProvider(): array
     {
@@ -702,7 +702,7 @@ final class FrontendUserTest extends UnitTestCase
     }
 
     /**
-     * @return array<string, array<int, int<0, max>>>
+     * @return array<non-empty-string, array{0: FrontendUser::STATUS_*}>
      */
     public function validStatusDataProvider(): array
     {
@@ -719,7 +719,7 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      *
-     * @param int<0, max> $status
+     * @param FrontendUser::STATUS_* $status
      *
      * @dataProvider validStatusDataProvider
      */
@@ -729,7 +729,7 @@ final class FrontendUserTest extends UnitTestCase
     }
 
     /**
-     * @return array<string, array<int, int>>
+     * @return array<non-empty-string, array{0: int}>
      */
     public function invalidStatusDataProvider(): array
     {
