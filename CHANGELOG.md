@@ -8,17 +8,23 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 ### Changed
-- Use native type declarations for properties (#404, #405)
 
 ### Deprecated
+
+### Removed
+
+### Fixed
+
+## 6.0.0
+
+### Changed
+- Use native type declarations for properties (#404, #405)
 
 ### Removed
 - Drop `FrontendUserWithCountry` (#390)
 - Drop the `fax` field (#388)
 - Drop support for TYPO3 10LTS (#387, #410)
 - Drop support for PHP 7.2/7.3 (#386)
-
-### Fixed
 
 ## 5.4.0
 
