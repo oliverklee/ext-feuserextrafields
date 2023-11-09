@@ -15,7 +15,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 - Drop `FrontendUserWithCountry` (#390)
 - Drop the `fax` field (#388)
-- Drop support for TYPO3 10LTS (#387)
+- Drop support for TYPO3 10LTS (#387, #410)
 - Drop support for PHP 7.2/7.3 (#386)
 
 ### Fixed
