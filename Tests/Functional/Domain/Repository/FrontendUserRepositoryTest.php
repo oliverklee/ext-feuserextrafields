@@ -18,7 +18,7 @@ use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
  */
 final class FrontendUserRepositoryTest extends FunctionalTestCase
 {
-    protected array $testExtensionsToLoad = ['typo3conf/ext/feuserextrafields'];
+    protected array $testExtensionsToLoad = ['oliverklee/feuserextrafields'];
 
     private PersistenceManagerInterface $persistenceManager;
 
