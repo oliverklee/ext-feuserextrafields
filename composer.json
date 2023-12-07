@@ -170,7 +170,6 @@
 			"rm crowdin.yml",
 			"rm phive.xml",
 			"rm phpstan-baseline.neon",
-			"rm phpstan-baseline.neon",
 			"rm phpstan.neon",
 			"rm rector.php"
 		]
