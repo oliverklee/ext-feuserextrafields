@@ -157,12 +157,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         $this->subject->add($user);
         $this->subject->persistAll();
 
-        $connection = $this->getConnectionPool()->getConnectionForTable('fe_users');
-        $databaseRow = $connection
-            ->executeQuery('SELECT * FROM fe_users WHERE uid = :uid', ['uid' => $user->getUid()])
-            ->fetchAssociative();
-
-        self::assertIsArray($databaseRow);
+        $this->assertCSVDataSet(__DIR__ . '/Fixtures/CreatedUser.csv');
     }
 
     /**
@@ -249,12 +244,6 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         $this->subject->add($user);
         $this->persistenceManager->persistAll();
 
-        $connection = $this->getConnectionPool()->getConnectionForTable('fe_users');
-        $databaseRow = $connection
-            ->executeQuery('SELECT * FROM fe_users WHERE uid = :uid', ['uid' => $user->getUid()])
-            ->fetchAssociative();
-
-        self::assertIsArray($databaseRow);
-        self::assertSame($pageUid, $databaseRow['pid']);
+        $this->assertCSVDataSet(__DIR__ . '/Fixtures/CreatedUserOnPage.csv');
     }
 }

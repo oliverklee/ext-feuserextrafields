@@ -168,11 +168,6 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
         $this->subject->add($group);
         $this->subject->persistAll();
 
-        $connection = $this->getConnectionPool()->getConnectionForTable('fe_users');
-        $databaseRow = $connection
-            ->executeQuery('SELECT * FROM fe_groups WHERE uid = :uid', ['uid' => $group->getUid()])
-            ->fetchAssociative();
-
-        self::assertIsArray($databaseRow);
+        $this->assertCSVDataSet(__DIR__ . '/Fixtures/CreatedUserGroup.csv');
     }
 }
