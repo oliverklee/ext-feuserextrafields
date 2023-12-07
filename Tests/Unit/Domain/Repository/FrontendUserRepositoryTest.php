@@ -22,8 +22,13 @@ final class FrontendUserRepositoryTest extends UnitTestCase
     {
         parent::setUp();
 
-        $objectManagerStub = $this->createStub(ObjectManagerInterface::class);
-        $this->subject = new FrontendUserRepository($objectManagerStub);
+        if (\interface_exists(ObjectManagerInterface::class)) {
+            $objectManagerStub = $this->createStub(ObjectManagerInterface::class);
+            // @phpstan-ignore-next-line This line is 11LTS-specific, but we're running PHPStan on TYPO3 12.
+            $this->subject = new FrontendUserRepository($objectManagerStub);
+        } else {
+            $this->subject = new FrontendUserRepository();
+        }
     }
 
     /**
