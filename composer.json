@@ -165,7 +165,6 @@
 			"rm .gitignore",
 			"rm .php-cs-fixer.php",
 			"rm .phpstorm.meta.php",
-			"rm composer.lock",
 			"rm crowdin.yml",
 			"rm phive.xml",
 			"rm phpstan-baseline.neon",
