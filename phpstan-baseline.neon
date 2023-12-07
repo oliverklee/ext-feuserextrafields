@@ -1,2 +1,21 @@
 parameters:
-	ignoreErrors: []
+	ignoreErrors:
+		-
+			message: "#^Class OliverKlee\\\\FeUserExtraFields\\\\Domain\\\\Repository\\\\FrontendUserGroupRepository constructor invoked with 1 parameter, 0 required\\.$#"
+			count: 1
+			path: Tests/Unit/Domain/Repository/FrontendUserGroupRepositoryTest.php
+
+		-
+			message: "#^Class TYPO3\\\\CMS\\\\Extbase\\\\Object\\\\ObjectManagerInterface not found\\.$#"
+			count: 1
+			path: Tests/Unit/Domain/Repository/FrontendUserGroupRepositoryTest.php
+
+		-
+			message: "#^Class OliverKlee\\\\FeUserExtraFields\\\\Domain\\\\Repository\\\\FrontendUserRepository constructor invoked with 1 parameter, 0 required\\.$#"
+			count: 1
+			path: Tests/Unit/Domain/Repository/FrontendUserRepositoryTest.php
+
+		-
+			message: "#^Class TYPO3\\\\CMS\\\\Extbase\\\\Object\\\\ObjectManagerInterface not found\\.$#"
+			count: 1
+			path: Tests/Unit/Domain/Repository/FrontendUserRepositoryTest.php
