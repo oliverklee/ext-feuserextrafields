@@ -9,7 +9,8 @@ call_user_func(static function (): void {
         'crdate' => [
             'config' => [
                 'type' => 'input',
-                'renderType' => 'inputDateTime',
+                'renderType' => 'datetime',
+                'format' => 'datetime',
                 'eval' => 'datetime,int',
                 'readOnly' => true,
             ],
@@ -17,7 +18,8 @@ call_user_func(static function (): void {
         'tstamp' => [
             'config' => [
                 'type' => 'input',
-                'renderType' => 'inputDateTime',
+                'format' => 'datetime',
+                'renderType' => 'datetime',
                 'eval' => 'datetime,int',
                 'readOnly' => true,
             ],
@@ -40,20 +42,20 @@ call_user_func(static function (): void {
                 'renderType' => 'selectSingle',
                 'items' => [
                     [
-                        $languageFile . 'gender.99',
-                        \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_NOT_PROVIDED,
+                        'label' => $languageFile . 'gender.99',
+                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_NOT_PROVIDED,
                     ],
                     [
-                        $languageFile . 'gender.0',
-                        \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_MALE,
+                        'label' => $languageFile . 'gender.0',
+                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_MALE,
                     ],
                     [
-                        $languageFile . 'gender.1',
-                        \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_FEMALE,
+                        'label' => $languageFile . 'gender.1',
+                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_FEMALE,
                     ],
                     [
-                        $languageFile . 'gender.2',
-                        \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_DIVERSE,
+                        'label' => $languageFile . 'gender.2',
+                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_DIVERSE,
                     ],
                 ],
                 'default' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_NOT_PROVIDED,
@@ -63,9 +65,10 @@ call_user_func(static function (): void {
             'label' => $languageFile . 'dateOfBirth',
             'config' => [
                 'type' => 'input',
-                'renderType' => 'inputDateTime',
+                'renderType' => 'datetime',
+                'format' => 'date',
                 'size' => 10,
-                'eval' => 'date,int',
+                'eval' => 'int',
                 'default' => 0,
             ],
         ],
@@ -93,28 +96,28 @@ call_user_func(static function (): void {
                 'renderType' => 'selectSingle',
                 'items' => [
                     [
-                        $languageFile . 'status.0',
-                        \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_NONE,
+                        'label' => $languageFile . 'status.0',
+                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_NONE,
                     ],
                     [
-                        $languageFile . 'status.1',
-                        \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_STUDENT,
+                        'label' => $languageFile . 'status.1',
+                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_STUDENT,
                     ],
                     [
-                        $languageFile . 'status.2',
-                        \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_JOB_SEEKING_FULL_TIME,
+                        'label' => $languageFile . 'status.2',
+                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_JOB_SEEKING_FULL_TIME,
                     ],
                     [
-                        $languageFile . 'status.3',
-                        \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_WORKING,
+                        'label' => $languageFile . 'status.3',
+                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_WORKING,
                     ],
                     [
-                        $languageFile . 'status.4',
-                        \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_RETIRED,
+                        'label' => $languageFile . 'status.4',
+                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_RETIRED,
                     ],
                     [
-                        $languageFile . 'status.5',
-                        \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_JOB_SEEKING_PART_TIME,
+                        'label' => $languageFile . 'status.5',
+                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_JOB_SEEKING_PART_TIME,
                     ],
                 ],
                 'default' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_NONE,
@@ -131,6 +134,86 @@ call_user_func(static function (): void {
             ],
         ],
     ];
+
+    $typo3Version = new \TYPO3\CMS\Core\Information\Typo3Version();
+    if ($typo3Version->getMajorVersion() < 12) {
+        unset($temporaryColumns['gender']['config']['items'], $temporaryColumns['status']['config']['items']);
+        $temporaryColumns = array_replace_recursive(
+            $temporaryColumns,
+            [
+                'crdate' => [
+                    'config' => [
+                        'renderType' => 'inputDateTime',
+                        'eval' => 'datetime,int',
+                    ],
+                ],
+                'tstamp' => [
+                    'config' => [
+                        'renderType' => 'inputDateTime',
+                        'eval' => 'datetime,int',
+                    ],
+                ],
+                'date_of_birth' => [
+                    'config' => [
+                        'renderType' => 'inputDateTime',
+                        'eval' => 'datetime,int',
+                    ],
+                ],
+                'gender' => [
+                    'config' => [
+                        'items' => [
+                            [
+                                $languageFile . 'gender.99',
+                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_NOT_PROVIDED,
+                            ],
+                            [
+                                $languageFile . 'gender.0',
+                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_MALE,
+                            ],
+                            [
+                                $languageFile . 'gender.1',
+                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_FEMALE,
+                            ],
+                            [
+                                $languageFile . 'gender.2',
+                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_DIVERSE,
+                            ],
+                        ],
+                    ],
+                ],
+                'status' => [
+                    'config' => [
+                        'items' => [
+                            [
+                                $languageFile . 'status.0',
+                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_NONE,
+                            ],
+                            [
+                                $languageFile . 'status.1',
+                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_STUDENT,
+                            ],
+                            [
+                                $languageFile . 'status.2',
+                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_JOB_SEEKING_FULL_TIME,
+                            ],
+                            [
+                                $languageFile . 'status.3',
+                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_WORKING,
+                            ],
+                            [
+                                $languageFile . 'status.4',
+                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_RETIRED,
+                            ],
+                            [
+                                $languageFile . 'status.5',
+                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_JOB_SEEKING_PART_TIME,
+                            ],
+                        ],
+                    ],
+                ],
+            ]
+        );
+    }
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('fe_users', $temporaryColumns);
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
