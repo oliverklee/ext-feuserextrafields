@@ -6,8 +6,6 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
-- Add support for TYPO3 12LTS (#436, #437, #438, #440, #441)
-- Add the Crowdin configuration (#428)
 
 ### Changed
 
@@ -16,6 +14,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+
+## 6.1.0
+
+### Added
+- Add support for TYPO3 12LTS (#436, #437, #438, #440, #441)
+- Add the Crowdin configuration (#428)
 
 ## 6.0.0
 
