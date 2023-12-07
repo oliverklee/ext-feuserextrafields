@@ -251,17 +251,15 @@ jobs:
           - typo3-version: "^11.5"
             php-version: "8.1"
             composer-dependencies: highest
-          # Skipped due to a bug in a lower version of webmozart/assert.
-          # - typo3-version: "^11.5"
-          #   php-version: "8.2"
-          #   composer-dependencies: lowest
+          - typo3-version: "^11.5"
+            php-version: "8.2"
+            composer-dependencies: lowest
           - typo3-version: "^11.5"
             php-version: "8.2"
             composer-dependencies: highest
-          # Skipped due to a bug in a lower version of webmozart/assert.
-          # - typo3-version: "^11.5"
-          #   php-version: "8.3"
-          #   composer-dependencies: lowest
+          - typo3-version: "^11.5"
+            php-version: "8.3"
+            composer-dependencies: lowest
           - typo3-version: "^11.5"
             php-version: "8.3"
             composer-dependencies: highest
@@ -271,14 +269,13 @@ jobs:
           - typo3-version: "^12.4"
             php-version: "8.1"
             composer-dependencies: lowest
-          # Skipped due to a bug in a lower version of webmozart/assert.
-          # - typo3-version: "^12.4"
-          #   php-version: "8.2"
-          #   composer-dependencies: lowest
+          - typo3-version: "^12.4"
+            php-version: "8.2"
+            composer-dependencies: lowest
           - typo3-version: "^12.4"
             php-version: "8.2"
             composer-dependencies: highest
-          # Skipped due to a bug in a lower version of webmozart/assert.
+          # still broken for some reason
           # - typo3-version: "^12.4"
           #   php-version: "8.3"
           #   composer-dependencies: lowest
