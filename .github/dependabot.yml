@@ -15,7 +15,6 @@ updates:
     allow:
       - dependency-type: "development"
     ignore:
-      - dependency-name: "doctrine/dbal"
       - dependency-name: "ergebnis/composer-normalize"
         versions: [ ">= 2.29.0" ]
       - dependency-name: "phpunit/phpunit"
