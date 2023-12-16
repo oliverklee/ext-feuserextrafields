@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+- Fix the minimum 12LTS version (#458)
 
 ## 6.1.0
 
