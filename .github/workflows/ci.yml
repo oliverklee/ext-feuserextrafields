@@ -275,10 +275,9 @@ jobs:
           - typo3-version: "^12.4"
             php-version: "8.2"
             composer-dependencies: highest
-          # still broken for some reason
-          # - typo3-version: "^12.4"
-          #   php-version: "8.3"
-          #   composer-dependencies: lowest
+          - typo3-version: "^12.4"
+            php-version: "8.3"
+            composer-dependencies: lowest
           - typo3-version: "^12.4"
             php-version: "8.3"
             composer-dependencies: highest
