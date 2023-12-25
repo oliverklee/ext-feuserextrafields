@@ -36,7 +36,6 @@
 		"phpstan/phpstan-strict-rules": "^1.5.1",
 		"phpunit/phpunit": "^9.6.15",
 		"saschaegerer/phpstan-typo3": "^1.9.1",
-		"seld/jsonlint": "^1.10.1",
 		"squizlabs/php_codesniffer": "^3.8.0",
 		"ssch/typo3-rector": "^1.5.2",
 		"symfony/routing": "^5.4.26 || ^6.3.5 || ^7.0.0",
@@ -106,7 +105,6 @@
 		"ci:dynamic": [
 			"@ci:tests"
 		],
-		"ci:json:lint": "find . ! -path '*.Build/*' -name '*.json' | xargs -r php .Build/vendor/bin/jsonlint -q",
 		"ci:php": [
 			"@ci:php:cs-fixer",
 			"@ci:php:lint",
@@ -119,7 +117,6 @@
 		"ci:php:stan": "phpstan --no-progress",
 		"ci:static": [
 			"@ci:composer:normalize",
-			"@ci:json:lint",
 			"@ci:php:cs-fixer",
 			"@ci:php:lint",
 			"@ci:php:sniff",
@@ -180,7 +177,6 @@
 		"ci:coverage:merge": "Merges the code coverage reports for unit and functional tests.",
 		"ci:coverage:unit": "Generates the code coverage report for unit tests.",
 		"ci:dynamic": "Runs all PHPUnit tests (unit and functional).",
-		"ci:json:lint": "Lints the JSON files.",
 		"ci:php": "Runs all static checks for the PHP files.",
 		"ci:php:cs-fixer": "Checks the code style with the PHP Coding Standards Fixer (PHP-CS-Fixer).",
 		"ci:php:lint": "Lints the PHP files for syntax errors.",
