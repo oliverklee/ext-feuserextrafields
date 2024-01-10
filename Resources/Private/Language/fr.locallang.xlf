@@ -1,28 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" target-language="fr" datatype="plaintext" original="messages">
-		<header/>
-		<body>
-			<trans-unit id="gender">
-				<source>Gender</source>
-				<target>Genre</target>
-			</trans-unit>
-			<trans-unit id="dateOfBirth">
-				<source>Birth date</source>
-				<target>Date de naissance</target>
-			</trans-unit>
-			<trans-unit id="gender.0">
-				<source>Mr.</source>
-				<target>Monsieur</target>
-			</trans-unit>
-			<trans-unit id="gender.1">
-				<source>Mrs.</source>
-				<target>Madame</target>
-			</trans-unit>
-			<trans-unit id="zone">
-				<source>State/province</source>
-				<target>Canton/province</target>
-			</trans-unit>
-		</body>
-	</file>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="messages" target-language="fr">
+    <header/>
+    <body>
+      <trans-unit id="full_salutation">
+        <source>Full salutation (possibly with name)</source>
+        <target state="needs-translation">Full salutation (possibly with name)</target>
+      </trans-unit>
+      <trans-unit id="gender">
+        <source>Gender</source>
+        <target state="translated">Genre</target>
+      </trans-unit>
+      <trans-unit id="gender.99">
+        <source>(none provided)</source>
+        <target state="needs-translation">(none provided)</target>
+      </trans-unit>
+      <trans-unit id="gender.0">
+        <source>Mr.</source>
+        <target state="translated">Monsieur</target>
+      </trans-unit>
+      <trans-unit id="gender.1">
+        <source>Mrs.</source>
+        <target state="translated">Madame</target>
+      </trans-unit>
+      <trans-unit id="gender.2">
+        <source>diverse</source>
+        <target state="needs-translation">diverse</target>
+      </trans-unit>
+      <trans-unit id="dateOfBirth">
+        <source>Birth date</source>
+        <target state="translated">Date de naissance</target>
+      </trans-unit>
+      <trans-unit id="zone">
+        <source>State/province</source>
+        <target state="translated">Canton/province</target>
+      </trans-unit>
+      <trans-unit id="privacy">
+        <source>Privacy agreement</source>
+        <target state="needs-translation">Privacy agreement</target>
+      </trans-unit>
+      <trans-unit id="status">
+        <source>Job status</source>
+        <target state="needs-translation">Job status</target>
+      </trans-unit>
+      <trans-unit id="status.1">
+        <source>Student</source>
+        <target state="needs-translation">Student</target>
+      </trans-unit>
+      <trans-unit id="status.2">
+        <source>Job seeking (full time)</source>
+        <target state="needs-translation">Job seeking (full time)</target>
+      </trans-unit>
+      <trans-unit id="status.3">
+        <source>Working</source>
+        <target state="needs-translation">Working</target>
+      </trans-unit>
+      <trans-unit id="status.4">
+        <source>Retired</source>
+        <target state="needs-translation">Retired</target>
+      </trans-unit>
+      <trans-unit id="status.5">
+        <source>Job seeking (part time)</source>
+        <target state="needs-translation">Job seeking (part time)</target>
+      </trans-unit>
+      <trans-unit id="comments">
+        <source>Comments</source>
+        <target state="needs-translation">Comments</target>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>
