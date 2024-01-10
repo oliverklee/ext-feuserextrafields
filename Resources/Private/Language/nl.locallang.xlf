@@ -7,37 +7,37 @@
         <source>Full salutation (possibly with name)</source>
         <target state="needs-translation">Full salutation (possibly with name)</target>
       </trans-unit>
-      <trans-unit id="gender">
+      <trans-unit id="gender" approved="yes">
         <source>Gender</source>
-        <target state="translated">Dhr./Mevr.</target>
+        <target state="final">Dhr./Mevr.</target>
       </trans-unit>
       <trans-unit id="gender.99">
         <source>(none provided)</source>
         <target state="needs-translation">(none provided)</target>
       </trans-unit>
-      <trans-unit id="gender.0">
+      <trans-unit id="gender.0" approved="yes">
         <source>Mr.</source>
-        <target state="translated">Dhr.</target>
+        <target state="final">Dhr.</target>
       </trans-unit>
-      <trans-unit id="gender.1">
+      <trans-unit id="gender.1" approved="yes">
         <source>Mrs.</source>
-        <target state="translated">Mevr.</target>
+        <target state="final">Mevr.</target>
       </trans-unit>
       <trans-unit id="gender.2">
         <source>diverse</source>
         <target state="needs-translation">diverse</target>
       </trans-unit>
-      <trans-unit id="dateOfBirth">
+      <trans-unit id="dateOfBirth" approved="yes">
         <source>Birth date</source>
-        <target state="translated">Geboortedatum</target>
+        <target state="final">Geboortedatum</target>
       </trans-unit>
-      <trans-unit id="zone">
+      <trans-unit id="zone" approved="yes">
         <source>State/province</source>
-        <target state="translated">Provincie</target>
+        <target state="final">Provincie</target>
       </trans-unit>
-      <trans-unit id="privacy">
+      <trans-unit id="privacy" approved="yes">
         <source>Privacy agreement</source>
-        <target state="translated">Privacy overeenkomst</target>
+        <target state="final">Privacy overeenkomst</target>
       </trans-unit>
       <trans-unit id="status">
         <source>Job status</source>
