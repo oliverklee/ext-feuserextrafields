@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="en" datatype="plaintext" original="messages" target-language="fr">
+  <file source-language="en" datatype="plaintext" original="messages" target-language="pt-PT">
     <header/>
     <body>
       <trans-unit id="full_salutation">
         <source>Full salutation (possibly with name)</source>
         <target state="needs-translation">Full salutation (possibly with name)</target>
       </trans-unit>
-      <trans-unit id="gender" approved="yes">
+      <trans-unit id="gender">
         <source>Gender</source>
-        <target state="final">Genre</target>
+        <target state="needs-translation">Gender</target>
       </trans-unit>
       <trans-unit id="gender.99">
         <source>(none provided)</source>
         <target state="needs-translation">(none provided)</target>
       </trans-unit>
-      <trans-unit id="gender.0" approved="yes">
+      <trans-unit id="gender.0">
         <source>Mr.</source>
-        <target state="final">Monsieur</target>
+        <target state="needs-translation">Mr.</target>
       </trans-unit>
-      <trans-unit id="gender.1" approved="yes">
+      <trans-unit id="gender.1">
         <source>Mrs.</source>
-        <target state="final">Madame</target>
+        <target state="needs-translation">Mrs.</target>
       </trans-unit>
       <trans-unit id="gender.2">
         <source>diverse</source>
         <target state="needs-translation">diverse</target>
       </trans-unit>
-      <trans-unit id="dateOfBirth" approved="yes">
+      <trans-unit id="dateOfBirth">
         <source>Birth date</source>
-        <target state="final">Date de naissance</target>
+        <target state="needs-translation">Birth date</target>
       </trans-unit>
-      <trans-unit id="zone" approved="yes">
+      <trans-unit id="zone">
         <source>State/province</source>
-        <target state="final">Canton/province</target>
+        <target state="needs-translation">State/province</target>
       </trans-unit>
       <trans-unit id="privacy">
         <source>Privacy agreement</source>
