@@ -7,33 +7,33 @@
         <source>Full salutation (possibly with name)</source>
         <target state="needs-translation">Full salutation (possibly with name)</target>
       </trans-unit>
-      <trans-unit id="gender">
+      <trans-unit id="gender" approved="yes">
         <source>Gender</source>
-        <target state="translated">Genre</target>
+        <target state="final">Genre</target>
       </trans-unit>
       <trans-unit id="gender.99">
         <source>(none provided)</source>
         <target state="needs-translation">(none provided)</target>
       </trans-unit>
-      <trans-unit id="gender.0">
+      <trans-unit id="gender.0" approved="yes">
         <source>Mr.</source>
-        <target state="translated">Monsieur</target>
+        <target state="final">Monsieur</target>
       </trans-unit>
-      <trans-unit id="gender.1">
+      <trans-unit id="gender.1" approved="yes">
         <source>Mrs.</source>
-        <target state="translated">Madame</target>
+        <target state="final">Madame</target>
       </trans-unit>
       <trans-unit id="gender.2">
         <source>diverse</source>
         <target state="needs-translation">diverse</target>
       </trans-unit>
-      <trans-unit id="dateOfBirth">
+      <trans-unit id="dateOfBirth" approved="yes">
         <source>Birth date</source>
-        <target state="translated">Date de naissance</target>
+        <target state="final">Date de naissance</target>
       </trans-unit>
-      <trans-unit id="zone">
+      <trans-unit id="zone" approved="yes">
         <source>State/province</source>
-        <target state="translated">Canton/province</target>
+        <target state="final">Canton/province</target>
       </trans-unit>
       <trans-unit id="privacy">
         <source>Privacy agreement</source>
