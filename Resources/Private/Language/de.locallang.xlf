@@ -3,69 +3,69 @@
   <file source-language="en" datatype="plaintext" original="messages" target-language="de">
     <header/>
     <body>
-      <trans-unit id="full_salutation">
+      <trans-unit id="full_salutation" approved="yes">
         <source>Full salutation (possibly with name)</source>
-        <target state="translated">Vollständige Anrede (evtl. mit Name)</target>
+        <target state="final">Vollständige Anrede (evtl. mit Name)</target>
       </trans-unit>
-      <trans-unit id="gender">
+      <trans-unit id="gender" approved="yes">
         <source>Gender</source>
-        <target state="translated">Geschlecht</target>
+        <target state="final">Geschlecht</target>
       </trans-unit>
-      <trans-unit id="gender.99">
+      <trans-unit id="gender.99" approved="yes">
         <source>(none provided)</source>
-        <target state="translated">(nicht angegeben)</target>
+        <target state="final">(nicht angegeben)</target>
       </trans-unit>
-      <trans-unit id="gender.0">
+      <trans-unit id="gender.0" approved="yes">
         <source>Mr.</source>
-        <target state="translated">Herr</target>
+        <target state="final">Herr</target>
       </trans-unit>
-      <trans-unit id="gender.1">
+      <trans-unit id="gender.1" approved="yes">
         <source>Mrs.</source>
-        <target state="translated">Frau</target>
+        <target state="final">Frau</target>
       </trans-unit>
-      <trans-unit id="gender.2">
+      <trans-unit id="gender.2" approved="yes">
         <source>diverse</source>
-        <target state="translated">divers</target>
+        <target state="final">divers</target>
       </trans-unit>
-      <trans-unit id="dateOfBirth">
+      <trans-unit id="dateOfBirth" approved="yes">
         <source>Birth date</source>
-        <target state="translated">Geburtsdatum</target>
+        <target state="final">Geburtsdatum</target>
       </trans-unit>
-      <trans-unit id="zone">
+      <trans-unit id="zone" approved="yes">
         <source>State/province</source>
-        <target state="translated">Bundesland</target>
+        <target state="final">Bundesland</target>
       </trans-unit>
-      <trans-unit id="privacy">
+      <trans-unit id="privacy" approved="yes">
         <source>Privacy agreement</source>
-        <target state="translated">Datenschutzerklärung</target>
+        <target state="final">Datenschutzerklärung</target>
       </trans-unit>
-      <trans-unit id="status">
+      <trans-unit id="status" approved="yes">
         <source>Job status</source>
-        <target state="translated">Beschäftigungsstatus</target>
+        <target state="final">Beschäftigungsstatus</target>
       </trans-unit>
-      <trans-unit id="status.1">
+      <trans-unit id="status.1" approved="yes">
         <source>Student</source>
-        <target state="translated">in Ausbildung</target>
+        <target state="final">in Ausbildung</target>
       </trans-unit>
-      <trans-unit id="status.2">
+      <trans-unit id="status.2" approved="yes">
         <source>Job seeking (full time)</source>
-        <target state="translated">auf Arbeitssuche (Vollzeit)</target>
+        <target state="final">auf Arbeitssuche (Vollzeit)</target>
       </trans-unit>
-      <trans-unit id="status.3">
+      <trans-unit id="status.3" approved="yes">
         <source>Working</source>
-        <target state="translated">arbeitend</target>
+        <target state="final">arbeitend</target>
       </trans-unit>
-      <trans-unit id="status.4">
+      <trans-unit id="status.4" approved="yes">
         <source>Retired</source>
-        <target state="translated">in Rente</target>
+        <target state="final">in Rente</target>
       </trans-unit>
-      <trans-unit id="status.5">
+      <trans-unit id="status.5" approved="yes">
         <source>Job seeking (part time)</source>
-        <target state="translated">auf Arbeitssuche (Teilzeit)</target>
+        <target state="final">auf Arbeitssuche (Teilzeit)</target>
       </trans-unit>
-      <trans-unit id="comments">
+      <trans-unit id="comments" approved="yes">
         <source>Comments</source>
-        <target state="translated">Anmerkungen</target>
+        <target state="final">Anmerkungen</target>
       </trans-unit>
     </body>
   </file>
