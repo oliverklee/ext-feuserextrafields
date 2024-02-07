@@ -99,7 +99,7 @@ jobs:
         with:
           php-version: "${{ matrix.php-version }}"
           coverage: none
-          tools: composer:v2, phive
+          tools: composer:v2
       - name: "Show Composer version"
         run: composer --version
       - name: "Show the Composer configuration"
