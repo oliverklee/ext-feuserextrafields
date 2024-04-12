@@ -3,52 +3,52 @@
 	<file source-language="en" datatype="plaintext" original="messages">
 		<header/>
 		<body>
-			<trans-unit id="full_salutation">
+			<trans-unit id="full_salutation" resname="full_salutation" approved="yes">
 				<source>Full salutation (possibly with name)</source>
 			</trans-unit>
-			<trans-unit id="gender">
+			<trans-unit id="gender" resname="gender" approved="yes">
 				<source>Gender</source>
 			</trans-unit>
-			<trans-unit id="gender.99">
+			<trans-unit id="gender.99" resname="gender.99" approved="yes">
 				<source>(none provided)</source>
 			</trans-unit>
-			<trans-unit id="gender.0">
+			<trans-unit id="gender.0" resname="gender.0" approved="yes">
 				<source>Mr.</source>
 			</trans-unit>
-			<trans-unit id="gender.1">
+			<trans-unit id="gender.1" resname="gender.1" approved="yes">
 				<source>Mrs.</source>
 			</trans-unit>
-			<trans-unit id="gender.2">
+			<trans-unit id="gender.2" resname="gender.2" approved="yes">
 				<source>diverse</source>
 			</trans-unit>
-			<trans-unit id="dateOfBirth">
+			<trans-unit id="dateOfBirth" resname="dateOfBirth" approved="yes">
 				<source>Birth date</source>
 			</trans-unit>
-			<trans-unit id="zone">
+			<trans-unit id="zone" resname="zone" approved="yes">
 				<source>State/province</source>
 			</trans-unit>
-			<trans-unit id="privacy">
+			<trans-unit id="privacy" resname="privacy" approved="yes">
 				<source>Privacy agreement</source>
 			</trans-unit>
-			<trans-unit id="status">
+			<trans-unit id="status" resname="status" approved="yes">
 				<source>Job status</source>
 			</trans-unit>
-			<trans-unit id="status.1">
+			<trans-unit id="status.1" resname="status.1" approved="yes">
 				<source>Student</source>
 			</trans-unit>
-			<trans-unit id="status.2">
+			<trans-unit id="status.2" resname="status.2" approved="yes">
 				<source>Job seeking (full time)</source>
 			</trans-unit>
-			<trans-unit id="status.3">
+			<trans-unit id="status.3" resname="status.3" approved="yes">
 				<source>Working</source>
 			</trans-unit>
-			<trans-unit id="status.4">
+			<trans-unit id="status.4" resname="status.4" approved="yes">
 				<source>Retired</source>
 			</trans-unit>
-			<trans-unit id="status.5">
+			<trans-unit id="status.5" resname="status.5" approved="yes">
 				<source>Job seeking (part time)</source>
 			</trans-unit>
-			<trans-unit id="comments">
+			<trans-unit id="comments" resname="comments" approved="yes">
 				<source>Comments</source>
 			</trans-unit>
 		</body>
