@@ -3,27 +3,27 @@
 	<file source-language="en" target-language="nl" datatype="plaintext" original="messages">
 		<header/>
 		<body>
-			<trans-unit id="gender">
+			<trans-unit id="gender" resname="gender" approved="yes">
 				<source>Gender</source>
 				<target>Dhr./Mevr.</target>
 			</trans-unit>
-			<trans-unit id="gender.0">
+			<trans-unit id="gender.0" resname="gender.0" approved="yes">
 				<source>Mr.</source>
 				<target>Dhr.</target>
 			</trans-unit>
-			<trans-unit id="gender.1">
+			<trans-unit id="gender.1" resname="gender.1" approved="yes">
 				<source>Mrs.</source>
 				<target>Mevr.</target>
 			</trans-unit>
-			<trans-unit id="dateOfBirth">
+			<trans-unit id="dateOfBirth" resname="dateOfBirth" approved="yes">
 				<source>Birth date</source>
 				<target>Geboortedatum</target>
 			</trans-unit>
-			<trans-unit id="zone">
+			<trans-unit id="zone" resname="zone" approved="yes">
 				<source>State/province</source>
 				<target>Provincie</target>
 			</trans-unit>
-			<trans-unit id="privacy">
+			<trans-unit id="privacy" resname="privacy" approved="yes">
 				<source>Privacy agreement</source>
 				<target>Privacy overeenkomst</target>
 			</trans-unit>
