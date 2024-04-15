@@ -672,6 +672,24 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
+    public function hasTermsAcknowledgedInitiallyReturnsFalse(): void
+    {
+        self::assertFalse($this->subject->hasTermsAcknowledged());
+    }
+
+    /**
+     * @test
+     */
+    public function setTermsAcknowledgedSetsTermsAcknowledged(): void
+    {
+        $this->subject->setTermsAcknowledged(true);
+
+        self::assertTrue($this->subject->hasTermsAcknowledged());
+    }
+
+    /**
+     * @test
+     */
     public function getDateOfBirthInitiallyReturnsNull(): void
     {
         $result = $this->subject->getDateOfBirth();
