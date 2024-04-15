@@ -8,10 +8,18 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 ### Changed
-- Improve the annotations (#539)
-- Raise the required TYPO3 bugfix version (#461)
 
 ### Deprecated
+
+### Removed
+
+### Fixed
+
+## 6.1.1
+
+### Changed
+- Improve the annotations (#539)
+- Raise the required TYPO3 bugfix version (#461)
 
 ### Removed
 - Delete localizations that are now on Crowdin (#537)
