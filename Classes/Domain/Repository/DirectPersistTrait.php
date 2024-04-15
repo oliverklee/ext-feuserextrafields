@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace OliverKlee\FeUserExtraFields\Domain\Repository;
 
-use TYPO3\CMS\Extbase\Persistence\RepositoryInterface;
+use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
  * Trait that adds a persistAll method to a repository. The idea is that users of this repository should not need to
@@ -12,7 +12,10 @@ use TYPO3\CMS\Extbase\Persistence\RepositoryInterface;
  *
  * This is the default implementation of the corresponding interface.
  *
- * @mixin RepositoryInterface
+ * @mixin Repository
+ * @phpstan-require-implements DirectPersistInterface
+ *
+ * @internal
  */
 trait DirectPersistTrait
 {

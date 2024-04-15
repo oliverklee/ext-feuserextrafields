@@ -9,6 +9,8 @@ namespace OliverKlee\FeUserExtraFields\Domain\Repository;
  * care about the persistence manager.
  *
  * The corresponding trait is the default implementation.
+ *
+ * @internal
  */
 interface DirectPersistInterface
 {
