@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+- Make some DB fields visually smaller (#544)
 
 ## 6.1.1
 
