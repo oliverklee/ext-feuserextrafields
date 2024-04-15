@@ -34,6 +34,9 @@ return RectorConfig::configure()
 
         Typo3SetList::TYPO3_11,
 
+        // Typo3SetList::CODE_QUALITY,
+        // Typo3SetList::GENERAL,
+
         // TYPO3TestingFrameworkSetList::TYPO3_TESTING_FRAMEWORK_7,
 
         // LevelSetList::UP_TO_PHP_53,
