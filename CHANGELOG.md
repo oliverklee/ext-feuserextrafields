@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Deprecated
 
 ### Removed
+- Delete localizations that are now on Crowdin (#537)
 
 ### Fixed
 - Add `resname` to all language labels (#535)
