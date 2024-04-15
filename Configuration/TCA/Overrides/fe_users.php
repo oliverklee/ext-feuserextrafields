@@ -89,6 +89,13 @@ call_user_func(static function (): void {
                 'type' => 'check',
             ],
         ],
+        'terms_acknowledged' => [
+            'exclude' => true,
+            'label' => $languageFile . 'terms_acknowledged',
+            'config' => [
+                'type' => 'check',
+            ],
+        ],
         'status' => [
             'label' => $languageFile . 'status',
             'config' => [
@@ -236,6 +243,6 @@ call_user_func(static function (): void {
     );
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
-        'privacy, comments'
+        'privacy, terms_acknowledged, comments'
     );
 });

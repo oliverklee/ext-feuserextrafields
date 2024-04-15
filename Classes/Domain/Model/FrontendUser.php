@@ -200,6 +200,11 @@ class FrontendUser extends AbstractEntity
      */
     protected bool $privacy = false;
 
+    /**
+     * the "terms and conditions" have been acknowledged
+     */
+    protected bool $termsAcknowledged = false;
+
     protected ?\DateTime $dateOfBirth = null;
 
     /**
@@ -464,6 +469,16 @@ class FrontendUser extends AbstractEntity
     public function setPrivacy(bool $privacy): void
     {
         $this->privacy = $privacy;
+    }
+
+    public function hasTermsAcknowledged(): bool
+    {
+        return $this->termsAcknowledged;
+    }
+
+    public function setTermsAcknowledged(bool $termsAcknowledged): void
+    {
+        $this->termsAcknowledged = $termsAcknowledged;
     }
 
     public function getFullSalutation(): string

@@ -30,6 +30,9 @@
 			<trans-unit id="privacy" resname="privacy" approved="yes">
 				<source>Privacy agreement</source>
 			</trans-unit>
+			<trans-unit id="terms_acknowledged" resname="comments" approved="yes">
+				<source>Terms acknowledged</source>
+			</trans-unit>
 			<trans-unit id="status" resname="status" approved="yes">
 				<source>Job status</source>
 			</trans-unit>
