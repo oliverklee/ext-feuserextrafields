@@ -6,13 +6,19 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
-- Add a checkbox for "terms acknowledged" (#538)
 
 ### Changed
 
 ### Deprecated
 
 ### Removed
+
+### Fixed
+
+## 6.2.0
+
+### Added
+- Add a checkbox for "terms acknowledged" (#538)
 
 ### Fixed
 - Make some DB fields visually smaller (#544)
