@@ -41,7 +41,7 @@
 		"ssch/typo3-rector-testing-framework": "^2.0.1",
 		"symfony/console": "^5.4.26 || ^6.3.5 || ^7.0.0",
 		"symfony/routing": "^5.4.26 || ^6.3.5 || ^7.0.0",
-		"symfony/translation": "^5.4.26 || ^6.3.5 || ^7.0.0",
+		"symfony/translation": "^5.4.35",
 		"symfony/yaml": "^5.4.26 || ^6.3.5 || ^7.0.0",
 		"typo3/coding-standards": "~0.6.1",
 		"typo3/testing-framework": "^7.0.4",
