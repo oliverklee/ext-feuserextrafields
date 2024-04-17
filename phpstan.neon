@@ -17,10 +17,5 @@ parameters:
     - Configuration
     - Tests
 
-  scanDirectories:
-    - Classes
-    - Configuration
-    - Tests
-
   # Allow instanceof checks, particularly in tests
   checkAlwaysTrueCheckTypeFunctionCall: false
