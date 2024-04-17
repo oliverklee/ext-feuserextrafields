@@ -17,10 +17,3 @@ functionality).
 | **Repository:**  | https://github.com/oliverklee/ext-feuserextrafields               |
 | **Read online:** | https://docs.typo3.org/p/oliverklee/feuserextrafields/main/en-us/ |
 | **TER:**         | https://extensions.typo3.org/extension/feuserextrafields/         |
-
-## Compatibility with TYPO3 12LTS/12.4
-
-This extension is not compatible TYPO3 12LTS/12.4 yet.
-Please consider supporting the
-[crowdfunding campaign](https://github.com/oliverklee/ext-seminars/wiki/12LTS-Crowdfunding-Campaign)
-to make this happen.
