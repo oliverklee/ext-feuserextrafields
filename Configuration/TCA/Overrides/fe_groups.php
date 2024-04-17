@@ -3,8 +3,11 @@
 defined('TYPO3') || die();
 
 call_user_func(static function (): void {
+    $languageFile = 'LLL:EXT:feuserextrafields/Resources/Private/Language/locallang.xlf:';
+
     $temporaryColumns = [
         'crdate' => [
+            'label' => $languageFile . 'crdate',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'datetime',
@@ -14,6 +17,7 @@ call_user_func(static function (): void {
             ],
         ],
         'tstamp' => [
+            'label' => $languageFile . 'tstamp',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'datetime',
