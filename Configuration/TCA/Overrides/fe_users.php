@@ -7,6 +7,7 @@ call_user_func(static function (): void {
 
     $temporaryColumns = [
         'crdate' => [
+            'label' => $languageFile . 'crdate',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'datetime',
@@ -16,6 +17,7 @@ call_user_func(static function (): void {
             ],
         ],
         'tstamp' => [
+            'label' => $languageFile . 'tstamp',
             'config' => [
                 'type' => 'input',
                 'format' => 'datetime',

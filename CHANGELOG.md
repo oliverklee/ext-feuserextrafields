@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 ### Changed
+- Add labels for `crdate` and `tstamp` (#557)
 
 ### Deprecated
 
