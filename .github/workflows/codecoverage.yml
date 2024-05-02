@@ -25,7 +25,7 @@ jobs:
           coverage: pcov
           extensions: mysqli
           ini-values: pcov.directory=Classes
-          tools: composer:2, phive
+          tools: composer:v2, phive
       - name: "Show Composer version"
         run: composer --version
       - name: "Show the Composer configuration"
