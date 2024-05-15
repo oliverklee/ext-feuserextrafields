@@ -1,13 +1,18 @@
 ---
+# This GitHub Actions workflow calculates the code coverage of the extension and uploads it to coveralls.io.
 name: Code coverage
 on:
   push:
     branches:
       - main
   pull_request:
+permissions:
+  contents: read
 jobs:
   code-coverage:
     name: "Calculate code coverage"
+    permissions:
+      actions: write
     runs-on: ubuntu-22.04
     env:
       DB_DATABASE: typo3
@@ -22,10 +27,12 @@ jobs:
         with:
           php-version: "${{ matrix.php-version }}"
           ini-file: development
-          coverage: pcov
-          extensions: mysqli
-          ini-values: pcov.directory=Classes
           tools: composer:v2, phive
+          extensions: mysqli
+          coverage: pcov
+          ini-values: pcov.directory=Classes
+      - name: "Install development tools"
+        run: phive --no-progress install --trust-gpg-keys D8406D0D82947747293778314AA394086372C20A
       - name: "Show Composer version"
         run: composer --version
       - name: "Show the Composer configuration"
@@ -52,14 +59,12 @@ jobs:
         run: |
           composer update --no-ansi --no-interaction --no-progress --with-dependencies
           composer show
-      - name: "Install development tools"
-        run: phive --no-progress install --trust-gpg-keys D8406D0D82947747293778314AA394086372C20A
       - name: "Start MySQL"
         run: "sudo /etc/init.d/mysql start"
       - name: "Run unit tests with coverage"
         run: composer ci:coverage:unit
-      - name: "Show coverage files"
-        run: "ls -la .Build/coverage/"
+      - name: "Show generated coverage files"
+        run: "ls -lahR .Build/coverage/"
       - name: "Run functional tests with coverage"
         run: |
           export typo3DatabaseName="$DB_DATABASE";
@@ -67,10 +72,12 @@ jobs:
           export typo3DatabaseUsername="$DB_USER";
           export typo3DatabasePassword="$DB_PASSWORD";
           composer ci:coverage:functional
-      - name: "Show coverage files"
-        run: "ls -la .Build/coverage/"
+      - name: "Show generated coverage files"
+        run: "ls -lahR .Build/coverage/"
       - name: "Merge coverage results"
         run: composer ci:coverage:merge
+      - name: "Show merged coverage files"
+        run: "ls -lahR ./build/logs/"
       - name: "Upload coverage results to Coveralls"
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
