@@ -29,8 +29,8 @@ final class FrontendUserGroupTest extends UnitTestCase
 
     protected function tearDown(): void
     {
-        // @phpstan-ignore-next-line We know that the necessary array keys exist.
-        unset($GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][FrontendUserGroup::class]);
+        // @phpstan-ignore offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible
+        unset($GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']);
         MakeInstanceCacheFlusher::flushMakeInstanceCache();
         parent::tearDown();
     }
@@ -48,9 +48,10 @@ final class FrontendUserGroupTest extends UnitTestCase
      */
     public function canBeSubclassed(): void
     {
-        // @phpstan-ignore-next-line We know that the necessary array keys exist.
-        $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][FrontendUserGroup::class]
-            = ['className' => XclassFrontendUserGroup::class];
+        // @phpstan-ignore offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible
+        $xclassConfiguration = &$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'];
+        self::assertIsArray($xclassConfiguration);
+        $xclassConfiguration[FrontendUserGroup::class] = ['className' => XclassFrontendUserGroup::class];
 
         $instance = GeneralUtility::makeInstance(FrontendUserGroup::class);
 
