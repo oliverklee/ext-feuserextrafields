@@ -3,7 +3,7 @@
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Extra fields for TYPO3 frontend users',
     'description' => 'Extra fields for TYPO3 frontend users and drop-in replacement for the removed FrontEndUser Core model',
-    'version' => '6.2.1',
+    'version' => '6.2.2',
     'category' => 'misc',
     'constraints' => [
         'depends' => [
