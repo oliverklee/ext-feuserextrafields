@@ -17,7 +17,6 @@ $EM_CONF[$_EXTKEY] = [
         ],
     ],
     'state' => 'stable',
-    'clearCacheOnLoad' => true,
     'author' => 'Oliver Klee',
     'author_email' => 'typo3-coding@oliverklee.de',
     'author_company' => 'oliverklee.de',
