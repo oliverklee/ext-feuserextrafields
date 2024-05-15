@@ -15,6 +15,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- Set the default gender value to "none provided" in the SQL table definition (#599)
+
 ## 6.2.1
 
 ### Changed

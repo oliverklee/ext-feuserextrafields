@@ -3,7 +3,7 @@
 #
 CREATE TABLE fe_users (
 	full_salutation varchar(255) DEFAULT '' NOT NULL,
-	gender tinyint(2) unsigned DEFAULT '0' NOT NULL,
+	gender tinyint(2) unsigned DEFAULT '99' NOT NULL,
 	date_of_birth int(11) DEFAULT '0' NOT NULL,
 	zone varchar(45) DEFAULT '' NOT NULL,
 	privacy tinyint(1) unsigned DEFAULT '0' NOT NULL,
