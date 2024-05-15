@@ -101,7 +101,7 @@ final class FrontendUserGroupRepositoryTest extends FunctionalTestCase
     {
         $this->importCSVDataSet(__DIR__ . '/Fixtures/UserGroupWithAllScalarData.csv');
 
-        // @phpstan-ignore-next-line We are explicitly testing with a contract-violating value.
+        // @phpstan-ignore argument.type (We are explicitly testing with a contract-violating value.)
         $models = $this->subject->findByUids([1, '\'"--ab']);
 
         self::assertCount(1, $models);
