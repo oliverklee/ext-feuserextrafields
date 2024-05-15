@@ -1,5 +1,8 @@
 <?php
 
+use TYPO3\CMS\Core\Information\Typo3Version;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 defined('TYPO3') || die();
 
 call_user_func(static function (): void {
@@ -28,7 +31,7 @@ call_user_func(static function (): void {
         ],
     ];
 
-    $typo3Version = new \TYPO3\CMS\Core\Information\Typo3Version();
+    $typo3Version = new Typo3Version();
     if ($typo3Version->getMajorVersion() < 12) {
         $temporaryColumns = array_replace_recursive(
             $temporaryColumns,
@@ -49,5 +52,5 @@ call_user_func(static function (): void {
         );
     }
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('fe_groups', $temporaryColumns);
+    ExtensionManagementUtility::addTCAcolumns('fe_groups', $temporaryColumns);
 });

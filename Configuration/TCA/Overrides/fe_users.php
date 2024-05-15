@@ -1,5 +1,9 @@
 <?php
 
+use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
+use TYPO3\CMS\Core\Information\Typo3Version;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 defined('TYPO3') || die();
 
 call_user_func(static function (): void {
@@ -45,22 +49,22 @@ call_user_func(static function (): void {
                 'items' => [
                     [
                         'label' => $languageFile . 'gender.99',
-                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_NOT_PROVIDED,
+                        'value' => FrontendUser::GENDER_NOT_PROVIDED,
                     ],
                     [
                         'label' => $languageFile . 'gender.0',
-                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_MALE,
+                        'value' => FrontendUser::GENDER_MALE,
                     ],
                     [
                         'label' => $languageFile . 'gender.1',
-                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_FEMALE,
+                        'value' => FrontendUser::GENDER_FEMALE,
                     ],
                     [
                         'label' => $languageFile . 'gender.2',
-                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_DIVERSE,
+                        'value' => FrontendUser::GENDER_DIVERSE,
                     ],
                 ],
-                'default' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_NOT_PROVIDED,
+                'default' => FrontendUser::GENDER_NOT_PROVIDED,
             ],
         ],
         'date_of_birth' => [
@@ -106,30 +110,30 @@ call_user_func(static function (): void {
                 'items' => [
                     [
                         'label' => $languageFile . 'status.0',
-                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_NONE,
+                        'value' => FrontendUser::STATUS_NONE,
                     ],
                     [
                         'label' => $languageFile . 'status.1',
-                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_STUDENT,
+                        'value' => FrontendUser::STATUS_STUDENT,
                     ],
                     [
                         'label' => $languageFile . 'status.2',
-                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_JOB_SEEKING_FULL_TIME,
+                        'value' => FrontendUser::STATUS_JOB_SEEKING_FULL_TIME,
                     ],
                     [
                         'label' => $languageFile . 'status.3',
-                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_WORKING,
+                        'value' => FrontendUser::STATUS_WORKING,
                     ],
                     [
                         'label' => $languageFile . 'status.4',
-                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_RETIRED,
+                        'value' => FrontendUser::STATUS_RETIRED,
                     ],
                     [
                         'label' => $languageFile . 'status.5',
-                        'value' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_JOB_SEEKING_PART_TIME,
+                        'value' => FrontendUser::STATUS_JOB_SEEKING_PART_TIME,
                     ],
                 ],
-                'default' => \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_NONE,
+                'default' => FrontendUser::STATUS_NONE,
             ],
         ],
         'comments' => [
@@ -144,7 +148,7 @@ call_user_func(static function (): void {
         ],
     ];
 
-    $typo3Version = new \TYPO3\CMS\Core\Information\Typo3Version();
+    $typo3Version = new Typo3Version();
     if ($typo3Version->getMajorVersion() < 12) {
         unset($temporaryColumns['gender']['config']['items'], $temporaryColumns['status']['config']['items']);
         $temporaryColumns = array_replace_recursive(
@@ -173,19 +177,19 @@ call_user_func(static function (): void {
                         'items' => [
                             [
                                 $languageFile . 'gender.99',
-                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_NOT_PROVIDED,
+                                FrontendUser::GENDER_NOT_PROVIDED,
                             ],
                             [
                                 $languageFile . 'gender.0',
-                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_MALE,
+                                FrontendUser::GENDER_MALE,
                             ],
                             [
                                 $languageFile . 'gender.1',
-                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_FEMALE,
+                                FrontendUser::GENDER_FEMALE,
                             ],
                             [
                                 $languageFile . 'gender.2',
-                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::GENDER_DIVERSE,
+                                FrontendUser::GENDER_DIVERSE,
                             ],
                         ],
                     ],
@@ -195,27 +199,27 @@ call_user_func(static function (): void {
                         'items' => [
                             [
                                 $languageFile . 'status.0',
-                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_NONE,
+                                FrontendUser::STATUS_NONE,
                             ],
                             [
                                 $languageFile . 'status.1',
-                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_STUDENT,
+                                FrontendUser::STATUS_STUDENT,
                             ],
                             [
                                 $languageFile . 'status.2',
-                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_JOB_SEEKING_FULL_TIME,
+                                FrontendUser::STATUS_JOB_SEEKING_FULL_TIME,
                             ],
                             [
                                 $languageFile . 'status.3',
-                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_WORKING,
+                                FrontendUser::STATUS_WORKING,
                             ],
                             [
                                 $languageFile . 'status.4',
-                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_RETIRED,
+                                FrontendUser::STATUS_RETIRED,
                             ],
                             [
                                 $languageFile . 'status.5',
-                                \OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::STATUS_JOB_SEEKING_PART_TIME,
+                                FrontendUser::STATUS_JOB_SEEKING_PART_TIME,
                             ],
                         ],
                     ],
@@ -224,26 +228,26 @@ call_user_func(static function (): void {
         );
     }
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('fe_users', $temporaryColumns);
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+    ExtensionManagementUtility::addTCAcolumns('fe_users', $temporaryColumns);
+    ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
         'full_salutation, gender',
         '',
         'before:name'
     );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+    ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
         'date_of_birth, status',
         '',
         'after:name'
     );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+    ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
         'zone',
         '',
         'after:city'
     );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+    ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
         'privacy, terms_acknowledged, comments'
     );

@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
+use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
+
 return [
-    OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser::class => [
+    FrontendUser::class => [
         'tableName' => 'fe_users',
         'properties' => [
             'creationDate' => ['fieldName' => 'crdate'],
@@ -12,7 +15,7 @@ return [
             'lastLogin' => ['fieldName' => 'lastlogin'],
         ],
     ],
-    OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup::class => [
+    FrontendUserGroup::class => [
         'tableName' => 'fe_groups',
         'properties' => [
             'creationDate' => ['fieldName' => 'crdate'],
