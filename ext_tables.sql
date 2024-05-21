@@ -7,6 +7,7 @@ CREATE TABLE fe_users (
 	date_of_birth int(11) DEFAULT '0' NOT NULL,
 	zone varchar(45) DEFAULT '' NOT NULL,
 	privacy tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	privacy_date_of_acceptance int(11) unsigned DEFAULT '0' NOT NULL,
 	terms_acknowledged tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	terms_date_of_acceptance int(11) unsigned DEFAULT '0' NOT NULL,
 	status tinyint(1) unsigned DEFAULT '0' NOT NULL,

@@ -36,6 +36,9 @@
 			<trans-unit id="privacy" resname="privacy">
 				<source>Privacy agreement</source>
 			</trans-unit>
+			<trans-unit id="privacyDateOfAcceptance" resname="privacyDateOfAcceptance">
+				<source>Privacy agreement acknowledged at</source>
+			</trans-unit>
 			<trans-unit id="terms_acknowledged" resname="terms_acknowledged">
 				<source>Terms acknowledged</source>
 			</trans-unit>
