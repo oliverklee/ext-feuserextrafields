@@ -78,7 +78,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "6.2.x-dev"
+			"dev-main": "6.3.x-dev"
 		},
 		"typo3/cms": {
 			"extension-key": "feuserextrafields",
