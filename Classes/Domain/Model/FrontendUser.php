@@ -205,6 +205,8 @@ class FrontendUser extends AbstractEntity
      */
     protected bool $termsAcknowledged = false;
 
+    protected ?\DateTime $termsDateOfAcceptance = null;
+
     protected ?\DateTime $dateOfBirth = null;
 
     /**
@@ -479,6 +481,16 @@ class FrontendUser extends AbstractEntity
     public function setTermsAcknowledged(bool $termsAcknowledged): void
     {
         $this->termsAcknowledged = $termsAcknowledged;
+    }
+
+    public function getTermsDateOfAcceptance(): ?\DateTime
+    {
+        return $this->termsDateOfAcceptance;
+    }
+
+    public function setTermsDateOfAcceptance(?\DateTime $date): void
+    {
+        $this->termsDateOfAcceptance = $date;
     }
 
     public function getFullSalutation(): string
