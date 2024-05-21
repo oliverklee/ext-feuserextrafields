@@ -47,9 +47,17 @@
         <source>Privacy agreement</source>
         <target state="final">Privacy overeenkomst</target>
       </trans-unit>
-      <trans-unit id="terms_acknowledged" resname="comments">
+      <trans-unit id="privacyDateOfAcceptance" resname="privacyDateOfAcceptance">
+        <source>Privacy agreement acknowledged at</source>
+        <target state="needs-translation">Privacy agreement acknowledged at</target>
+      </trans-unit>
+      <trans-unit id="terms_acknowledged" resname="terms_acknowledged">
         <source>Terms acknowledged</source>
         <target state="needs-translation">Terms acknowledged</target>
+      </trans-unit>
+      <trans-unit id="termsDateOfAcceptance" resname="termsDateOfAcceptance">
+        <source>Terms acknowledged at</source>
+        <target state="needs-translation">Terms acknowledged at</target>
       </trans-unit>
       <trans-unit id="status" resname="status">
         <source>Job status</source>
@@ -78,6 +86,10 @@
       <trans-unit id="comments" resname="comments">
         <source>Comments</source>
         <target state="needs-translation">Comments</target>
+      </trans-unit>
+      <trans-unit id="vatIn" resname="vatIn">
+        <source>VAT identification number (VATIN)</source>
+        <target state="needs-translation">VAT identification number (VATIN)</target>
       </trans-unit>
     </body>
   </file>
