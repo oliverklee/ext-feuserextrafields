@@ -5,11 +5,11 @@
     <body>
       <trans-unit id="crdate" resname="crdate">
         <source>Creation date</source>
-        <target state="needs-translation">Creation date</target>
+        <target state="translated">Date de création</target>
       </trans-unit>
       <trans-unit id="tstamp" resname="tstamp">
         <source>Change date</source>
-        <target state="needs-translation">Change date</target>
+        <target state="translated">Date de modification</target>
       </trans-unit>
       <trans-unit id="full_salutation" resname="full_salutation">
         <source>Full salutation (possibly with name)</source>
@@ -73,7 +73,7 @@
       </trans-unit>
       <trans-unit id="status.3" resname="status.3">
         <source>Working</source>
-        <target state="needs-translation">Working</target>
+        <target state="translated">Employé</target>
       </trans-unit>
       <trans-unit id="status.4" resname="status.4">
         <source>Retired</source>
@@ -85,11 +85,11 @@
       </trans-unit>
       <trans-unit id="comments" resname="comments">
         <source>Comments</source>
-        <target state="needs-translation">Comments</target>
+        <target state="translated">Commentaires</target>
       </trans-unit>
-      <trans-unit id="vatIn" resname="vatIn">
+      <trans-unit id="vatIn" resname="vatIn" approved="yes">
         <source>VAT identification number (VATIN)</source>
-        <target state="needs-translation">VAT identification number (VATIN)</target>
+        <target state="final">Numéro de TVA intracommunautaire (no TVA)</target>
       </trans-unit>
     </body>
   </file>
