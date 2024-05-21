@@ -66,6 +66,9 @@
 			<trans-unit id="comments" resname="comments">
 				<source>Comments</source>
 			</trans-unit>
+			<trans-unit id="vatIn" resname="vatIn">
+				<source>VAT identification number (VATIN)</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

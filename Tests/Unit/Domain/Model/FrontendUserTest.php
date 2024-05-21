@@ -503,6 +503,25 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
+    public function getVatInInitiallyReturnsEmptyString(): void
+    {
+        self::assertSame('', $this->subject->getVatIn());
+    }
+
+    /**
+     * @test
+     */
+    public function setVatInSetsVatIn(): void
+    {
+        $value = 'DE987654321';
+        $this->subject->setVatIn($value);
+
+        self::assertSame($value, $this->subject->getVatIn());
+    }
+
+    /**
+     * @test
+     */
     public function getImageInitiallyReturnsEmptyCollection(): void
     {
         $result = $this->subject->getImage();
