@@ -1,6 +1,7 @@
 <?php
 
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
+use OliverKlee\FeUserExtraFields\Domain\Model\Gender;
 use TYPO3\CMS\Core\Information\Typo3Version;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
@@ -49,22 +50,22 @@ call_user_func(static function (): void {
                 'items' => [
                     [
                         'label' => $languageFile . 'gender.99',
-                        'value' => FrontendUser::GENDER_NOT_PROVIDED,
+                        'value' => Gender::notProvided(),
                     ],
                     [
                         'label' => $languageFile . 'gender.0',
-                        'value' => FrontendUser::GENDER_MALE,
+                        'value' => Gender::male(),
                     ],
                     [
                         'label' => $languageFile . 'gender.1',
-                        'value' => FrontendUser::GENDER_FEMALE,
+                        'value' => Gender::female(),
                     ],
                     [
                         'label' => $languageFile . 'gender.2',
-                        'value' => FrontendUser::GENDER_DIVERSE,
+                        'value' => Gender::diverse(),
                     ],
                 ],
-                'default' => FrontendUser::GENDER_NOT_PROVIDED,
+                'default' => Gender::notProvided(),
             ],
         ],
         'date_of_birth' => [
@@ -210,19 +211,19 @@ call_user_func(static function (): void {
                         'items' => [
                             [
                                 $languageFile . 'gender.99',
-                                FrontendUser::GENDER_NOT_PROVIDED,
+                                Gender::notProvided(),
                             ],
                             [
                                 $languageFile . 'gender.0',
-                                FrontendUser::GENDER_MALE,
+                                Gender::male(),
                             ],
                             [
                                 $languageFile . 'gender.1',
-                                FrontendUser::GENDER_FEMALE,
+                                Gender::female(),
                             ],
                             [
                                 $languageFile . 'gender.2',
-                                FrontendUser::GENDER_DIVERSE,
+                                Gender::diverse(),
                             ],
                         ],
                     ],

@@ -19,26 +19,36 @@ class FrontendUser extends AbstractEntity
 
     /**
      * @var int
+     *
+     * @deprecated #599 will be removed in version 7.0, use the `Gender` class instead
      */
     public const GENDER_MALE = 0;
 
     /**
      * @var int
+     *
+     * @deprecated #599 will be removed in version 7.0, use the `Gender` class instead
      */
     public const GENDER_FEMALE = 1;
 
     /**
      * @var int
+     *
+     * @deprecated #599 will be removed in version 7.0, use the `Gender` class instead
      */
     public const GENDER_DIVERSE = 2;
 
     /**
      * @var int
+     *
+     * @deprecated #599 will be removed in version 7.0, use the `Gender` class instead
      */
     public const GENDER_NOT_PROVIDED = 99;
 
     /**
      * @var list<self::GENDER_*>
+     *
+     * @deprecated #599 will be removed in version 7.0, use the `Gender` class instead
      */
     public const VALID_GENDERS = [
         self::GENDER_MALE,
@@ -532,6 +542,9 @@ class FrontendUser extends AbstractEntity
         $this->fullSalutation = $fullSalutation;
     }
 
+    /**
+     * @deprecated #599 will be removed in version 7.0, use the `Gender` class instead
+     */
     public static function isValidGender(int $gender): bool
     {
         return \in_array($gender, self::VALID_GENDERS, true);
