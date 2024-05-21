@@ -39,6 +39,9 @@
 			<trans-unit id="terms_acknowledged" resname="comments">
 				<source>Terms acknowledged</source>
 			</trans-unit>
+			<trans-unit id="termsDateOfAcceptance" resname="comments">
+				<source>Terms acknowledged at</source>
+			</trans-unit>
 			<trans-unit id="status" resname="status">
 				<source>Job status</source>
 			</trans-unit>
