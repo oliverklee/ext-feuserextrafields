@@ -172,6 +172,13 @@ class FrontendUser extends AbstractEntity
     protected string $company = '';
 
     /**
+     * VAT identification number (VATIN)
+     *
+     * @Extbase\Validate("StringLength", options={"maximum": 15})
+     */
+    protected string $vatIn = '';
+
+    /**
      * @var ObjectStorage<FileReference>
      */
     protected ObjectStorage $image;
@@ -423,6 +430,16 @@ class FrontendUser extends AbstractEntity
     public function setCompany(string $company): void
     {
         $this->company = $company;
+    }
+
+    public function getVatIn(): string
+    {
+        return $this->vatIn;
+    }
+
+    public function setVatIn(string $vatIn): void
+    {
+        $this->vatIn = $vatIn;
     }
 
     /**

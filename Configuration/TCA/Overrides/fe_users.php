@@ -88,6 +88,17 @@ call_user_func(static function (): void {
                 'default' => '',
             ],
         ],
+        'vat_in' => [
+            'exclude' => true,
+            'label' => $languageFile . 'vatIn',
+            'config' => [
+                'type' => 'input',
+                'size' => 10,
+                'max' => 15,
+                'eval' => 'trim',
+                'default' => '',
+            ],
+        ],
         'privacy' => [
             'exclude' => true,
             'label' => $languageFile . 'privacy',
@@ -280,6 +291,12 @@ call_user_func(static function (): void {
         'zone',
         '',
         'after:city'
+    );
+    ExtensionManagementUtility::addToAllTCAtypes(
+        'fe_users',
+        'vat_in',
+        '',
+        'after:company'
     );
     ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
