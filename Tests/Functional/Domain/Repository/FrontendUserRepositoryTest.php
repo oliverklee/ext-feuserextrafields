@@ -6,6 +6,7 @@ namespace OliverKlee\FeUserExtraFields\Tests\Functional\Domain\Repository;
 
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
+use OliverKlee\FeUserExtraFields\Domain\Model\Gender;
 use OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepository;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
@@ -78,7 +79,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         self::assertEquals(new \DateTime('2024-05-18T02:40'), $model->getTermsDateOfAcceptance());
         self::assertSame('NRW', $model->getZone());
         self::assertSame('Welcome, Max MM!', $model->getFullSalutation());
-        self::assertSame(FrontendUser::GENDER_DIVERSE, $model->getGender());
+        self::assertSame(Gender::diverse(), $model->getGender());
         self::assertEquals(new \DateTime('2022-04-02T00:00'), $model->getDateOfBirth());
         self::assertSame(FrontendUser::STATUS_JOB_SEEKING_FULL_TIME, $model->getStatus());
         self::assertSame('Here we go!', $model->getComments());

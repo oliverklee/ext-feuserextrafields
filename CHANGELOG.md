@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
+- Add a wrapper class for gender values (#624)
 - Add `FrontendUser.vatIn` (VAT identification number) (#623)
 - Add `FrontendUser.privacyDateOfAcceptance` (#622)
 - Add `FrontendUser.termsDateOfAcceptance` (#620)
@@ -13,6 +14,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Changed
 
 ### Deprecated
+- Deprecate the gender constants (#624)
 
 ### Removed
 
