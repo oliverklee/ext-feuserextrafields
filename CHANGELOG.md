@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
+- Add `FrontendUser.privacyDateOfAcceptance` (#622)
 - Add `FrontendUser.termsDateOfAcceptance` (#620)
 
 ### Changed

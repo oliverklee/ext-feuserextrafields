@@ -674,6 +674,25 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
+    public function getPrivacyDateOfAcceptanceInitiallyReturnsNull(): void
+    {
+        self::assertNull($this->subject->getPrivacyDateOfAcceptance());
+    }
+
+    /**
+     * @test
+     */
+    public function setPrivacyDateOfAcceptanceSetsPrivacyDateOfAcceptance(): void
+    {
+        $model = new \DateTime();
+        $this->subject->setPrivacyDateOfAcceptance($model);
+
+        self::assertSame($model, $this->subject->getPrivacyDateOfAcceptance());
+    }
+
+    /**
+     * @test
+     */
     public function hasTermsAcknowledgedInitiallyReturnsFalse(): void
     {
         self::assertFalse($this->subject->hasTermsAcknowledged());

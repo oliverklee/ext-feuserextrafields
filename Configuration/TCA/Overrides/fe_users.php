@@ -95,6 +95,17 @@ call_user_func(static function (): void {
                 'type' => 'check',
             ],
         ],
+        'privacy_date_of_acceptance' => [
+            'exclude' => true,
+            'label' => $languageFile . 'privacyDateOfAcceptance',
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'datetime',
+                'format' => 'datetime',
+                'eval' => 'datetime,int',
+                'readOnly' => true,
+            ],
+        ],
         'terms_acknowledged' => [
             'exclude' => true,
             'label' => $languageFile . 'terms_acknowledged',
@@ -205,6 +216,12 @@ call_user_func(static function (): void {
                         ],
                     ],
                 ],
+                'privacy_date_of_acceptance' => [
+                    'config' => [
+                        'renderType' => 'inputDateTime',
+                        'eval' => 'datetime,int',
+                    ],
+                ],
                 'terms_date_of_acceptance' => [
                     'config' => [
                         'renderType' => 'inputDateTime',
@@ -266,6 +283,6 @@ call_user_func(static function (): void {
     );
     ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
-        'privacy, terms_acknowledged, terms_date_of_acceptance, comments'
+        'privacy, privacy_date_of_acceptance, terms_acknowledged, terms_date_of_acceptance, comments'
     );
 });
