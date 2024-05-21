@@ -87,9 +87,9 @@
         <source>Comments</source>
         <target state="needs-translation">Comments</target>
       </trans-unit>
-      <trans-unit id="vatIn" resname="vatIn">
+      <trans-unit id="vatIn" resname="vatIn" approved="yes">
         <source>VAT identification number (VATIN)</source>
-        <target state="needs-translation">VAT identification number (VATIN)</target>
+        <target state="final">CVR-nummer (CVR)</target>
       </trans-unit>
     </body>
   </file>
