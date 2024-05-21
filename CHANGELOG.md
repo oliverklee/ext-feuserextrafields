@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+- Fix some copy'n'paste errors with `resname` in the language file (#621)
 
 ## 6.2.2
 
