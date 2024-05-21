@@ -6,17 +6,25 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ## x.y.z
 
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+## 6.3.0
+
+### Added
 - Add a wrapper class for gender values (#624)
 - Add `FrontendUser.vatIn` (VAT identification number) (#623)
 - Add `FrontendUser.privacyDateOfAcceptance` (#622)
 - Add `FrontendUser.termsDateOfAcceptance` (#620)
 
-### Changed
-
 ### Deprecated
 - Deprecate the gender constants (#624)
-
-### Removed
 
 ### Fixed
 - Fix some copy'n'paste errors with `resname` in the language file (#621)
