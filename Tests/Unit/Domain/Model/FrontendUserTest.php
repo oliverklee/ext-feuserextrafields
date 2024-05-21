@@ -808,4 +808,23 @@ final class FrontendUserTest extends UnitTestCase
 
         self::assertSame($value, $this->subject->getComments());
     }
+
+    /**
+     * @test
+     */
+    public function getTermsDateOfAcceptanceInitiallyReturnsNull(): void
+    {
+        self::assertNull($this->subject->getTermsDateOfAcceptance());
+    }
+
+    /**
+     * @test
+     */
+    public function setTermsDateOfAcceptanceSetsTermsDateOfAcceptance(): void
+    {
+        $model = new \DateTime();
+        $this->subject->setTermsDateOfAcceptance($model);
+
+        self::assertSame($model, $this->subject->getTermsDateOfAcceptance());
+    }
 }
