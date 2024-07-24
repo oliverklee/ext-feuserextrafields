@@ -3,13 +3,13 @@
   <file source-language="en" datatype="plaintext" original="messages" target-language="nl">
     <header/>
     <body>
-      <trans-unit id="crdate" resname="crdate">
+      <trans-unit id="crdate" resname="crdate" approved="yes">
         <source>Creation date</source>
-        <target state="translated">Aanmaakdatum</target>
+        <target state="final">Aanmaakdatum</target>
       </trans-unit>
-      <trans-unit id="tstamp" resname="tstamp">
+      <trans-unit id="tstamp" resname="tstamp" approved="yes">
         <source>Change date</source>
-        <target state="translated">Wijzigingsdatum</target>
+        <target state="final">Wijzigingsdatum</target>
       </trans-unit>
       <trans-unit id="full_salutation" resname="full_salutation">
         <source>Full salutation (possibly with name)</source>
@@ -59,9 +59,9 @@
         <source>Terms acknowledged at</source>
         <target state="needs-translation">Terms acknowledged at</target>
       </trans-unit>
-      <trans-unit id="status" resname="status">
+      <trans-unit id="status" resname="status" approved="yes">
         <source>Job status</source>
-        <target state="needs-translation">Job status</target>
+        <target state="final">Arbeidsstatus</target>
       </trans-unit>
       <trans-unit id="status.1" resname="status.1">
         <source>Student</source>
@@ -71,9 +71,9 @@
         <source>Job seeking (full time)</source>
         <target state="needs-translation">Job seeking (full time)</target>
       </trans-unit>
-      <trans-unit id="status.3" resname="status.3">
+      <trans-unit id="status.3" resname="status.3" approved="yes">
         <source>Working</source>
-        <target state="translated">Werkend</target>
+        <target state="final">Werkend</target>
       </trans-unit>
       <trans-unit id="status.4" resname="status.4">
         <source>Retired</source>
