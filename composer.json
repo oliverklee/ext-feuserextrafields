@@ -29,7 +29,6 @@
 		"bnf/phpstan-psr-container": "^1.0.1",
 		"ergebnis/composer-normalize": "^2.43.0",
 		"friendsofphp/php-cs-fixer": "^3.62.0",
-		"php-coveralls/php-coveralls": "^2.7.0",
 		"phpstan/extension-installer": "^1.4.1",
 		"phpstan/phpstan": "1.11.8",
 		"phpstan/phpstan-phpunit": "^1.4.0",
