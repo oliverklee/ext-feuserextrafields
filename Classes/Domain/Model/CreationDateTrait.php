@@ -9,7 +9,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 /**
  * Adds the creation date to a model.
  *
- * @mixin AbstractEntity
+ * @phpstan-require-extends AbstractEntity
  *
  * @internal
  */
