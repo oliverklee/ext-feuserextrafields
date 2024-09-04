@@ -12,7 +12,7 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
  *
  * This is the default implementation of the corresponding interface.
  *
- * @mixin Repository
+ * @phpstan-require-extends Repository
  * @phpstan-require-implements DirectPersistInterface
  *
  * @internal
