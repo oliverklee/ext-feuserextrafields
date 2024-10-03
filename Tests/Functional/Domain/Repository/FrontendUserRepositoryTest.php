@@ -7,10 +7,13 @@ namespace OliverKlee\FeUserExtraFields\Tests\Functional\Domain\Repository;
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUser;
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
 use OliverKlee\FeUserExtraFields\Domain\Model\Gender;
+use OliverKlee\FeUserExtraFields\Domain\Repository\DirectPersistInterface;
 use OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepository;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Persistence\PersistenceManagerInterface;
+use TYPO3\CMS\Extbase\Persistence\Repository;
+use TYPO3\CMS\Extbase\Persistence\RepositoryInterface;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 /**
@@ -32,6 +35,30 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         $this->persistenceManager = $this->get(PersistenceManagerInterface::class);
 
         $this->subject = $this->get(FrontendUserRepository::class);
+    }
+
+    /**
+     * @test
+     */
+    public function implementsRepositoryInterface(): void
+    {
+        self::assertInstanceOf(RepositoryInterface::class, $this->subject);
+    }
+
+    /**
+     * @test
+     */
+    public function isRepository(): void
+    {
+        self::assertInstanceOf(Repository::class, $this->subject);
+    }
+
+    /**
+     * @test
+     */
+    public function implementsDirectPersistInterface(): void
+    {
+        self::assertInstanceOf(DirectPersistInterface::class, $this->subject);
     }
 
     /**
