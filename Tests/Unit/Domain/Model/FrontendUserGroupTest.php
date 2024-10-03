@@ -6,7 +6,6 @@ namespace OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Model;
 
 use OliverKlee\FeUserExtraFields\Domain\Model\FrontendUserGroup;
 use OliverKlee\FeUserExtraFields\Tests\Unit\Domain\Model\Fixtures\XclassFrontendUserGroup;
-use OliverKlee\FeUserExtraFields\Tests\Unit\Support\MakeInstanceCacheFlusher;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
@@ -22,7 +21,7 @@ final class FrontendUserGroupTest extends UnitTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        MakeInstanceCacheFlusher::flushMakeInstanceCache();
+        GeneralUtility::flushInternalRuntimeCaches();
 
         $this->subject = new FrontendUserGroup();
     }
@@ -31,7 +30,7 @@ final class FrontendUserGroupTest extends UnitTestCase
     {
         // @phpstan-ignore offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible
         unset($GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']);
-        MakeInstanceCacheFlusher::flushMakeInstanceCache();
+        GeneralUtility::flushInternalRuntimeCaches();
         parent::tearDown();
     }
 
