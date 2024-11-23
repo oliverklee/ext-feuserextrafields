@@ -1,10 +1,6 @@
-.. include:: /Includes.rst.txt
-
-.. _start:
-
-=====================================
+============================
 TYPO3 extension ``feuserextrafields``
-=====================================
+============================
 
 :Extension key:
    feuserextrafields
@@ -28,14 +24,7 @@ TYPO3 extension ``feuserextrafields``
 :Rendered:
    |today|
 
-----
-
-This TYPO3 extension adds additional common fields to FE users
-and provides Extbase models for this (like the `sr_feuser_register` and
-`sf_register` extensions do, but without the additional registering
-functionality).
-
-----
+The content of this document is related to TYPO3 - a GNU/GPL CMS/Framework available from www.typo3.org
 
 **Table of Contents:**
 
@@ -47,9 +36,3 @@ functionality).
    AddedFields
 
 .. Meta Menu
-
-.. toctree::
-   :hidden:
-
-   Sitemap
-   genindex
