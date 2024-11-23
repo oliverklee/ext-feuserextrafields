@@ -1,5 +1,3 @@
-.. include:: /Includes.rst.txt
-
 .. _extbase-models:
 
 ========================
@@ -16,9 +14,3 @@ This extension provides the following Extbase models and repositories:
 These models and repositories can also be used as drop-in replacements for the
 :php:`FrontEndUser` model and repository that were deprecated in TYPO3 V11 and
 will be/have been removed in TYPO3 V12.
-
-Validation
-==========
-
-Please note that the models do not provide any validation for their
-properties (as the validation is expected to be specific to each application).
