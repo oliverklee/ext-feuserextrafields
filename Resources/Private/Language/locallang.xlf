@@ -3,70 +3,70 @@
 	<file source-language="en" datatype="plaintext" original="messages">
 		<header/>
 		<body>
-			<trans-unit id="crdate" resname="crdate">
+			<trans-unit id="crdate">
 				<source>Creation date</source>
 			</trans-unit>
-			<trans-unit id="tstamp" resname="tstamp">
+			<trans-unit id="tstamp">
 				<source>Change date</source>
 			</trans-unit>
-			<trans-unit id="full_salutation" resname="full_salutation">
+			<trans-unit id="full_salutation">
 				<source>Full salutation (possibly with name)</source>
 			</trans-unit>
-			<trans-unit id="gender" resname="gender">
+			<trans-unit id="gender">
 				<source>Gender</source>
 			</trans-unit>
-			<trans-unit id="gender.99" resname="gender.99">
+			<trans-unit id="gender.99">
 				<source>(none provided)</source>
 			</trans-unit>
-			<trans-unit id="gender.0" resname="gender.0">
+			<trans-unit id="gender.0">
 				<source>Mr.</source>
 			</trans-unit>
-			<trans-unit id="gender.1" resname="gender.1">
+			<trans-unit id="gender.1">
 				<source>Mrs.</source>
 			</trans-unit>
-			<trans-unit id="gender.2" resname="gender.2">
+			<trans-unit id="gender.2">
 				<source>diverse</source>
 			</trans-unit>
-			<trans-unit id="dateOfBirth" resname="dateOfBirth">
+			<trans-unit id="dateOfBirth">
 				<source>Birth date</source>
 			</trans-unit>
-			<trans-unit id="zone" resname="zone">
+			<trans-unit id="zone">
 				<source>State/province</source>
 			</trans-unit>
-			<trans-unit id="privacy" resname="privacy">
+			<trans-unit id="privacy">
 				<source>Privacy agreement</source>
 			</trans-unit>
-			<trans-unit id="privacyDateOfAcceptance" resname="privacyDateOfAcceptance">
+			<trans-unit id="privacyDateOfAcceptance">
 				<source>Privacy agreement acknowledged at</source>
 			</trans-unit>
-			<trans-unit id="terms_acknowledged" resname="terms_acknowledged">
+			<trans-unit id="terms_acknowledged">
 				<source>Terms acknowledged</source>
 			</trans-unit>
-			<trans-unit id="termsDateOfAcceptance" resname="termsDateOfAcceptance">
+			<trans-unit id="termsDateOfAcceptance">
 				<source>Terms acknowledged at</source>
 			</trans-unit>
-			<trans-unit id="status" resname="status">
+			<trans-unit id="status">
 				<source>Job status</source>
 			</trans-unit>
-			<trans-unit id="status.1" resname="status.1">
+			<trans-unit id="status.1">
 				<source>Student</source>
 			</trans-unit>
-			<trans-unit id="status.2" resname="status.2">
+			<trans-unit id="status.2">
 				<source>Job seeking (full time)</source>
 			</trans-unit>
-			<trans-unit id="status.3" resname="status.3">
+			<trans-unit id="status.3">
 				<source>Working</source>
 			</trans-unit>
-			<trans-unit id="status.4" resname="status.4">
+			<trans-unit id="status.4">
 				<source>Retired</source>
 			</trans-unit>
-			<trans-unit id="status.5" resname="status.5">
+			<trans-unit id="status.5">
 				<source>Job seeking (part time)</source>
 			</trans-unit>
-			<trans-unit id="comments" resname="comments">
+			<trans-unit id="comments">
 				<source>Comments</source>
 			</trans-unit>
-			<trans-unit id="vatIn" resname="vatIn">
+			<trans-unit id="vatIn">
 				<source>VAT identification number (VATIN)</source>
 			</trans-unit>
 		</body>
