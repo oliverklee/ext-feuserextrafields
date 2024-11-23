@@ -15,6 +15,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Removed
 
+- Remove unneeded `resname` from the language files (#729)
+
 ### Fixed
 
 - Improve the type annotations (#678)
