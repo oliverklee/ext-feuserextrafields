@@ -38,7 +38,7 @@
 		"ssch/typo3-rector": "2.12.0",
 		"ssch/typo3-rector-testing-framework": "2.0.1",
 		"symfony/console": "^5.4.47 || ^6.4.15 || ^7.1.8",
-		"symfony/dependency-injection": "^5.4.48 || ^6.4.16 || ^7.1.9",
+		"symfony/dependency-injection": "^7.2.0",
 		"symfony/routing": "^5.4.48 || ^6.4.16 || ^7.1.9",
 		"symfony/translation": "^5.4.45 || ^6.4.13 || ^7.1.6",
 		"symfony/yaml": "^5.4.45 || ^6.4.13 || ^7.1.6",
