@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace OliverKlee\FeUserExtraFields\Domain\Model;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Annotation as Extbase;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
@@ -380,6 +381,24 @@ class FrontendUser extends AbstractEntity
     public function setEmail(string $email): void
     {
         $this->email = $email;
+    }
+
+    /**
+     * @return non-empty-string the email address (if it is non-empty and valid)
+     *
+     * @throws \UnexpectedValueException if the email address is empty or invalid
+     */
+    public function getValidEmail(): string
+    {
+        $email = $this->getEmail();
+        if ($email === '') {
+            throw new \UnexpectedValueException('The email address is empty.', 1735245325);
+        }
+        if (!GeneralUtility::validEmail($email)) {
+            throw new \UnexpectedValueException('The email address is invalid.', 1735245456);
+        }
+
+        return $email;
     }
 
     public function getTitle(): string

@@ -344,6 +344,47 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
+    public function getValidEmailForEmptyEmailThrowsException(): void
+    {
+        $this->subject->setEmail('');
+
+        $this->expectException(\UnexpectedValueException::class);
+        $this->expectExceptionMessage('The email address is empty.');
+        $this->expectExceptionCode(1735245325);
+
+        $this->subject->getValidEmail();
+    }
+
+    /**
+     * @test
+     */
+    public function getValidEmailForInvalidEmailThrowsException(): void
+    {
+        $this->subject->setEmail('Better caul Saul.');
+
+        $this->expectException(\UnexpectedValueException::class);
+        $this->expectExceptionMessage('The email address is invalid.');
+        $this->expectExceptionCode(1735245456);
+
+        $this->subject->getValidEmail();
+    }
+
+    /**
+     * @test
+     */
+    public function getValidEmailForValidEmailReturnsEmail(): void
+    {
+        $email = 'oli@example.com';
+        $this->subject->setEmail($email);
+
+        $result = $this->subject->getValidEmail();
+
+        self::assertSame($email, $result);
+    }
+
+    /**
+     * @test
+     */
     public function getTitleInitiallyReturnsEmptyString(): void
     {
         $result = $this->subject->getTitle();

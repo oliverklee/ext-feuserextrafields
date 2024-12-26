@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- Add `FrontendUser::getValidEmail()` (#747)
 - Add support for PHP 8.4 (#725)
 
 ### Changed
