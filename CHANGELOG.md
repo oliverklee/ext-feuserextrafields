@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
-- Require TYPO3 >= 11.5.40 (#692, #726)
+- Require TYPO3 >= 11.5.41 (#692, #726, #746)
 
 ### Deprecated
 
