@@ -7,14 +7,24 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+## 6.4.0: Add support for PHP 8.4
+
+### Added
+
 - Add `FrontendUser::getValidEmail()` (#747)
 - Add support for PHP 8.4 (#725)
 
 ### Changed
 
 - Require TYPO3 >= 11.5.41 (#692, #726, #746)
-
-### Deprecated
 
 ### Removed
 
