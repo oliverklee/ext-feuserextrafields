@@ -27,7 +27,7 @@
 	},
 	"require-dev": {
 		"ergebnis/composer-normalize": "2.45.0",
-		"friendsofphp/php-cs-fixer": "3.68.4",
+		"friendsofphp/php-cs-fixer": "3.68.5",
 		"phpstan/extension-installer": "1.4.3",
 		"phpstan/phpstan": "1.12.11",
 		"phpstan/phpstan-phpunit": "1.4.1",
