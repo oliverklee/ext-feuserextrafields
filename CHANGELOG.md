@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- Add `FrontendUserRepository.findBySearchTermInBackendMode` (#776)
 - Add `Frontenduser.getDisplayName()` (#775)
 
 ### Changed

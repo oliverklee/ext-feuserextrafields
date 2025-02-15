@@ -12,6 +12,7 @@ use OliverKlee\FeUserExtraFields\Domain\Repository\FrontendUserRepository;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Persistence\PersistenceManagerInterface;
+use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 use TYPO3\CMS\Extbase\Persistence\RepositoryInterface;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
@@ -277,5 +278,169 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         $this->persistenceManager->persistAll();
 
         $this->assertCSVDataSet(__DIR__ . '/Fixtures/CreatedUserOnPage.csv');
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeReturnsQueryResult(): void
+    {
+        $result = $this->subject->findBySearchTermInBackendMode('1234');
+
+        self::assertInstanceOf(QueryResultInterface::class, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeReturnsResultWithFrontendUser(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/VisibleUser.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('1234');
+
+        $model = $result->getFirst();
+        self::assertInstanceOf(FrontendUser::class, $model);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeFindsVisibleUserWithExactMatchingUid(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/VisibleUser.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('1234');
+
+        $model = $result->getFirst();
+        self::assertInstanceOf(FrontendUser::class, $model);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeFindsHiddenUserWithExactMatchingUid(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/HiddenUser.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('1234');
+
+        $model = $result->getFirst();
+        self::assertInstanceOf(FrontendUser::class, $model);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeIgnoresDeletedUserWithExactMatchingUid(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/DeletedUser.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('1234');
+
+        self::assertInstanceOf(QueryResultInterface::class, $result);
+        self::assertCount(0, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeFindsUserOnAnyPage(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/UserOnPage.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('1234');
+
+        $model = $result->getFirst();
+        self::assertInstanceOf(FrontendUser::class, $model);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeIgnoresUserWithCompletelyDifferentUid(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/VisibleUser.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('4567');
+
+        self::assertCount(0, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeIgnoresUserSubstringMatchInUid(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/VisibleUser.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('23');
+
+        self::assertCount(0, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeFindsUserWithCaseInsensitiveSubstringMatchOnUserName(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/VisibleUser.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('ainbo');
+
+        $model = $result->getFirst();
+        self::assertInstanceOf(FrontendUser::class, $model);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeFindsUserWithCaseInsensitiveSubstringMatchOnFullName(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/VisibleUser.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('AX');
+
+        $model = $result->getFirst();
+        self::assertInstanceOf(FrontendUser::class, $model);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeFindsUserWithCaseInsensitiveSubstringMatchOnFirstName(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/VisibleUser.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('schm');
+
+        $model = $result->getFirst();
+        self::assertInstanceOf(FrontendUser::class, $model);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeFindsUserWithCaseInsensitiveSubstringMatchOnEmail(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/VisibleUser.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('zm');
+
+        $model = $result->getFirst();
+        self::assertInstanceOf(FrontendUser::class, $model);
+    }
+
+    /**
+     * @test
+     */
+    public function findBySearchTermInBackendModeFindsUserWithCaseInsensitiveSubstringMatchOnCompany(): void
+    {
+        $this->importCSVDataSet(__DIR__ . '/Fixtures/User/findBySearchTermInBackendMode/VisibleUser.csv');
+
+        $result = $this->subject->findBySearchTermInBackendMode('UME');
+
+        $model = $result->getFirst();
+        self::assertInstanceOf(FrontendUser::class, $model);
     }
 }
