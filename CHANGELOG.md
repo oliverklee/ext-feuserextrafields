@@ -7,9 +7,6 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
-- Add `FrontendUserRepository.findBySearchTermInBackendMode` (#776)
-- Add `Frontenduser.getDisplayName()` (#775)
-
 ### Changed
 
 ### Deprecated
@@ -17,6 +14,13 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Removed
 
 ### Fixed
+
+## 6.5.0: Add new features
+
+### Added
+
+- Add `FrontendUserRepository.findBySearchTermInBackendMode` (#776)
+- Add `Frontenduser.getDisplayName()` (#775)
 
 ## 6.4.0: Add support for PHP 8.4
 
