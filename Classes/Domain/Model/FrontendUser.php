@@ -401,6 +401,44 @@ class FrontendUser extends AbstractEntity
         return $email;
     }
 
+    /**
+     * Returns a name to display for the user.
+     *
+     * The name is constructed from these parts (if these exist):
+     *
+     * 1. full name
+     * 2. last name, first name
+     * 3. last name
+     * 4. first name
+     * 5. email address
+     *
+     * If all of these are empty, `null` is returned.
+     */
+    public function getDisplayName(): ?string
+    {
+        switch (true) {
+            case $this->getName() !== '':
+                $displayName = $this->getName();
+                break;
+            case $this->getLastName() !== '' && $this->getFirstName() !== '':
+                $displayName = $this->getLastName() . ', ' . $this->getFirstName();
+                break;
+            case $this->getLastName() !== '':
+                $displayName = $this->getLastName();
+                break;
+            case $this->getFirstName() !== '':
+                $displayName = $this->getFirstName();
+                break;
+            case $this->getEmail() !== '':
+                $displayName = $this->getEmail();
+                break;
+            default:
+                $displayName = null;
+        }
+
+        return $displayName;
+    }
+
     public function getTitle(): string
     {
         return $this->title;

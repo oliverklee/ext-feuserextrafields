@@ -879,4 +879,47 @@ final class FrontendUserTest extends UnitTestCase
 
         self::assertSame($model, $this->subject->getTermsDateOfAcceptance());
     }
+
+    /**
+     * @test
+     */
+    public function getDisplayNameForEmptyModelReturnsNull(): void
+    {
+        self::assertNull($this->subject->getDisplayName());
+    }
+
+    /**
+     * @return array<non-empty-string, array{0: string, 1: string, 2: string, 3: string, 4: string}>
+     */
+    public static function displayNameDataProvider(): array
+    {
+        return [
+            'full name only' => ['Don Juan', '', '', '', 'Don Juan'],
+            'first name only' => ['', 'Don', '', '', 'Don'],
+            'last name only' => ['', '', 'Juan', '', 'Juan'],
+            'full and first and last name' => ['Don Juan', 'Don', 'Juan', '', 'Don Juan'],
+            'first and last name' => ['', 'Don', 'Juan', '', 'Juan, Don'],
+            'email only' => ['', '', '', 'don@example.com', 'don@example.com'],
+            'full name and email' => ['Don Juan', '', '', 'don@example.com', 'Don Juan'],
+        ];
+    }
+
+    /**
+     * @test
+     * @dataProvider displayNameDataProvider
+     */
+    public function getDisplayNameForNonEmptyDataReturnsDisplayName(
+        string $fullName,
+        string $firstName,
+        string $lastName,
+        string $email,
+        string $expected
+    ): void {
+        $this->subject->setName($fullName);
+        $this->subject->setFirstName($firstName);
+        $this->subject->setLastName($lastName);
+        $this->subject->setEmail($email);
+
+        self::assertSame($expected, $this->subject->getDisplayName());
+    }
 }
