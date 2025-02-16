@@ -9,6 +9,7 @@ call_user_func(static function (): void {
     $languageFile = 'LLL:EXT:feuserextrafields/Resources/Private/Language/locallang.xlf:';
 
     $temporaryColumns = [
+        'exclude' => true,
         'crdate' => [
             'label' => $languageFile . 'crdate',
             'config' => [
@@ -20,6 +21,7 @@ call_user_func(static function (): void {
             ],
         ],
         'tstamp' => [
+            'exclude' => true,
             'label' => $languageFile . 'tstamp',
             'config' => [
                 'type' => 'input',
