@@ -32,7 +32,6 @@ call_user_func(static function (): void {
             ],
         ],
         'full_salutation' => [
-            'exclude' => 0,
             'label' => $languageFile . 'full_salutation',
             'config' => [
                 'type' => 'input',
