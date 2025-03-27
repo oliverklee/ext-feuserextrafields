@@ -15,6 +15,10 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+# 6.5.1: Internal cleanup
+
+No user-facing changes.
+
 ## 6.5.0: Add new features
 
 ### Added
