@@ -166,6 +166,7 @@
 			"rm .php-cs-fixer.php",
 			"rm crowdin.yml",
 			"rm phive.xml",
+			"rm phpcs.xml",
 			"rm phpstan-baseline.neon",
 			"rm phpstan.neon",
 			"rm rector.php"
