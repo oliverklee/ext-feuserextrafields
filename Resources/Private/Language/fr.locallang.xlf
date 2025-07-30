@@ -91,6 +91,10 @@
         <source>VAT identification number (VATIN)</source>
         <target state="final">Numéro de TVA intracommunautaire (no TVA)</target>
       </trans-unit>
+      <trans-unit id="department">
+        <source>Department</source>
+        <target state="needs-translation">Department</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
