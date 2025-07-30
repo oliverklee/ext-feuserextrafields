@@ -517,6 +517,25 @@ final class FrontendUserTest extends UnitTestCase
     /**
      * @test
      */
+    public function getDepartmentInitiallyReturnsEmptyString(): void
+    {
+        self::assertSame('', $this->subject->getDepartment());
+    }
+
+    /**
+     * @test
+     */
+    public function setDepartmentSetsDepartment(): void
+    {
+        $value = 'Macrodata refinement';
+        $this->subject->setDepartment($value);
+
+        self::assertSame($value, $this->subject->getDepartment());
+    }
+
+    /**
+     * @test
+     */
     public function getVatInInitiallyReturnsEmptyString(): void
     {
         self::assertSame('', $this->subject->getVatIn());

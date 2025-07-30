@@ -99,6 +99,7 @@ final class FrontendUserRepositoryTest extends FunctionalTestCase
         self::assertSame('United States of CAT', $model->getCountry());
         self::assertSame('www.example.com', $model->getWww());
         self::assertSame('Cat Scans Inc.', $model->getCompany());
+        self::assertSame('Mammalians Nurturable', $model->getDepartment());
         self::assertSame('DE123456789', $model->getVatIn());
         self::assertEquals(new \DateTime('2022-04-02T18:00'), $model->getLastLogin());
         self::assertTrue($model->getPrivacy());

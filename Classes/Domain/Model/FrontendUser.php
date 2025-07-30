@@ -183,6 +183,11 @@ class FrontendUser extends AbstractEntity
     protected string $company = '';
 
     /**
+     * @Extbase\Validate("StringLength", options={"maximum": 128})
+     */
+    protected string $department = '';
+
+    /**
      * VAT identification number (VATIN)
      *
      * @Extbase\Validate("StringLength", options={"maximum": 15})
@@ -497,6 +502,16 @@ class FrontendUser extends AbstractEntity
     public function setCompany(string $company): void
     {
         $this->company = $company;
+    }
+
+    public function getDepartment(): string
+    {
+        return $this->department;
+    }
+
+    public function setDepartment(string $department): void
+    {
+        $this->department = $department;
     }
 
     public function getVatIn(): string
