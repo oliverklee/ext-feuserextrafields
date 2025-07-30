@@ -7,17 +7,23 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
-- Add a department field (#824)
-
 ### Changed
-
-- Require the latest TYPO3 12LTS security release (#807)
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+## 6.6.0: Add department field
+
+### Added
+
+- Add a department field (#824)
+
+### Changed
+
+- Require the latest TYPO3 12LTS security release (#807)
 
 # 6.5.1: Internal cleanup
 
