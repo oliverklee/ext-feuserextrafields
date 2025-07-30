@@ -88,6 +88,17 @@ call_user_func(static function (): void {
                 'default' => '',
             ],
         ],
+        'department' => [
+            'exclude' => true,
+            'label' => $languageFile . 'department',
+            'config' => [
+                'type' => 'input',
+                'size' => 20,
+                'max' => 128,
+                'eval' => 'trim',
+                'default' => '',
+            ],
+        ],
         'vat_in' => [
             'exclude' => true,
             'label' => $languageFile . 'vatIn',
@@ -294,7 +305,7 @@ call_user_func(static function (): void {
     );
     ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
-        'vat_in',
+        'department, vat_in',
         '',
         'after:company'
     );
