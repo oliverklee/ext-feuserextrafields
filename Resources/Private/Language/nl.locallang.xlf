@@ -75,25 +75,25 @@
         <source>Working</source>
         <target state="final">Werkend</target>
       </trans-unit>
-      <trans-unit id="status.4">
+      <trans-unit id="status.4" approved="yes">
         <source>Retired</source>
-        <target state="needs-translation">Retired</target>
+        <target state="final">Met pensioen</target>
       </trans-unit>
       <trans-unit id="status.5">
         <source>Job seeking (part time)</source>
         <target state="needs-translation">Job seeking (part time)</target>
       </trans-unit>
-      <trans-unit id="comments">
+      <trans-unit id="comments" approved="yes">
         <source>Comments</source>
-        <target state="needs-translation">Comments</target>
+        <target state="final">Opmerkingen</target>
       </trans-unit>
       <trans-unit id="vatIn" approved="yes">
         <source>VAT identification number (VATIN)</source>
         <target state="final">Btw-nummer (Btw-nr.)</target>
       </trans-unit>
-      <trans-unit id="department">
+      <trans-unit id="department" approved="yes">
         <source>Department</source>
-        <target state="needs-translation">Department</target>
+        <target state="final">Afdeling</target>
       </trans-unit>
     </body>
   </file>
