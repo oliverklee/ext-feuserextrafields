@@ -69,6 +69,9 @@
 			<trans-unit id="vatIn">
 				<source>VAT identification number (VATIN)</source>
 			</trans-unit>
+			<trans-unit id="department">
+				<source>Department</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
