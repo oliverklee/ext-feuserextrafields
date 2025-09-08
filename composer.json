@@ -26,7 +26,7 @@
 		"typo3/cms-extbase": "^11.5.41 || ^12.4.31"
 	},
 	"require-dev": {
-		"ergebnis/composer-normalize": "2.48.1",
+		"ergebnis/composer-normalize": "2.48.2",
 		"friendsofphp/php-cs-fixer": "3.87.1",
 		"phpstan/extension-installer": "1.4.3",
 		"phpstan/phpstan": "1.12.28",
