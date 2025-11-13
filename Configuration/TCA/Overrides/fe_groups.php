@@ -48,7 +48,7 @@ call_user_func(static function (): void {
                         'eval' => 'datetime,int',
                     ],
                 ],
-            ]
+            ],
         );
     }
 
