@@ -280,7 +280,7 @@ call_user_func(static function (): void {
                         ],
                     ],
                 ],
-            ]
+            ],
         );
     }
 
@@ -289,28 +289,28 @@ call_user_func(static function (): void {
         'fe_users',
         'full_salutation, gender',
         '',
-        'before:name'
+        'before:name',
     );
     ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
         'date_of_birth, status',
         '',
-        'after:name'
+        'after:name',
     );
     ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
         'zone',
         '',
-        'after:city'
+        'after:city',
     );
     ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
         'department, vat_in',
         '',
-        'after:company'
+        'after:company',
     );
     ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
-        'privacy, privacy_date_of_acceptance, terms_acknowledged, terms_date_of_acceptance, comments'
+        'privacy, privacy_date_of_acceptance, terms_acknowledged, terms_date_of_acceptance, comments',
     );
 });

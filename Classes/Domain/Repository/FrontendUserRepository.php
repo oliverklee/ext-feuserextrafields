@@ -50,7 +50,8 @@ class FrontendUserRepository extends Repository implements DirectPersistInterfac
     public function findBySearchTermInBackendMode(string $searchTerm): QueryResultInterface
     {
         $query = $this->createQuery();
-        $query->getQuerySettings()
+        $query
+            ->getQuerySettings()
             ->setRespectStoragePage(false)
             ->setIgnoreEnableFields(true);
 
@@ -63,8 +64,8 @@ class FrontendUserRepository extends Repository implements DirectPersistInterfac
                 $query->like('firstName', '%' . $escapedSearchTerm . '%'),
                 $query->like('lastName', '%' . $escapedSearchTerm . '%'),
                 $query->like('email', '%' . $escapedSearchTerm . '%'),
-                $query->like('company', '%' . $escapedSearchTerm . '%')
-            )
+                $query->like('company', '%' . $escapedSearchTerm . '%'),
+            ),
         );
 
         return $query->execute();
