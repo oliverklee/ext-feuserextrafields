@@ -19,37 +19,29 @@ class FrontendUser extends AbstractEntity
     use ModificationDateTrait;
 
     /**
-     * @var int
-     *
      * @deprecated #599 will be removed in version 7.0, use the `Gender` class instead
      */
     public const GENDER_MALE = 0;
 
     /**
-     * @var int
-     *
      * @deprecated #599 will be removed in version 7.0, use the `Gender` class instead
      */
     public const GENDER_FEMALE = 1;
 
     /**
-     * @var int
-     *
      * @deprecated #599 will be removed in version 7.0, use the `Gender` class instead
      */
     public const GENDER_DIVERSE = 2;
 
     /**
-     * @var int
-     *
      * @deprecated #599 will be removed in version 7.0, use the `Gender` class instead
      */
     public const GENDER_NOT_PROVIDED = 99;
 
     /**
-     * @var list<self::GENDER_*>
-     *
      * @deprecated #599 will be removed in version 7.0, use the `Gender` class instead
+     *
+     * @var list<self::GENDER_*>
      */
     public const VALID_GENDERS = [
         self::GENDER_MALE,
@@ -58,34 +50,11 @@ class FrontendUser extends AbstractEntity
         self::GENDER_NOT_PROVIDED,
     ];
 
-    /**
-     * @var int
-     */
     public const STATUS_NONE = 0;
-
-    /**
-     * @var int
-     */
     public const STATUS_STUDENT = 1;
-
-    /**
-     * @var int
-     */
     public const STATUS_JOB_SEEKING_FULL_TIME = 2;
-
-    /**
-     * @var int
-     */
     public const STATUS_WORKING = 3;
-
-    /**
-     * @var int
-     */
     public const STATUS_RETIRED = 4;
-
-    /**
-     * @var int
-     */
     public const STATUS_JOB_SEEKING_PART_TIME = 5;
 
     /**
